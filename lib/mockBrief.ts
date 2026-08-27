@@ -52,6 +52,32 @@ export interface Competitor {
   weaknesses: Quote[];
 }
 
+export type SourceSection =
+  | "Consumer Sentiment"
+  | "Key Concerns & Barriers"
+  | "Content Opportunities"
+  | "Creator Signals"
+  | "Competitive Landscape";
+
+/** A pointer back to a specific finding in sections 1-5. */
+export interface EvidenceLink {
+  section: SourceSection;
+  detail: string;
+  locality: Locality;
+}
+
+/**
+ * Section 6 is the only section that infers rather than summarises, so it is
+ * the only one that can quietly turn into an opinion. The non-empty tuple type
+ * makes the rule structural: a direction that cites no prior finding does not
+ * compile.
+ */
+export interface PositioningDirection {
+  recommendation: string;
+  rationale: string;
+  supportedBy: [EvidenceLink, ...EvidenceLink[]];
+}
+
 export interface Brief {
   categoryId: CategoryId;
   discussionsAnalysed: number;
@@ -69,9 +95,12 @@ export interface Brief {
   content: { items: ContentAngle[]; evidence: SectionEvidence };
   creators: { items: CreatorSignal[]; evidence: SectionEvidence };
   competitive: { items: Competitor[]; gap: string; evidence: SectionEvidence };
+  positioning: { items: PositioningDirection[]; evidence: SectionEvidence };
 }
 
-const BRIEFS: Record<CategoryId, Brief> = {
+type BriefCore = Omit<Brief, "positioning">;
+
+const BRIEFS: Record<CategoryId, BriefCore> = {
   "ai-app": {
     categoryId: "ai-app",
     discussionsAnalysed: 31,
@@ -850,9 +879,222 @@ const BRIEFS: Record<CategoryId, Brief> = {
   },
 };
 
+/**
+ * Section 6 — Positioning Suggestions.
+ *
+ * Three directions, never more: the product promises three decisions in ten
+ * minutes, and a list of ten is a list nobody acts on. Every direction cites
+ * the findings in sections 1-5 that produced it.
+ */
+const POSITIONING: Record<CategoryId, Brief["positioning"]> = {
+  "ai-app": {
+    items: [
+      {
+        recommendation: "Lead on data handling, not on capability",
+        rationale:
+          "Privacy is raised in 9 of 31 discussions, and UK students describe it concretely — where the document goes, who can read it — rather than as an abstract principle. None of the three most-mentioned competitors addresses it. For a Chinese brand entering the UK this is simultaneously the highest-risk objection and the least contested claim available.",
+        supportedBy: [
+          { section: "Key Concerns & Barriers", detail: "Barrier 03 — Privacy and data concerns", locality: "UK" },
+          { section: "Competitive Landscape", detail: "Identified gap — price and integrity anxiety unaddressed", locality: "UK" },
+        ],
+      },
+      {
+        recommendation: "Position as study support rather than writing output",
+        rationale:
+          "Academic integrity risk appears in 7 of 31 discussions and is almost entirely UK-specific. Framing the product around producing work invites exactly this objection; framing it around understanding and revision sidesteps it without weakening the underlying capability claim.",
+        supportedBy: [
+          { section: "Key Concerns & Barriers", detail: "Barrier 04 — Academic integrity risk", locality: "UK" },
+          { section: "Consumer Sentiment", detail: "Trust remains low despite active experimentation", locality: "UK" },
+        ],
+      },
+      {
+        recommendation: "Compete on course-specific depth, not general capability",
+        rationale:
+          "ChatGPT holds default status across 22 discussions, so a general-capability comparison is a fight on the incumbent's ground. Its most frequently named weakness in UK discussion is that it does not know the user's course — a gap that specificity can occupy without needing to out-perform it broadly.",
+        supportedBy: [
+          { section: "Competitive Landscape", detail: "ChatGPT — “too general, it doesn’t know my course”", locality: "UK" },
+          { section: "Content Opportunities", detail: "Subject-specific demonstration outperforms generic framing", locality: "UK" },
+        ],
+      },
+    ],
+    evidence: {
+      confidence: "Medium",
+      basis: "All three directions cite UK-oriented findings, drawn from 8 UK discussions against 23 global",
+      sources: [
+        { subreddit: "UniUK", postTitle: "Does anyone actually trust AI for coursework?", locality: "UK" },
+        { subreddit: "UniUK", postTitle: "Is using AI for essays actually cheating now?", locality: "UK" },
+        { subreddit: "UniUK", postTitle: "Is ChatGPT Plus worth it as a student?", locality: "UK" },
+      ],
+    },
+  },
+
+  "consumer-electronics": {
+    items: [
+      {
+        recommendation: "Make the UK service path the headline claim",
+        rationale:
+          "After-sales uncertainty leads UK discussion at 14 of 27 and is a service question, not a product one. Buyers in this category already accept that build quality has converged, so specification claims argue a point nobody disputes while the actual objection goes unanswered.",
+        supportedBy: [
+          { section: "Key Concerns & Barriers", detail: "Barrier 01 — After-sales and warranty uncertainty", locality: "UK" },
+          { section: "Competitive Landscape", detail: "Identified gap — no brand markets its UK service experience", locality: "UK" },
+        ],
+      },
+      {
+        recommendation: "Treat retail presence as a trust asset, not a distribution decision",
+        rationale:
+          "Availability through a known UK retailer functions as a trust proxy in 9 of 27 discussions — buyers use it to decide whether a brand is a gamble. That makes shelf presence a brand argument worth making explicitly in marketing, rather than a channel fact left implicit.",
+        supportedBy: [
+          { section: "Key Concerns & Barriers", detail: "Barrier 02 — Retail availability and trust signals", locality: "UK" },
+          { section: "Consumer Sentiment", detail: "Scepticism attaches to service, not to product quality", locality: "UK" },
+        ],
+      },
+      {
+        recommendation: "Differentiate on software, where category expectations are lowest",
+        rationale:
+          "Companion app quality is the most common global criticism of challenger brands at 8 of 27 discussions, and the incumbent is not judged well on it either. Expectations are low enough that competence alone reads as a differentiator.",
+        supportedBy: [
+          { section: "Key Concerns & Barriers", detail: "Barrier 03 — Software and app quality", locality: "Global" },
+          { section: "Competitive Landscape", detail: "Anker — range confusion despite hardware trust", locality: "UK" },
+        ],
+      },
+    ],
+    evidence: {
+      confidence: "High",
+      basis: "Two of three directions rest on UK-oriented findings, from 11 UK discussions against 16 global",
+      sources: [
+        { subreddit: "AskUK", postTitle: "Warranty experiences with newer brands", locality: "UK" },
+        { subreddit: "UKTech", postTitle: "Where do you actually buy these", locality: "UK" },
+        { subreddit: "gadgets", postTitle: "Why is the companion app always bad", locality: "Global" },
+      ],
+    },
+  },
+
+  "smart-home": {
+    items: [
+      {
+        recommendation: "Sell continuity, and make local control the proof",
+        rationale:
+          "Fear that a cloud service will be withdrawn leads the category at 15 of 24 discussions, and buyers read local control as evidence that a company is serious rather than as a technical feature. Positioning around what keeps working without the vendor answers the objection that is actually deferring purchases.",
+        supportedBy: [
+          { section: "Key Concerns & Barriers", detail: "Barrier 01 — Ecosystem lock-in and shutdown risk", locality: "Global" },
+          { section: "Competitive Landscape", detail: "Home Assistant — local operation as the trust benchmark", locality: "Global" },
+        ],
+      },
+      {
+        recommendation: "Own the UK rental market, which nobody is addressing",
+        rationale:
+          "Rental and older-property constraints appear in 8 of 24 discussions and are close to absent from competitor marketing. Non-permanent installation is a marketable proposition in the UK in a way it is not in markets with different housing stock.",
+        supportedBy: [
+          { section: "Key Concerns & Barriers", detail: "Barrier 02 — Rental and older-property constraints", locality: "UK" },
+          { section: "Content Opportunities", detail: "Nothing drilled, nothing permanent", locality: "UK" },
+        ],
+      },
+      {
+        recommendation: "Make local control legible to non-technical buyers",
+        rationale:
+          "The category splits between expensive-and-reliable and capable-but-forbidding, with the most-recommended local-first option dismissed as something you would not set your parents up with. The unoccupied position is local control that does not require expertise to obtain.",
+        supportedBy: [
+          { section: "Competitive Landscape", detail: "Identified gap — local control is not legible to non-technical buyers", locality: "Global" },
+          { section: "Key Concerns & Barriers", detail: "Barrier 03 — Setup complexity", locality: "Global" },
+        ],
+      },
+    ],
+    evidence: {
+      confidence: "Medium",
+      basis: "One of three directions is UK-specific; the rest are category-wide, from 9 UK discussions against 15 global",
+      sources: [
+        { subreddit: "UKsmarthome", postTitle: "Renting — what can I actually install?", locality: "UK" },
+        { subreddit: "homeautomation", postTitle: "What happens when the company shuts down", locality: "Global" },
+        { subreddit: "smarthome", postTitle: "Local control or nothing", locality: "Global" },
+      ],
+    },
+  },
+
+  "3d-printer": {
+    items: [
+      {
+        recommendation: "Publish the qualified figure, not the headline figure",
+        rationale:
+          "Scepticism toward specification claims is the strongest signal in the category at 14 of 26 discussions, and this audience tests claims rather than accepting them. A headline number that does not survive contact actively costs credibility here, where a conservative number stated with its conditions buys it.",
+        supportedBy: [
+          { section: "Key Concerns & Barriers", detail: "Barrier 01 — Marketing claims that do not survive testing", locality: "Global" },
+          { section: "Content Opportunities", detail: "The unedited first print, straight out of the box", locality: "Global" },
+        ],
+      },
+      {
+        recommendation: "Make European parts availability concrete and checkable",
+        rationale:
+          "Support and spare-parts availability is a stated purchase criterion in 11 of 26 discussions, with wait times quoted in weeks. This is where a European presence can be made specific rather than claimed in general terms.",
+        supportedBy: [
+          { section: "Key Concerns & Barriers", detail: "Barrier 02 — Support and spare-parts availability", locality: "Global" },
+        ],
+      },
+      {
+        recommendation: "Position openness against the leader's cloud dependency",
+        rationale:
+          "Cloud dependency is the most frequent unaddressed anxiety about the current benchmark brand, and proprietary consumables are an instant disqualifier in 8 of 26 discussions. Openness is an asset to lead with in this category rather than a concession to explain away.",
+        supportedBy: [
+          { section: "Key Concerns & Barriers", detail: "Barrier 03 — Proprietary consumables", locality: "Global" },
+          { section: "Competitive Landscape", detail: "Bambu Lab — cloud dependency as the standing concern", locality: "Global" },
+        ],
+      },
+    ],
+    evidence: {
+      confidence: "Low",
+      basis: "Every direction rests on global discussions — 2 UK against 24 global, so none is validated for UK buyers",
+      sources: [
+        { subreddit: "3Dprinting", postTitle: "What do reviews consistently get wrong", locality: "Global" },
+        { subreddit: "ender3", postTitle: "Spare parts wait times", locality: "Global" },
+        { subreddit: "BambuLab", postTitle: "Cloud dependency concerns", locality: "Global" },
+      ],
+    },
+  },
+
+  "action-camera": {
+    items: [
+      {
+        recommendation: "Replace the iteration story with a workflow story",
+        rationale:
+          "Generational fatigue leads the category at 13 of 23 discussions — buyers openly doubt that each release adds value. Launching on an incremented specification argues directly into that scepticism, while a claim about what the whole process now looks like does not.",
+        supportedBy: [
+          { section: "Key Concerns & Barriers", detail: "Barrier 01 — Perceived lack of generational improvement", locality: "Global" },
+          { section: "Competitive Landscape", detail: "Identified gap — leaders judged on software but market on optics", locality: "Global" },
+        ],
+      },
+      {
+        recommendation: "Claim cold-weather endurance, which no brand currently does",
+        rationale:
+          "Battery performance in cold conditions is the most concrete unmet need in the category at 9 of 23 discussions, and is raised in the specific terms of a use case rather than as a specification preference. It is directly relevant to UK and Northern European buyers and is claimed by nobody.",
+        supportedBy: [
+          { section: "Key Concerns & Barriers", detail: "Barrier 02 — Battery performance in cold conditions", locality: "Global" },
+          { section: "Competitive Landscape", detail: "Identified gap — cold-weather endurance unclaimed", locality: "Global" },
+        ],
+      },
+      {
+        recommendation: "Compete after capture, where the bottleneck has moved",
+        rationale:
+          "Post-capture workflow friction appears in 8 of 23 discussions, and both leaders are already judged on their software rather than their optics. Differentiation is available in the part of the experience buyers complain about and neither competitor markets.",
+        supportedBy: [
+          { section: "Key Concerns & Barriers", detail: "Barrier 03 — Post-capture workflow friction", locality: "Global" },
+          { section: "Competitive Landscape", detail: "Insta360 — reframing workflow named as the real difference", locality: "Global" },
+        ],
+      },
+    ],
+    evidence: {
+      confidence: "Low",
+      basis: "Every direction rests on global discussions — 3 UK against 20 global, so none is validated for UK buyers",
+      sources: [
+        { subreddit: "gopro", postTitle: "Is the upgrade actually worth it this year", locality: "Global" },
+        { subreddit: "MTB", postTitle: "Winter riding kit thread", locality: "Global" },
+        { subreddit: "videography", postTitle: "Post-production is the bottleneck", locality: "Global" },
+      ],
+    },
+  },
+};
+
 export function getBrief(categoryId: string | undefined): Brief {
-  if (categoryId && categoryId in BRIEFS) {
-    return BRIEFS[categoryId as CategoryId];
-  }
-  return BRIEFS["ai-app"];
+  const key: CategoryId =
+    categoryId && categoryId in BRIEFS ? (categoryId as CategoryId) : "ai-app";
+  return { ...BRIEFS[key], positioning: POSITIONING[key] };
 }
+

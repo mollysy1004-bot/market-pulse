@@ -48,6 +48,11 @@ const OUTPUTS = [
     body: "The competitors consumers raise unprompted, how they are perceived, and where the gap sits.",
     serves: "Brand / GTM",
   },
+  {
+    title: "Positioning Suggestions",
+    body: "Three directions a new entrant could take, each naming the findings above that produced it.",
+    serves: "Product Marketing / Brand",
+  },
 ];
 
 const PIPELINE = [
@@ -166,8 +171,8 @@ export default function Home() {
                 What you&rsquo;ll get
               </h2>
               <p className="mt-4 text-[16px] leading-[1.65] text-ink-soft">
-                Five sections, each answering the first question a different
-                part of the marketing chain has to settle.
+                Six sections. The first five report what the market is doing;
+                the last one turns that into what a brand could do about it.
               </p>
             </div>
 

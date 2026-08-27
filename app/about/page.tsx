@@ -74,12 +74,13 @@ export default function AboutPage() {
             segment. Market Pulse collects recent discussions from the
             communities where that category is actually debated, analyses them,
             and returns a structured market entry brief covering sentiment,
-            adoption barriers, content opportunities, creator signals and the
-            competitive landscape.
+            adoption barriers, content opportunities, creator signals, the
+            competitive landscape and the positioning directions those findings
+            support.
           </p>
           <p>
             The structure is fixed on purpose. A brief that always answers the
-            same five questions can be compared across markets and handed to a
+            same six questions can be compared across markets and handed to a
             colleague without a walkthrough.
           </p>
         </Block>
@@ -115,6 +116,12 @@ export default function AboutPage() {
             UK coverage is thin, the brief states it. Frequency is counted at the
             discussion level rather than the comment level, so a single popular
             thread cannot inflate a barrier into a trend.
+          </p>
+          <p>
+            The final section is the one exception: positioning directions are
+            inferred rather than observed. Each one therefore has to name the
+            findings in the preceding sections that produced it, so a reader can
+            reject the recommendation and still keep the evidence.
           </p>
         </Block>
 

@@ -55,9 +55,23 @@ Editing copy does not require touching the page components.
 | `lib/options.ts` | The three dropdowns, and the category → subreddit mapping with `UK` / `Global` locality tags |
 | `lib/mockBrief.ts` | The sample brief for each of the five categories |
 | `app/page.tsx` | Home page sections |
-| `app/brief/page.tsx` | Brief layout — the five sections |
+| `app/brief/page.tsx` | Brief layout — the six sections |
 | `app/about/page.tsx` | About page copy |
 | `app/globals.css` | Colour, type and spacing tokens |
+
+## The six sections
+
+| # | Section | Answers | Serves |
+|---|---------|---------|--------|
+| 1 | Consumer Sentiment | How does this market feel about the category? | Market Research |
+| 2 | Key Concerns & Barriers | What is stopping adoption? | Product Marketing |
+| 3 | Content Opportunities | What content should we make? | Content / Social |
+| 4 | Creator Signals | Who does this audience listen to, and why? | KOL |
+| 5 | Competitive Landscape | Who are we up against, and where is the gap? | Brand / GTM |
+| 6 | Positioning Suggestions | So how should we position ourselves? | Product Marketing / Brand |
+
+Sections 1–5 report what the market is doing. Section 6 turns that into what a
+brand could do about it.
 
 ## Design decisions worth keeping
 
@@ -82,6 +96,14 @@ presenting global signals as UK findings.
 **Creator Signals, not creator recommendations.** Section 4 reports observed
 audience preference with the discussion pattern behind it, rather than asserting
 who to hire — Reddit data supports the former and not the latter.
+
+**Section 6 must cite sections 1-5.** Positioning Suggestions is the only
+section that infers rather than reports, so it is the only one that can quietly
+become an opinion. Each direction carries a `supportedBy` list pointing at the
+findings that produced it, typed as a non-empty tuple — a direction citing no
+prior finding fails to compile. Three directions, never more: the product
+promises three decisions in ten minutes, and a list of ten is a list nobody
+acts on.
 
 ## Next steps
 

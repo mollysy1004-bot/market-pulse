@@ -5,7 +5,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { EvidencePanel } from "@/components/EvidencePanel";
 import { PullQuote } from "@/components/Quote";
 import { ConfidenceBadge, LocalityTag, SectionNumber } from "@/components/Tags";
-import { getBrief } from "@/lib/mockBrief";
+import { getBrief, type EvidenceLink } from "@/lib/mockBrief";
 import {
   AUDIENCES,
   CATEGORIES,
@@ -374,6 +374,70 @@ export default async function BriefPage({
             />
           </div>
           <EvidencePanel evidence={brief.competitive.evidence} />
+        </SectionShell>
+
+        {/* 6 — Positioning suggestions */}
+        <SectionShell
+          n="Section 6"
+          title="Positioning suggestions"
+          purpose="Evidence-backed directions for how a new entrant could position itself. The only section that infers rather than reports — so every direction names the findings behind it."
+        >
+          <p className="max-w-2xl font-display text-[24px] leading-[1.3] font-medium tracking-[-0.01em]">
+            So, where could a new entrant win?
+          </p>
+
+          <ol className="mt-9 space-y-9">
+            {brief.positioning.items.map((direction, index) => (
+              <li
+                key={direction.recommendation}
+                className="border border-rule bg-surface p-6 sm:p-7"
+              >
+                <div className="flex items-baseline gap-4">
+                  <span className="font-mono text-[12px] text-muted">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="font-display text-[21px] leading-[1.3] font-medium">
+                    {direction.recommendation}
+                  </h3>
+                </div>
+
+                <p className="mt-4 max-w-2xl text-[15px] leading-[1.7] text-ink-soft sm:pl-9">
+                  <span className="font-mono text-[11px] tracking-[0.08em] text-muted uppercase">
+                    Why&nbsp;&nbsp;
+                  </span>
+                  {direction.rationale}
+                </p>
+
+                <div className="mt-5 border-t border-rule-soft pt-4 sm:ml-9">
+                  <p className="font-mono text-[10px] tracking-[0.1em] text-muted uppercase">
+                    Supported by
+                  </p>
+                  <ul className="mt-2.5 space-y-2">
+                    {direction.supportedBy.map((link: EvidenceLink) => (
+                      <li
+                        key={`${link.section}-${link.detail}`}
+                        className="flex flex-wrap items-baseline gap-x-2.5 gap-y-1 text-[13px]"
+                      >
+                        <LocalityTag locality={link.locality} />
+                        <span className="font-mono text-[11px] tracking-[0.04em] text-muted">
+                          {link.section}
+                        </span>
+                        <span className="text-ink-soft">{link.detail}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </li>
+            ))}
+          </ol>
+
+          <div className="mt-10">
+            <ConfidenceBadge
+              confidence={brief.positioning.evidence.confidence}
+              basis={brief.positioning.evidence.basis}
+            />
+          </div>
+          <EvidencePanel evidence={brief.positioning.evidence} />
         </SectionShell>
 
         {/* Sources */}
