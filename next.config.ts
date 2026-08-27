@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // The floating dev badge overlaps page content in the bottom-left corner.
+  devIndicators: false,
 };
 
 export default nextConfig;
