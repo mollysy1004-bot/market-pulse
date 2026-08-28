@@ -100,7 +100,13 @@ export interface Brief {
 
 type BriefCore = Omit<Brief, "positioning">;
 
-const BRIEFS: Record<CategoryId, BriefCore> = {
+/**
+ * Sample briefs exist only for categories that have not been generated yet, so
+ * this is deliberately partial: a category with a real brief never reaches
+ * here, and writing illustrative content for one would be work whose only
+ * possible use is to be mistaken for evidence.
+ */
+const BRIEFS: Partial<Record<CategoryId, BriefCore>> = {
   "ai-app": {
     categoryId: "ai-app",
     discussionsAnalysed: 31,
@@ -886,7 +892,7 @@ const BRIEFS: Record<CategoryId, BriefCore> = {
  * minutes, and a list of ten is a list nobody acts on. Every direction cites
  * the findings in sections 1-5 that produced it.
  */
-const POSITIONING: Record<CategoryId, Brief["positioning"]> = {
+const POSITIONING: Partial<Record<CategoryId, Brief["positioning"]>> = {
   "ai-app": {
     items: [
       {
@@ -1095,6 +1101,7 @@ const POSITIONING: Record<CategoryId, Brief["positioning"]> = {
 export function getBrief(categoryId: string | undefined): Brief {
   const key: CategoryId =
     categoryId && categoryId in BRIEFS ? (categoryId as CategoryId) : "ai-app";
-  return { ...BRIEFS[key], positioning: POSITIONING[key] };
+  // The fallback key always resolves, so these are present by construction.
+  return { ...BRIEFS[key]!, positioning: POSITIONING[key]! };
 }
 

@@ -3,6 +3,8 @@ export type Locality = "UK" | "Global";
 export type CategoryId =
   | "ai-app"
   | "consumer-electronics"
+  | "charging-power"
+  | "audio-earbuds"
   | "smart-home"
   | "3d-printer"
   | "action-camera";
@@ -16,7 +18,15 @@ export interface Option {
 
 export const CATEGORIES: Option[] = [
   { id: "ai-app", label: "AI App", hint: "Doubao, ChatGPT competitors", available: true },
-  { id: "consumer-electronics", label: "Consumer Electronics", hint: "Anker, Insta360", available: true },
+  // Consumer Electronics is the odd entry here: the other categories name a
+  // product type, and this one names a shelf. It collected cookware and car
+  // finance before the anchor gate, and reads thin afterwards because it was
+  // never one category. Charging & Power and Audio are the two slices where
+  // Chinese brands actually compete and where dedicated communities exist, so
+  // they are collected separately rather than pooled.
+  { id: "consumer-electronics", label: "Consumer Electronics", hint: "broad — see Charging or Audio", available: true },
+  { id: "charging-power", label: "Charging & Power", hint: "Anker, Ugreen, Baseus", available: false },
+  { id: "audio-earbuds", label: "Audio & Earbuds", hint: "Soundcore, Edifier, QCY", available: false },
   { id: "smart-home", label: "Smart Home", hint: "Dreame, Roborock", available: true },
   { id: "3d-printer", label: "3D Printer", hint: "Bambu Lab", available: true },
   { id: "action-camera", label: "Action Camera", hint: "Insta360, GoPro competitors", available: true },
@@ -73,6 +83,23 @@ export const SUBREDDIT_MAP: Record<CategoryId, SubredditRef[]> = {
     { name: "technology", locality: "Global", note: "Broader tech discussion" },
     { name: "BuyItForLife", locality: "Global", note: "Quality and value discussions" },
   ],
+  "charging-power": [
+    { name: "AskUK", locality: "UK", note: "UK purchase decisions and brand perception" },
+    { name: "CasualUK", locality: "UK", note: "Everyday UK product talk and recommendations" },
+    { name: "UKPersonalFinance", locality: "UK", note: "Value, warranty and replacement decisions" },
+    { name: "UsbCHardware", locality: "Global", note: "Charging standards, cable and adapter quality" },
+    { name: "anker", locality: "Global", note: "Anker owners — the incumbent this category competes with" },
+    { name: "gadgets", locality: "Global", note: "Product discovery and reviews" },
+    { name: "BuyItForLife", locality: "Global", note: "Durability and after-sales experience" },
+  ],
+  "audio-earbuds": [
+    { name: "AskUK", locality: "UK", note: "UK purchase decisions and brand perception" },
+    { name: "CasualUK", locality: "UK", note: "Everyday UK product talk and recommendations" },
+    { name: "headphones", locality: "Global", note: "General audio discussion and reviews" },
+    { name: "HeadphoneAdvice", locality: "Global", note: "Purchase advice — stated needs and budgets" },
+    { name: "BudgetAudiophile", locality: "Global", note: "Value tier, where Chinese brands compete" },
+    { name: "earbuds", locality: "Global", note: "True wireless specifically" },
+  ],
   "smart-home": [
     // r/UKsmarthome does not exist, and no UK-specific smart home community of
     // usable size does — the largest candidates have 16 and 427 members. UK
@@ -119,6 +146,15 @@ export function labelFor(options: Option[], id: string | undefined): string {
  * community is talking about, which is almost never the category. Sources are
  * searched, not browsed, and this mapping is what makes a general UK community
  * usable as evidence for a specific category.
+ *
+ * How broad a term can safely be depends on where it is searched. Inside a
+ * category-specific community — r/UsbCHardware, r/BambuLab — everything is on
+ * topic already, so "worth buying" and "warranty" retrieve real discussion. In
+ * a general community the same terms retrieve whatever that community argues
+ * about: searching r/AskUK for them returned threads on hard-boiled eggs and
+ * what people's parents refused to buy, and every one was correctly rejected
+ * by the relevance gate. There, the search itself has to carry the category,
+ * which is why these lists lead with brands and product terms.
  */
 export const CATEGORY_QUERIES: Record<CategoryId, string[]> = {
   // Each list mixes three kinds of term, because a category surfaces through
@@ -137,6 +173,16 @@ export const CATEGORY_QUERIES: Record<CategoryId, string[]> = {
     "power bank", "charger", "earbuds",
     "worth buying", "warranty", "customer support",
     "build quality", "refurbished", "cheap brand",
+  ],
+  "charging-power": [
+    "Anker", "Ugreen", "Baseus",
+    "power bank", "portable charger", "USB-C charger", "charging brick",
+    "worth buying", "warranty", "battery life", "fast charging", "GaN charger",
+  ],
+  "audio-earbuds": [
+    "Soundcore", "Anker earbuds", "Edifier", "QCY",
+    "wireless earbuds", "budget earbuds", "noise cancelling",
+    "worth buying", "sound quality", "build quality", "comfort", "battery life",
   ],
   "smart-home": [
     "Roborock", "Dreame", "Eufy", "Aqara",
@@ -189,6 +235,16 @@ export const CATEGORY_ANCHORS: Record<CategoryId, string[]> = {
     "power bank", "portable charger", "charging station", "wall charger",
     "USB-C cable", "earbuds", "headphones", "earphones",
     "SSD", "hard drive", "external drive",
+  ],
+  "charging-power": [
+    "Anker", "Ugreen", "Baseus", "EcoFlow", "Belkin", "Nitecore",
+    "power bank", "portable charger", "charging brick", "wall charger",
+    "USB-C", "GaN", "power delivery", "battery pack", "charging cable",
+  ],
+  "audio-earbuds": [
+    "Soundcore", "Edifier", "QCY", "Moondrop", "Sennheiser", "AirPods",
+    "earbuds", "headphones", "earphones", "IEM", "ANC",
+    "noise cancelling", "true wireless", "over-ear", "in-ear",
   ],
   "smart-home": [
     "Roborock", "Dreame", "Eufy", "Aqara", "Alexa", "Home Assistant",
