@@ -62,15 +62,24 @@ export const SUBREDDIT_MAP: Record<CategoryId, SubredditRef[]> = {
     { name: "productivity", locality: "Global", note: "Workflow and tool recommendations" },
   ],
   "consumer-electronics": [
-    { name: "UKTech", locality: "UK", note: "UK-specific tech product discussions" },
+    // r/UKTech was listed here as the primary UK source. It has 186 subscribers,
+    // is restricted, and returned nothing for any category term — the mapping was
+    // written from assumption rather than checked. Replaced with communities that
+    // actually carry UK purchase discussion.
     { name: "AskUK", locality: "UK", note: "Purchase decisions, brand perception" },
+    { name: "CasualUK", locality: "UK", note: "Everyday UK product talk and recommendations" },
+    { name: "UKPersonalFinance", locality: "UK", note: "Value, warranty and replacement decisions" },
     { name: "gadgets", locality: "Global", note: "Product discovery and reviews" },
     { name: "technology", locality: "Global", note: "Broader tech discussion" },
     { name: "BuyItForLife", locality: "Global", note: "Quality and value discussions" },
   ],
   "smart-home": [
-    { name: "UKsmarthome", locality: "UK", note: "UK-specific smart home" },
+    // r/UKsmarthome does not exist, and no UK-specific smart home community of
+    // usable size does — the largest candidates have 16 and 427 members. UK
+    // evidence for this category comes from general UK communities instead, and
+    // the category is treated as thin on UK coverage.
     { name: "AskUK", locality: "UK", note: "Home tech adoption attitudes" },
+    { name: "DIYUK", locality: "UK", note: "UK installation, wiring and home-tech practicalities" },
     { name: "homeautomation", locality: "Global", note: "Smart home setup and products" },
     { name: "smarthome", locality: "Global", note: "Product recommendations and reviews" },
   ],
@@ -89,7 +98,13 @@ export const SUBREDDIT_MAP: Record<CategoryId, SubredditRef[]> = {
 };
 
 /** Categories with thin UK-specific coverage must say so on the brief. */
-export const THIN_UK_COVERAGE: CategoryId[] = ["3d-printer", "action-camera"];
+export const THIN_UK_COVERAGE: CategoryId[] = [
+  "3d-printer",
+  "action-camera",
+  // No UK smart home community of usable size exists; UK evidence here comes
+  // only from general UK communities discussing the category in passing.
+  "smart-home",
+];
 
 export function labelFor(options: Option[], id: string | undefined): string {
   return options.find((o) => o.id === id)?.label ?? "—";

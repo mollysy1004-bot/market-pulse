@@ -13,8 +13,16 @@ export function corpusPath(categoryId: CategoryId): string {
   return path.join(CORPUS_DIR, `${categoryId}.json`);
 }
 
-export function rawPath(subreddit: string): string {
-  return path.join(RAW_DIR, `${subreddit.toLowerCase()}.json`);
+/**
+ * Raw dumps are stored per category, not per subreddit.
+ *
+ * A community can serve more than one category — r/AskUK is a source for both
+ * consumer electronics and smart home — and it is searched with that category's
+ * terms each time, so the two dumps hold different discussions. Keying by
+ * subreddit alone would let one category's collection overwrite another's.
+ */
+export function rawPath(categoryId: string, subreddit: string): string {
+  return path.join(RAW_DIR, categoryId, `${subreddit.toLowerCase()}.json`);
 }
 
 export function hasCorpus(categoryId: CategoryId): boolean {

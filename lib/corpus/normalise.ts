@@ -18,14 +18,16 @@ function truncate(text: string, limit: number): string {
 }
 
 /**
- * Posts that are about the community rather than the category. These carry a
- * subreddit's own meta-discussion into the corpus and read as consumer signal
- * once the analysis prompt sees them, so they are dropped before storage.
+ * Posts that are about the community, or are promotion, rather than the
+ * category. Both carry something other than consumer opinion into the corpus
+ * and read as signal once the analysis prompt sees them — the comments under a
+ * giveaway are entries, not attitudes — so they are dropped before storage.
  */
 function isMetaPost(title: string): boolean {
-  return /^\s*(\[?(meta|mod|announcement|megathread)\]?|weekly|daily|monthly|welcome to|read the rules|our discord)/i.test(
-    title,
-  );
+  const meta =
+    /^\s*[\[【]?\s*(meta|mod|announcement|megathread|weekly|daily|monthly|welcome to|read the rules|our discord)/i;
+  const promo = /giveaway|sweepstake|\bwin a\b|discount code|coupon|\bsponsored\b|\bpromo\b/i;
+  return meta.test(title) || promo.test(title);
 }
 
 /**

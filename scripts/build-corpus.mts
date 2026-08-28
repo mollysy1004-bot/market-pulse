@@ -27,7 +27,7 @@ for (const categoryId of targets) {
   const missing: string[] = [];
 
   for (const src of sources) {
-    const file = rawPath(src.name);
+    const file = rawPath(categoryId, src.name);
     if (!existsSync(file)) {
       missing.push(src.name);
       continue;
