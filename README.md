@@ -13,11 +13,17 @@ Spec: v0.3 (Feishu).
 | 1 | Frontend structure, routing, mock brief | **Done** |
 | 2 | Reddit collection → locality tagging → corpus | **Done** |
 | 3 | Claude analysis → verified structured JSON | **Done** |
-| 4 | Pre-generated briefs and deployment | In progress |
+| 4 | Pre-generated briefs and deployment | **Done** |
 
-`ai-app` renders a generated brief built from 23 collected discussions. The
-other four categories still render sample data, and each brief states on the
-page which of the two it is.
+Live at **https://market-pulse-two-omega.vercel.app**
+
+All five categories render generated briefs, built from 101 collected
+discussions in total. Smart home, 3D printer and action camera carry a
+limited-UK-coverage notice, which is accurate rather than cautious: they rest on
+2, 0 and 0 UK-located discussions respectively.
+
+Briefs are imported statically and bundled at build time, so the deployed site
+makes no API calls, costs nothing to serve, and cannot fail on a live request.
 
 **On Reddit credentials.** Reddit's app registration could not be completed for
 this account, and the public JSON endpoints now refuse unauthenticated clients
@@ -129,11 +135,13 @@ to put it on the site.
 
 ## Next steps
 
-1. Collect and generate the remaining four categories
-2. Deploy — briefs are imported statically, so the deployed site makes no API
-   calls and cannot fail live
-3. Restore Reddit OAuth if app registration becomes possible, replacing the
+1. Restore Reddit OAuth if app registration becomes possible, replacing the
    browser-session collection step
+2. Widen the corpus per category — collection is capped at 12 discussions per
+   source and the relevance gate is deliberately strict, so most categories sit
+   near 20 discussions
+3. Add a second market. Everything above the source mapping is market-agnostic;
+   `MARKETS` already lists four more as unavailable
 
 **Citations are verified, not trusted.** The model never writes a subreddit
 name, locality tag or count. It cites discussion IDs, and `lib/analysis/resolve.ts`
