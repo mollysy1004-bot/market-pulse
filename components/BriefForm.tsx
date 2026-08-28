@@ -37,7 +37,19 @@ function Field({
               disabled={option.available === false}
             >
               {option.label}
-              {option.hint ? ` — ${option.hint}` : ""}
+              {/*
+                An em dash introduces an example of what the option covers; a
+                middle dot states why an option cannot be chosen. One mark for
+                both left "AI App — Doubao" and "United States — Coming soon"
+                reading as the same kind of note when they are not. Parentheses
+                were the first attempt and nested badly inside labels that
+                already carry them, as "Gen Z (18–25)" does.
+              */}
+              {option.hint
+                ? option.available === false
+                  ? ` · ${option.hint}`
+                  : ` — ${option.hint}`
+                : ""}
             </option>
           ))}
         </select>

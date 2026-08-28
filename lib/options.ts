@@ -24,10 +24,10 @@ export const CATEGORIES: Option[] = [
 
 export const MARKETS: Option[] = [
   { id: "uk", label: "United Kingdom", available: true },
-  { id: "us", label: "United States", hint: "Coming soon", available: false },
-  { id: "de", label: "Germany", hint: "Coming soon", available: false },
-  { id: "id", label: "Indonesia", hint: "Coming soon", available: false },
-  { id: "mx", label: "Mexico", hint: "Coming soon", available: false },
+  { id: "us", label: "United States", hint: "coming soon", available: false },
+  { id: "de", label: "Germany", hint: "coming soon", available: false },
+  { id: "id", label: "Indonesia", hint: "coming soon", available: false },
+  { id: "mx", label: "Mexico", hint: "coming soon", available: false },
 ];
 
 export const AUDIENCES: Option[] = [
