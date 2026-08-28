@@ -121,9 +121,36 @@ export function labelFor(options: Option[], id: string | undefined): string {
  * usable as evidence for a specific category.
  */
 export const CATEGORY_QUERIES: Record<CategoryId, string[]> = {
-  "ai-app": ["ChatGPT", "AI tool", "AI app", "AI subscription", "trust AI", "AI privacy"],
-  "consumer-electronics": ["Anker", "power bank", "charger brand", "worth buying", "warranty"],
-  "smart-home": ["robot vacuum", "smart home", "Roborock", "Dreame", "privacy camera"],
-  "3d-printer": ["Bambu Lab", "first printer", "worth it", "print quality", "customer support"],
-  "action-camera": ["Insta360", "GoPro alternative", "action camera", "worth upgrading", "battery life"],
+  // Each list mixes three kinds of term, because a category surfaces through
+  // all three and any one alone returns a narrow slice: the brands people name,
+  // the products they shop for, and the worries they voice. Competitor brands
+  // include Chinese ones — whether UK consumers name them at all is one of the
+  // things a brief for a Chinese brand most needs to answer.
+  "ai-app": [
+    "ChatGPT", "Copilot", "Gemini",
+    "AI tool", "AI app", "AI subscription",
+    "trust AI", "AI privacy", "AI detector", "AI hallucination",
+    "worth paying", "cancel subscription",
+  ],
+  "consumer-electronics": [
+    "Anker", "Ugreen", "Baseus",
+    "power bank", "charger", "earbuds",
+    "worth buying", "warranty", "customer support",
+    "build quality", "refurbished", "cheap brand",
+  ],
+  "smart-home": [
+    "Roborock", "Dreame", "Eufy", "Aqara",
+    "robot vacuum", "smart home", "smart plug", "security camera",
+    "privacy camera", "cloud subscription", "works offline", "local control",
+  ],
+  "3d-printer": [
+    "Bambu Lab", "Creality", "Prusa", "Elegoo",
+    "first printer", "print quality", "filament",
+    "worth it", "customer support", "firmware", "cloud", "reliability",
+  ],
+  "action-camera": [
+    "Insta360", "GoPro", "DJI Osmo", "Akaso",
+    "action camera", "360 camera", "helmet mount",
+    "battery life", "worth upgrading", "overheating", "app", "mounts",
+  ],
 };

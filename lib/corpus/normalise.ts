@@ -6,7 +6,7 @@ const MAX_COMMENT_CHARS = 500;
 /** Post bodies longer than this are truncated at collection time. */
 const MAX_SELFTEXT_CHARS = 1200;
 /** Comments kept per discussion, highest score first. */
-const MAX_COMMENTS_PER_DISCUSSION = 12;
+const MAX_COMMENTS_PER_DISCUSSION = 14;
 /** A thread with fewer replies than this carries no discussion signal. */
 const MIN_COMMENTS = 3;
 
