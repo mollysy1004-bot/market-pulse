@@ -23,20 +23,39 @@ export type BriefSource = "generated" | "sample";
  *
  * To add a category: generate it, then add the import and one entry here.
  */
-const GENERATED: Partial<Record<CategoryId, Brief>> = {
-  "ai-app": aiApp as unknown as Brief,
-  "consumer-electronics": consumerElectronics as unknown as Brief,
-  "smart-home": smartHome as unknown as Brief,
-  "3d-printer": printer3d as unknown as Brief,
-  "action-camera": actionCamera as unknown as Brief,
+type BriefFile = Brief & { audienceId: string };
+
+const FILES: Partial<Record<CategoryId, BriefFile>> = {
+  "ai-app": aiApp as unknown as BriefFile,
+  "consumer-electronics": consumerElectronics as unknown as BriefFile,
+  "smart-home": smartHome as unknown as BriefFile,
+  "3d-printer": printer3d as unknown as BriefFile,
+  "action-camera": actionCamera as unknown as BriefFile,
 };
 
+/** The audience a category has been generated for, or null if none has. */
+export function generatedAudienceFor(categoryId: string | undefined): string | null {
+  const file = categoryId ? FILES[categoryId as CategoryId] : undefined;
+  return file?.audienceId ?? null;
+}
+
+/**
+ * Returns the brief to render and the audience it belongs to.
+ *
+ * The audience is returned rather than accepted. It is not a display parameter:
+ * the same corpus asked about students and about parents yields different
+ * findings, so a brief generated for one must not be shown under the other.
+ * Presenting it that way asserts an analysis that was never run — the failure
+ * the citation checks exist to prevent, moved up into the page header — and
+ * returning the real audience means a hand-typed ?audience= cannot cause it.
+ */
 export function getBriefFor(categoryId: string | undefined): {
   brief: Brief;
   source: BriefSource;
+  audienceId: string | null;
 } {
-  const generated = categoryId ? GENERATED[categoryId as CategoryId] : undefined;
-  return generated
-    ? { brief: generated, source: "generated" }
-    : { brief: getSampleBrief(categoryId), source: "sample" };
+  const file = categoryId ? FILES[categoryId as CategoryId] : undefined;
+  return file
+    ? { brief: file, source: "generated", audienceId: file.audienceId }
+    : { brief: getSampleBrief(categoryId), source: "sample", audienceId: null };
 }

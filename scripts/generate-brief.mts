@@ -43,6 +43,11 @@ writeFileSync(rawOut, `${JSON.stringify(modelBrief, null, 2)}\n`, "utf8");
 
 const { brief, warnings } = resolveBrief(modelBrief, corpus, stats);
 
+// The audience is part of what was analysed, not just how the run was invoked:
+// the same corpus asked about a different audience is a different brief. Record
+// it so the site can never present a brief under an audience it did not analyse.
+const briefWithAudience = { ...brief, audienceId };
+
 const inCost = ((usage.input_tokens ?? 0) / 1e6) * 5;
 const outCost = ((usage.output_tokens ?? 0) / 1e6) * 25;
 console.log(
@@ -57,5 +62,5 @@ if (warnings.length) {
 }
 
 const out = path.join(process.cwd(), "data", "briefs", `${categoryId}.json`);
-writeFileSync(out, `${JSON.stringify(brief, null, 2)}\n`, "utf8");
+writeFileSync(out, `${JSON.stringify(briefWithAudience, null, 2)}\n`, "utf8");
 console.log(`\nAll citations check out. Wrote ${out}`);

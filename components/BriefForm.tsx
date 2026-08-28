@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState, useTransition } from "react";
 import { AUDIENCES, CATEGORIES, MARKETS, type Option } from "@/lib/options";
+import { generatedAudienceFor } from "@/lib/brief";
 
 function Field({
   label,
@@ -64,7 +65,28 @@ export function BriefForm() {
   const [isPending, startTransition] = useTransition();
   const [category, setCategory] = useState("ai-app");
   const [market, setMarket] = useState("uk");
-  const [audience, setAudience] = useState("students");
+  const [audience, setAudience] = useState(
+    () => generatedAudienceFor("ai-app") ?? "students",
+  );
+
+  /**
+   * Each category has been analysed for one audience. Offering the rest as
+   * selectable would promise an analysis that does not exist, so they are
+   * shown — the intended scope is worth seeing — and disabled.
+   */
+  const analysedAudience = generatedAudienceFor(category);
+  const audienceOptions: Option[] = AUDIENCES.map((option) =>
+    analysedAudience === null || option.id === analysedAudience
+      ? option
+      : { ...option, available: false, hint: "not yet generated" },
+  );
+
+  /** Changing category changes which audience exists; follow it. */
+  function handleCategoryChange(next: string) {
+    setCategory(next);
+    const nextAudience = generatedAudienceFor(next);
+    if (nextAudience) setAudience(nextAudience);
+  }
 
   function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
@@ -82,7 +104,7 @@ export function BriefForm() {
           name="category"
           options={CATEGORIES}
           value={category}
-          onChange={setCategory}
+          onChange={handleCategoryChange}
         />
         <Field
           label="Market"
@@ -94,7 +116,7 @@ export function BriefForm() {
         <Field
           label="Target audience"
           name="audience"
-          options={AUDIENCES}
+          options={audienceOptions}
           value={audience}
           onChange={setAudience}
         />
@@ -109,8 +131,9 @@ export function BriefForm() {
           {isPending ? "Generating brief…" : "Generate brief"}
         </button>
         <p className="text-[13px] leading-relaxed text-muted">
-          Only the United Kingdom is supported in this version. Other markets
-          are listed to show the intended scope.
+          Only the United Kingdom is supported in this version, and each
+          category has been analysed for one audience. The other options are
+          listed to show the intended scope.
         </p>
       </div>
     </form>

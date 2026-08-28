@@ -64,10 +64,17 @@ export default async function BriefPage({
   const marketId = first(params.market) ?? "uk";
   const audienceId = first(params.audience) ?? "students";
 
-  const { brief, source } = getBriefFor(categoryId);
+  const { brief, source, audienceId: analysedAudience } = getBriefFor(categoryId);
+  // The heading names the audience the brief was analysed for, not the one the
+  // URL asked for. They differ when someone selects an audience this category
+  // has not been generated for, and the brief must not be relabelled to match.
+  const shownAudience = analysedAudience ?? audienceId;
+  const audienceMismatch =
+    analysedAudience !== null && analysedAudience !== audienceId;
+
   const categoryLabel = labelFor(CATEGORIES, brief.categoryId);
   const marketLabel = labelFor(MARKETS, marketId);
-  const audienceLabel = labelFor(AUDIENCES, audienceId);
+  const audienceLabel = labelFor(AUDIENCES, shownAudience);
 
   const subreddits = SUBREDDIT_MAP[brief.categoryId as CategoryId];
   const thinCoverage = THIN_UK_COVERAGE.includes(brief.categoryId as CategoryId);
@@ -138,6 +145,16 @@ export default async function BriefPage({
               has not been generated yet, so the structure below is rendered with
               illustrative data. The quotes and figures are written examples
               rather than live results.
+            </p>
+          )}
+
+          {audienceMismatch && (
+            <p className="mt-4 border-l-2 border-conf-medium bg-surface-sunk px-5 py-4 text-[14px] leading-relaxed text-ink-soft">
+              <span className="font-medium">Different audience requested.</span>{" "}
+              You asked for {labelFor(AUDIENCES, audienceId)}, but this category
+              has only been analysed for {audienceLabel}. The brief below is the{" "}
+              {audienceLabel} analysis, shown as it was produced — it has not
+              been relabelled.
             </p>
           )}
 
