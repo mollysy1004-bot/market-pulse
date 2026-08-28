@@ -17,7 +17,7 @@ export function SiteHeader() {
             href="/#generate"
             className="text-ink-soft transition-colors hover:text-ink"
           >
-            Generate
+            Briefs
           </Link>
           <Link
             href="/about"

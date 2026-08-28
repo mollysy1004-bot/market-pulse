@@ -128,10 +128,17 @@ export function BriefForm() {
           disabled={isPending}
           className="inline-flex items-center justify-center rounded-sm bg-ink px-7 py-3.5 text-[15px] font-medium text-paper transition-opacity hover:opacity-88 disabled:opacity-60"
         >
-          {isPending ? "Generating brief…" : "Generate brief"}
+          {isPending ? "Opening…" : "View brief"}
         </button>
         <p className="text-[13px] leading-relaxed text-muted">
-          Only the United Kingdom is supported in this version, and each
+          Briefs are generated ahead of time, not on this click — see{" "}
+          <a
+            href="/about"
+            className="underline decoration-rule underline-offset-[4px] transition-colors hover:text-ink-soft"
+          >
+            why
+          </a>
+          . Only the United Kingdom is supported in this version, and each
           category has been analysed for one audience. The other options are
           listed to show the intended scope.
         </p>

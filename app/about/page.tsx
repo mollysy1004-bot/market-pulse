@@ -125,7 +125,34 @@ export default function AboutPage() {
           </p>
         </Block>
 
-        <Block n="05" title="What this is not">
+        <Block n="05" title="Why the briefs are pre-generated">
+          <p>
+            Opening a brief runs no analysis. Each one was generated in advance
+            from a collected corpus and is served as a static page. The original
+            design generated on demand; building it changed the decision.
+          </p>
+          <p>
+            Generating on demand means every page view depends on Reddit and an
+            AI API both being available and fast. Collection ran into hard rate
+            limiting more than once, and a single brief takes one to three
+            minutes to write. A visitor would be waiting on two external
+            services with no way to tell a slow request from a broken one.
+          </p>
+          <p>
+            Pre-generating trades freshness for reliability, and the trade is a
+            good one here: this is a pre-entry research tool, not a monitoring
+            dashboard. Category sentiment does not turn over hourly, so a corpus
+            refreshed periodically loses nothing that matters. In exchange the
+            site costs nothing to serve, responds immediately, and cannot fail
+            because someone else&rsquo;s API is down.
+          </p>
+          <p>
+            The cost is stated rather than hidden: every brief names the window
+            its evidence was collected in, so a reader can see how current it is.
+          </p>
+        </Block>
+
+        <Block n="06" title="What this is not">
           <p>
             This is a prototype, not an enterprise product. It is not a creator
             database, a social listening dashboard, a brand monitoring tool or a
@@ -141,7 +168,7 @@ export default function AboutPage() {
           </p>
         </Block>
 
-        <Block n="06" title="Who built it">
+        <Block n="07" title="Who built it">
           <p>
             Sijia Huang, MSc Marketing Management with Advertising at the
             University of Leeds. The UK market was built first because it is the

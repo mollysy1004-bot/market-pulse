@@ -146,14 +146,16 @@ export default function Home() {
         >
           <div className="mx-auto max-w-6xl px-6 py-24 lg:px-10">
             <div className="max-w-2xl">
-              <SectionNumber n="Generate" />
+              <SectionNumber n="Briefs" />
               <h2 className="mt-3 font-display text-[32px] leading-[1.2] font-medium tracking-[-0.015em] sm:text-[40px]">
-                Generate a market entry brief
+                Open a market entry brief
               </h2>
               <p className="mt-4 text-[16px] leading-[1.65] text-ink-soft">
-                Choose a category, a market and an audience. The brief that
-                comes back is structured the same way every time, so two markets
-                can be compared without re-reading the analysis.
+                Choose a category, a market and an audience. Every brief is
+                structured the same way, so two markets can be compared without
+                re-reading the analysis. The briefs are generated ahead of time
+                and served as static pages — opening one runs no analysis and
+                calls no API.
               </p>
             </div>
             <div className="mt-2 max-w-4xl">
