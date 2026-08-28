@@ -13,9 +13,15 @@ export async function generateModelBrief(
 ): Promise<{ brief: ModelBrief; usage: Anthropic.Usage }> {
   const client = new Anthropic();
 
-  const response = await client.messages.parse({
+  // Streamed rather than a plain parse() call: a full brief needs a max_tokens
+  // large enough that the SDK refuses to run it non-streaming. finalMessage()
+  // still returns the schema-parsed output.
+  const stream = client.messages.stream({
     model: MODEL,
-    max_tokens: 16000,
+    // A full six-section brief runs 12-15k output tokens; 16k left no margin
+    // and a category with more competitors truncated mid-JSON, surfacing as an
+    // opaque parse error rather than as the length limit it was.
+    max_tokens: 32000,
     thinking: { type: "adaptive" },
     output_config: {
       effort: "high",
@@ -33,6 +39,13 @@ export async function generateModelBrief(
     ],
   });
 
+  const response = await stream.finalMessage();
+
+  if (response.stop_reason === "max_tokens") {
+    throw new Error(
+      "Model output hit max_tokens and was cut off mid-brief. Raise max_tokens.",
+    );
+  }
   if (response.stop_reason === "refusal") {
     throw new Error(
       `Model declined: ${response.stop_details?.explanation ?? "no explanation"}`,
