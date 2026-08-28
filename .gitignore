@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+!.env.example
+
+# Collected Reddit content. Regenerable, and not ours to redistribute in bulk.
+# Generated briefs are committed: the site imports them at build time.
+/data/raw
+/data/corpus
+# Raw model output, kept for debugging a failed citation check.
+/data/briefs/*.model.json

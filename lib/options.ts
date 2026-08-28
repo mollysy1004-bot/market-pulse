@@ -94,3 +94,21 @@ export const THIN_UK_COVERAGE: CategoryId[] = ["3d-printer", "action-camera"];
 export function labelFor(options: Option[], id: string | undefined): string {
   return options.find((o) => o.id === id)?.label ?? "—";
 }
+
+/**
+ * Search terms per category, used to find category-relevant discussions inside
+ * each source community.
+ *
+ * This exists because listing endpoints do not work for this product: the hot
+ * and top listings of a general community like r/AskUK are about whatever that
+ * community is talking about, which is almost never the category. Sources are
+ * searched, not browsed, and this mapping is what makes a general UK community
+ * usable as evidence for a specific category.
+ */
+export const CATEGORY_QUERIES: Record<CategoryId, string[]> = {
+  "ai-app": ["ChatGPT", "AI tool", "AI app", "AI subscription", "trust AI", "AI privacy"],
+  "consumer-electronics": ["Anker", "power bank", "charger brand", "worth buying", "warranty"],
+  "smart-home": ["robot vacuum", "smart home", "Roborock", "Dreame", "privacy camera"],
+  "3d-printer": ["Bambu Lab", "first printer", "worth it", "print quality", "customer support"],
+  "action-camera": ["Insta360", "GoPro alternative", "action camera", "worth upgrading", "battery life"],
+};
