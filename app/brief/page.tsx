@@ -356,6 +356,46 @@ export default async function BriefPage({
           title="Competitive landscape"
           purpose="Who consumers raise unprompted, and where the gap sits."
         >
+          {/*
+            Share of voice, computed from the corpus rather than asked of the
+            model: how many of the analysed discussions name each brand. It is
+            awareness inside this evidence, not market share — a brand absent
+            here may still be large — and the label says so, because a bar chart
+            invites the stronger reading.
+          */}
+          <div className="mb-10 border border-rule bg-surface p-6 sm:p-7">
+            <p className="font-mono text-[11px] tracking-[0.1em] text-muted uppercase">
+              Share of discussion
+            </p>
+            <p className="mt-2 max-w-2xl text-[14px] leading-relaxed text-ink-soft">
+              How many of the {brief.discussionsAnalysed} analysed discussions
+              name each brand. This is presence in the conversation, not market
+              share.
+            </p>
+            <ul className="mt-5 space-y-3">
+              {brief.competitive.items.map((competitor) => {
+                const share = Math.round(
+                  (competitor.discussions / brief.discussionsAnalysed) * 100,
+                );
+                return (
+                  <li key={competitor.name} className="flex items-center gap-4">
+                    <span className="w-40 shrink-0 truncate text-[14px] text-ink">
+                      {competitor.name}
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      className="h-2 rounded-full bg-ink/75"
+                      style={{ width: `${Math.max(share, 2)}%` }}
+                    />
+                    <span className="font-mono text-[11px] text-muted">
+                      {competitor.discussions} of {brief.discussionsAnalysed}
+                    </span>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+
           <div className="space-y-9">
             {brief.competitive.items.map((competitor) => (
               <article
