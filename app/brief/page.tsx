@@ -5,7 +5,8 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { EvidencePanel } from "@/components/EvidencePanel";
 import { PullQuote } from "@/components/Quote";
 import { ConfidenceBadge, LocalityTag, SectionNumber } from "@/components/Tags";
-import { getBrief, type EvidenceLink } from "@/lib/mockBrief";
+import { getBriefFor } from "@/lib/brief";
+import { type EvidenceLink } from "@/lib/mockBrief";
 import {
   AUDIENCES,
   CATEGORIES,
@@ -63,7 +64,7 @@ export default async function BriefPage({
   const marketId = first(params.market) ?? "uk";
   const audienceId = first(params.audience) ?? "students";
 
-  const brief = getBrief(categoryId);
+  const { brief, source } = getBriefFor(categoryId);
   const categoryLabel = labelFor(CATEGORIES, brief.categoryId);
   const marketLabel = labelFor(MARKETS, marketId);
   const audienceLabel = labelFor(AUDIENCES, audienceId);
@@ -107,7 +108,9 @@ export default async function BriefPage({
               <dt className="font-mono text-[11px] tracking-[0.1em] text-muted uppercase">
                 Data window
               </dt>
-              <dd className="mt-1.5 text-[15px] text-ink">Last 90 days</dd>
+              <dd className="mt-1.5 text-[15px] text-ink">
+                {brief.dataWindow.replace(/^Posts and comment threads from /, "")}
+              </dd>
             </div>
             <div>
               <dt className="font-mono text-[11px] tracking-[0.1em] text-muted uppercase">
@@ -119,13 +122,24 @@ export default async function BriefPage({
             </div>
           </dl>
 
-          {/* Honesty notice — this is sample data, not live analysis. */}
-          <p className="mt-8 border-l-2 border-rule bg-surface-sunk px-5 py-4 text-[14px] leading-relaxed text-ink-soft">
-            <span className="font-medium">Sample brief.</span> This prototype
-            renders the brief structure using illustrative data. The Reddit
-            pipeline and AI analysis are not connected yet, so the quotes and
-            figures below are written examples rather than live results.
-          </p>
+          {/* Provenance notice — a generated brief and a written example must never read alike. */}
+          {source === "generated" ? (
+            <p className="mt-8 border-l-2 border-conf-high bg-surface-sunk px-5 py-4 text-[14px] leading-relaxed text-ink-soft">
+              <span className="font-medium">Generated brief.</span> Every finding
+              below comes from {brief.discussionsAnalysed} Reddit discussions
+              collected from the communities listed above and analysed against
+              them. Each quote was checked to appear verbatim in the discussion
+              it is attributed to; the brief is not published if any citation
+              fails that check.
+            </p>
+          ) : (
+            <p className="mt-8 border-l-2 border-rule bg-surface-sunk px-5 py-4 text-[14px] leading-relaxed text-ink-soft">
+              <span className="font-medium">Sample brief.</span> This category
+              has not been generated yet, so the structure below is rendered with
+              illustrative data. The quotes and figures are written examples
+              rather than live results.
+            </p>
+          )}
 
           {thinCoverage && (
             <p className="mt-4 border-l-2 border-conf-medium bg-surface-sunk px-5 py-4 text-[14px] leading-relaxed text-ink-soft">
