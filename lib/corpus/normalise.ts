@@ -31,20 +31,21 @@ function isMetaPost(title: string): boolean {
 }
 
 /**
- * Whether a discussion is actually about the category, rather than merely
- * matching a search term somewhere.
+ * Whether a discussion is actually about the category.
  *
- * Reddit's search is loose, and ranking the matches by comment count pulls in
- * a community's biggest threads regardless of topic — a r/UKPersonalFinance
- * thread about retirement outranks every real discussion of AI pricing. A
- * discussion qualifies only if the category is what the thread is about — a
- * term in the title or body. Allowing comment-level matches instead let
- * general threads in whenever a few commenters mentioned the category in
- * passing, which is not the same as the community discussing it.
+ * Retrieval and validation are separate steps with separate word lists.
+ * Searching is broad on purpose — the language of buying finds real discussion
+ * — but those same words cannot decide what was bought: "worth buying" and
+ * "warranty" matched cookware, a razor and a car finance dispute, all of which
+ * entered the consumer electronics corpus looking like evidence.
+ *
+ * The gate therefore tests category anchors — product entities and brands —
+ * and only in the title or body, so the discussion is about the category
+ * rather than merely mentioning it once in a reply.
  */
-function isOnTopic(post: RawPost, terms: string[]): boolean {
-  if (terms.length === 0) return true;
-  const patterns = terms.map((t) => {
+function isOnTopic(post: RawPost, anchors: string[]): boolean {
+  if (anchors.length === 0) return true;
+  const patterns = anchors.map((t) => {
     const escaped = t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     // Acronyms match case-sensitively: a case-insensitive "AI" also matches
     // air, aid and aim, which quietly readmits every off-topic thread.
@@ -59,7 +60,7 @@ export function normaliseDiscussions(
   raw: RawDiscussion[],
   subreddit: string,
   locality: Locality,
-  relevanceTerms: string[] = [],
+  anchors: string[] = [],
 ): Discussion[] {
   const seen = new Set<string>();
   const out: Discussion[] = [];
@@ -67,7 +68,7 @@ export function normaliseDiscussions(
   for (const { post, comments } of raw) {
     if (!post?.id || seen.has(post.id)) continue;
     if (isMetaPost(post.title)) continue;
-    if (!isOnTopic(post, relevanceTerms)) continue;
+    if (!isOnTopic(post, anchors)) continue;
 
     const kept = comments
       .filter((c) => c.body && !DELETED.has(c.body.trim()))

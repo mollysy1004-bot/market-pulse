@@ -154,3 +154,55 @@ export const CATEGORY_QUERIES: Record<CategoryId, string[]> = {
     "battery life", "worth upgrading", "overheating", "app", "mounts",
   ],
 };
+
+/**
+ * Category anchors: the terms that decide whether a discussion is about the
+ * category at all.
+ *
+ * These are deliberately not the search terms. Retrieval wants breadth, so
+ * CATEGORY_QUERIES includes the language of buying — "worth buying",
+ * "warranty", "customer support" — which finds real discussion inside a
+ * category's own communities. Those words prove a thread is about a purchase;
+ * they do not prove what was purchased. Used as a relevance test in a
+ * general-purpose community they admitted cookware, a razor and a car finance
+ * dispute into the consumer electronics corpus.
+ *
+ * Anchors name product entities and brands instead, so the gate asks the
+ * question it is actually for: is this discussion about this category?
+ * Retrieval stays broad, validation stays strict, and the two no longer share
+ * a list that cannot serve both.
+ */
+export const CATEGORY_ANCHORS: Record<CategoryId, string[]> = {
+  "ai-app": [
+    "AI", "LLM", "ChatGPT", "Copilot", "Gemini", "Claude",
+    "chatbot", "AI tool", "AI app", "prompt",
+  ],
+  // Bare everyday nouns — charger, phone, laptop — are not anchors in a general
+  // community: everyone owns one and mentions it in passing, which readmitted
+  // "what do you carry in your work bag" and "what has your kid lost at
+  // school". Anchors here are brands and compound product terms. Phones and
+  // laptops drop out with them, which matches the product's scope: a Chinese
+  // phone brand entering the UK already has brand mentions to monitor, and this
+  // is a tool for categories where it has none.
+  "consumer-electronics": [
+    "Anker", "Ugreen", "Baseus", "EcoFlow", "Belkin", "Soundcore",
+    "power bank", "portable charger", "charging station", "wall charger",
+    "USB-C cable", "earbuds", "headphones", "earphones",
+    "SSD", "hard drive", "external drive",
+  ],
+  "smart-home": [
+    "Roborock", "Dreame", "Eufy", "Aqara", "Alexa", "Home Assistant",
+    "robot vacuum", "smart home", "smart plug", "smart bulb",
+    "security camera", "doorbell", "thermostat", "smart lock", "hub",
+  ],
+  "3d-printer": [
+    "Bambu", "Creality", "Prusa", "Elegoo", "Ender",
+    "3D print", "3D printer", "filament", "nozzle", "resin",
+    "PLA", "PETG", "slicer", "bed levelling", "bed leveling",
+  ],
+  "action-camera": [
+    "GoPro", "Insta360", "Osmo", "Akaso", "DJI",
+    "action camera", "action cam", "360 camera", "helmet mount",
+    "chest mount", "gimbal", "Hero",
+  ],
+};
