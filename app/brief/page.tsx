@@ -216,12 +216,20 @@ export default async function BriefPage({
                 </div>
                 <div className="mt-4 pl-0 sm:pl-9">
                   <PullQuote quote={barrier.quote} />
-                  <p className="mt-4 max-w-2xl text-[15px] leading-[1.7] text-ink-soft">
-                    <span className="font-mono text-[11px] tracking-[0.08em] text-muted uppercase">
-                      Implication&nbsp;&nbsp;
-                    </span>
-                    {barrier.implication}
-                  </p>
+                  {/*
+                    The implication is the line a marketer acts on, and it read
+                    as more body text beside the quote it follows. Content and
+                    positioning carry their action in a heading already; this
+                    section did not, so it gets a rule of its own.
+                  */}
+                  <div className="mt-5 border-l-2 border-rule pl-4">
+                    <p className="font-mono text-[10px] tracking-[0.1em] text-muted uppercase">
+                      Implication
+                    </p>
+                    <p className="mt-1.5 max-w-2xl text-[15px] leading-[1.7] text-ink">
+                      {barrier.implication}
+                    </p>
+                  </div>
                 </div>
               </li>
             ))}
@@ -275,8 +283,26 @@ export default async function BriefPage({
         <SectionShell
           n="Section 4"
           title="Creator signals"
-          purpose="What the conversations reveal about who this audience listens to — observed preference, not a hiring list."
+          purpose="Who holds authority in these conversations — a read on the discourse, not creator research."
         >
+          {/*
+            A standing limitation, not a per-brief one. Reddit discussions name
+            products and brands constantly and name creators almost never, so
+            this section cannot report which creators an audience follows. It
+            reports whose contributions the community defers to, which is a
+            weaker and different thing, and the page says so rather than
+            letting the section read as a creator shortlist.
+          */}
+          <p className="mb-10 border-l-2 border-conf-medium bg-surface-sunk px-5 py-4 text-[14px] leading-relaxed text-ink-soft">
+            <span className="font-medium">What this section can and cannot
+            show.</span> Reddit discussions name products and brands
+            constantly, and creators almost never — this corpus names none at
+            all. What follows is therefore a read on whose contributions carry
+            weight inside these communities, not a finding about which creators
+            the audience follows elsewhere. Creator selection needs a source
+            that carries creator data; this is not one.
+          </p>
+
           <div className="space-y-10">
             {brief.creators.items.map((signal) => (
               <article key={signal.signal}>

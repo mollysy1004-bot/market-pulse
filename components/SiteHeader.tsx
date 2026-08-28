@@ -20,6 +20,12 @@ export function SiteHeader() {
             Briefs
           </Link>
           <Link
+            href="/process"
+            className="text-ink-soft transition-colors hover:text-ink"
+          >
+            How it was built
+          </Link>
+          <Link
             href="/about"
             className="text-ink-soft transition-colors hover:text-ink"
           >
