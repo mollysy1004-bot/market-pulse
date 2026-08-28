@@ -1,15 +1,19 @@
 {
   "categoryId": "3d-printer",
-  "audienceId": "tech-enthusiasts",
-  "discussionsAnalysed": 18,
+  "discussionsAnalysed": 34,
   "ukDiscussions": 0,
-  "globalDiscussions": 18,
-  "dataWindow": "Posts and comment threads from Sept 2025 to May 2026",
+  "globalDiscussions": 34,
+  "dataWindow": "Posts and comment threads from Sept 2025 to Jul 2026",
   "sentiment": {
     "label": "Mixed",
-    "headline": "Deep admiration for cheap, works-out-of-the-box Chinese machines sitting alongside an active, angry backlash about closed ecosystems — and, in places, about Chinese ownership itself",
-    "summary": "Across the corpus, enthusiasts consistently praise the reliability, speed and ease-of-use that Chinese-made printers (overwhelmingly Bambu Lab) brought to the category, while simultaneously running a sustained revolt over firmware lockdown, a cease-and-desist against a third-party slicer developer, and alleged AGPL violations. Several discussions show buyers who love their hardware yet state they will not repurchase. A minority of comments generalise the grievance to Chinese manufacturing and state influence, which is a live reputational risk for any Chinese brand entering this segment. Crucially, none of the 18 discussions is tagged UK — every thread is Global — so this is a category-level enthusiast sentiment pattern, not a measured UK sentiment reading.",
+    "headline": "Hardware admiration runs high, brand trust runs low — and the loudest distrust is aimed squarely at a Chinese incumbent",
+    "summary": "Across 34 discussions (all tagged Global; none tagged UK), enthusiasts separate hardware from company. Bambu Lab's machines are repeatedly praised as fast, reliable and beginner-proof, while the same threads carry sustained anger about cloud authentication, legal threats to an open-source developer, and support handling. Roughly 12 of the 34 discussions raise ecosystem lock-in or open-source grievance, and a smaller set (5) explicitly frames the issue in terms of the brand being Chinese — servers, jurisdiction and IP hypocrisy. A parallel current is straightforwardly positive: functional-print wins, cosplay quality jumps and 'it just works' relief from ex-Ender owners. Critically, none of this evidence is UK-located, so it describes a category conversation this audience is having, not a measured UK stance.",
     "quotes": [
+      {
+        "text": "Bambulab is an objectively terrible company with objectively terrific hardware. That about sums it up.",
+        "subreddit": "3Dprinting",
+        "locality": "Global"
+      },
       {
         "text": "Makes me so sad. I really wanted to like Bambu but I've made right to repair non negotiable in my life",
         "subreddit": "3Dprinting",
@@ -21,29 +25,24 @@
         "locality": "Global"
       },
       {
-        "text": "I'm sorry but there's not a single printer that competes with Bambu in terms of ease of use.",
+        "text": "self admitted niche segment of the 3d community complains about niche problems and asks us all to boycott.",
         "subreddit": "BambuLab",
         "locality": "Global"
       },
       {
-        "text": "I'm quite happy with Bambu unless something better comes along. So far I'm not seeing it.",
-        "subreddit": "BambuLab",
-        "locality": "Global"
-      },
-      {
-        "text": "Great news! Meantime we’ve put on hold all our Bambu related plans and switched suppliers.",
-        "subreddit": "BambuLab",
-        "locality": "Global"
-      },
-      {
-        "text": "Bambu Lab is amazing for speed, ease, and daily production.",
+        "text": "I did the jump to a P2s the other day, its like living in the future.",
         "subreddit": "ender3",
+        "locality": "Global"
+      },
+      {
+        "text": "This is exactly why I bought my 3D printer.",
+        "subreddit": "functionalprint",
         "locality": "Global"
       }
     ],
     "evidence": {
       "confidence": "Medium",
-      "basis": "18 discussions, all Global-tagged and 0 UK-tagged; the love/backlash split is consistent across at least 8 of them, but no UK-specific sentiment can be verified from this corpus.",
+      "basis": "0 UK-tagged and 34 global discussions; the hardware-good/company-bad split appears consistently in at least 10 separate threads, but no discussion establishes a UK point of view.",
       "sources": [
         {
           "subreddit": "3Dprinting",
@@ -53,6 +52,21 @@
         {
           "subreddit": "3Dprinting",
           "postTitle": "My first 3D Printer was from Bambu Lab. My next one won't be. Have other manufacturers caught up in affordability and ease-of-use?",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "3Dprinting",
+          "postTitle": "Does the recent Bambu labs drama make them worse as a starter choice?",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "3Dprinting",
+          "postTitle": "Sh*** is going to hit the fan. GamersNexus joins the fight against Bambu Labs.",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "3Dprinting",
+          "postTitle": "Had to replace my Mando helmet. Tested with my new printer. DAGGONE that's a quality jump.",
           "locality": "Global"
         },
         {
@@ -67,22 +81,22 @@
         },
         {
           "subreddit": "BambuLab",
-          "postTitle": "Bambu Lab A2L: Creative Playground. Extra Large.",
+          "postTitle": "Day 3 of bambu labs refusing to replace my printer bed after their Gcode tore a hole through it.",
           "locality": "Global"
         },
         {
           "subreddit": "BambuLab",
-          "postTitle": "The Software Freedom Conservancy (SFC) just launched a massive counter-offensive against Bambu Lab over AGPL violations – Introducing Project \"baltobu\"",
+          "postTitle": "SPC Joins Against Bambu Labs",
           "locality": "Global"
         },
         {
           "subreddit": "ender3",
-          "postTitle": "Why many people hate Ender 3?",
+          "postTitle": "It’s been real, and it’s been fun…",
           "locality": "Global"
         },
         {
-          "subreddit": "ender3",
-          "postTitle": "Ender 3 vs Bambu lab A1",
+          "subreddit": "functionalprint",
+          "postTitle": "Why pay $18 when you can 3D print it for $0.40?",
           "locality": "Global"
         }
       ]
@@ -91,73 +105,88 @@
   "barriers": {
     "items": [
       {
-        "name": "Closed ecosystem, cloud dependency and loss of local control",
-        "frequency": "6 of 18 discussions",
+        "name": "Closed ecosystem, cloud authentication and right-to-repair anger",
+        "frequency": "12 of 34 discussions",
         "quote": {
-          "text": "I set mine to LAN mode and monitor them from Home Assistant. Blocked at the firewall.",
-          "subreddit": "BambuLab",
-          "locality": "Global"
-        },
-        "implication": "Enthusiasts treat offline/LAN operation, open firmware and third-party slicer support as purchase-blocking requirements; a Chinese entrant that ships cloud-first will be read through the Bambu controversy on day one."
-      },
-      {
-        "name": "Right to repair, spare parts and product lifecycle",
-        "frequency": "2 of 18 discussions",
-        "quote": {
-          "text": "They're absolute workhorses, have good parts availability and upgrades, and take open source and privacy seriously.",
+          "text": "Companies like bambu will kill 3d printing which gained so much from it's open source nature. It's gross.",
           "subreddit": "3Dprinting",
           "locality": "Global"
         },
-        "implication": "Parts availability and long support windows are named as reasons to pay more for a rival; short EOL cycles are called out explicitly as a reason to distrust a brand."
+        "implication": "For a Chinese brand entering now, any firmware lock, mandatory cloud path or third-party-slicer restriction is pre-loaded with negative meaning in this audience's vocabulary."
       },
       {
-        "name": "Country-of-origin distrust and geopolitics",
-        "frequency": "2 of 18 discussions",
+        "name": "Legal action against open-source developers",
+        "frequency": "6 of 34 discussions",
         "quote": {
-          "text": "And people wonder how prusa is still thriving in a world full of chinese subsidized printers.",
+          "text": "Getting real tired of your shit, Bambu.",
           "subreddit": "BambuLab",
           "locality": "Global"
         },
-        "implication": "A visible minority frames the dispute in national terms, including claims about Chinese legal obligations on manufacturers; a Chinese brand should expect this framing to attach to it regardless of its own conduct."
+        "implication": "Enforcement behaviour, not product behaviour, generated the largest reaction threads in the corpus — including organised counter-action by the Software Freedom Conservancy."
       },
       {
-        "name": "After-sales support, returns and delivery damage",
-        "frequency": "2 of 18 discussions",
+        "name": "Country-of-origin distrust: data, servers and jurisdiction",
+        "frequency": "5 of 34 discussions",
         "quote": {
-          "text": "I'm currently dealing with bambu lab customer support over issues with my AMS lite. They do respond, but expect a 2-3 day delay between interactions.",
-          "subreddit": "3Dprinting",
+          "text": "Both are now in LAN mode (bye Chinese servers), and next printer this Fall will be a Prusa.",
+          "subreddit": "BambuLab",
           "locality": "Global"
         },
-        "implication": "Ticket-only support with multi-day latency and direct-shipping risk pushes buyers toward retail channels that offer easy returns and warranty cover."
+        "implication": "Chinese ownership is raised unprompted as a reason to distrust cloud connectivity and IP claims; a European open-source alternative is named as the escape route."
       },
       {
-        "name": "Home environment: fumes, ventilation and space",
-        "frequency": "2 of 18 discussions",
+        "name": "Customer support and RMA experience",
+        "frequency": "3 of 34 discussions",
+        "quote": {
+          "text": "I’ve never seen a company like Bambu. A product far beyond its competitors with the SHITTIEST customer service.",
+          "subreddit": "BambuLab",
+          "locality": "Global"
+        },
+        "implication": "Ticket-only support with multi-day latency is described as the weak point behind good hardware — a concrete, addressable differentiator."
+      },
+      {
+        "name": "Total-cost scepticism when justifying a printer",
+        "frequency": "3 of 34 discussions",
+        "quote": {
+          "text": "The answer is because its not £0.40. Its the £200 printer, + £25 roll of filament, + your skill and talent.",
+          "subreddit": "functionalprint",
+          "locality": "Global"
+        },
+        "implication": "Savings claims get audited by the audience; value messaging needs to survive a comments-section teardown."
+      },
+      {
+        "name": "Home safety: fumes, ventilation and living-space fit",
+        "frequency": "1 of 34 discussions",
         "quote": {
           "text": "The fumes are real. They can give some people a headache.",
           "subreddit": "3Dprinting",
           "locality": "Global"
         },
-        "implication": "Household acceptance is a real purchase barrier in small flats; enclosure, filtration and venting guidance is a live pre-purchase question, not an accessory upsell."
+        "implication": "Thin evidence — one discussion only — but it is a household-adoption objection in a small-apartment context, relevant to any market where printers live in living rooms."
       },
       {
-        "name": "Hidden cost creep on cheap machines",
-        "frequency": "3 of 18 discussions",
+        "name": "Hardware failure and fire-risk chatter",
+        "frequency": "2 of 34 discussions",
         "quote": {
-          "text": "This feels like the start of a bunch of micro purchases that all add up.",
-          "subreddit": "ender3",
+          "text": "Just watched the video and DAMN. even if this was hypothetical a slicing error on OPs part (not saying it is) Bambu studio should have caught this, and the machine should have caught this.",
+          "subreddit": "BambuLab",
           "locality": "Global"
         },
-        "implication": "Budget buyers are increasingly told that upgrade spend on a cheap printer exceeds the price of a capable ready-to-run machine — total cost of ownership is the argument that wins these threads."
+        "implication": "Safety rumours circulate quickly and attach to the brand rather than the unit; sensor-and-abort behaviour is treated as a trust feature."
       }
     ],
     "evidence": {
       "confidence": "Medium",
-      "basis": "6 barrier themes drawn from 18 Global-tagged discussions and 0 UK-tagged ones; the ecosystem/openness barrier recurs in 6 separate threads, the others in 2–3 each, so frequency is thin outside the top theme.",
+      "basis": "0 UK-tagged and 34 global discussions; the top barrier appears in 12 separate threads, but the fumes and safety barriers rest on 1–2 threads each and are labelled thin.",
       "sources": [
         {
           "subreddit": "3Dprinting",
           "postTitle": "Bambu Lab 3D printers: Never again",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "3Dprinting",
+          "postTitle": "Louis Rossman talks about Bambu Labs sending legal threats to orca slicer",
           "locality": "Global"
         },
         {
@@ -172,7 +201,12 @@
         },
         {
           "subreddit": "3Dprinting",
-          "postTitle": "My first 3D Printer was from Bambu Lab. My next one won't be. Have other manufacturers caught up in affordability and ease-of-use?",
+          "postTitle": "Does the recent Bambu labs drama make them worse as a starter choice?",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "3Dprinting",
+          "postTitle": "Sh*** is going to hit the fan. GamersNexus joins the fight against Bambu Labs.",
           "locality": "Global"
         },
         {
@@ -187,12 +221,22 @@
         },
         {
           "subreddit": "BambuLab",
+          "postTitle": "This is unacceptable BambuLabs...",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "BambuLab",
+          "postTitle": "Day 3 of bambu labs refusing to replace my printer bed after their Gcode tore a hole through it.",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "BambuLab",
           "postTitle": "The Software Freedom Conservancy (SFC) just launched a massive counter-offensive against Bambu Lab over AGPL violations – Introducing Project \"baltobu\"",
           "locality": "Global"
         },
         {
-          "subreddit": "ender3",
-          "postTitle": "Are these worth it or total waste of money?",
+          "subreddit": "BambuLab",
+          "postTitle": "SPC Joins Against Bambu Labs",
           "locality": "Global"
         },
         {
@@ -202,12 +246,12 @@
         },
         {
           "subreddit": "ender3",
-          "postTitle": "I wasted $800 on my first 3D printer. Here's what I learned so you don't have to.",
+          "postTitle": "Hello i just bought my first 3d printer (ender 3 pro) what do you guys think?",
           "locality": "Global"
         },
         {
-          "subreddit": "ender3",
-          "postTitle": "Is this worth it?",
+          "subreddit": "functionalprint",
+          "postTitle": "Why pay $18 when you can 3D print it for $0.40?",
           "locality": "Global"
         }
       ]
@@ -216,43 +260,73 @@
   "content": {
     "items": [
       {
-        "hook": "\"Works offline, stays yours\" — a plain demonstration of LAN-only printing, third-party slicer support and firmware you can roll back",
-        "why": "Local control is the single most repeated grievance in the corpus, and users already describe firewalling printers and running LAN mode themselves.",
-        "format": "Short demo video plus a written spec page listing what works with no internet connection; mirrored in enthusiast threads where the alternatives question is being asked."
+        "hook": "Plain-English 'you own this machine' explainer: local/LAN printing, third-party slicer support, and what the printer does when the internet is off",
+        "why": "Cloud lock-in and LAN-mode workarounds are the single most-discussed theme in the corpus, with users describing firewalling printers and flashing alternative firmware (D12, D21).",
+        "format": "Short demo video plus a written, versioned commitments page the community can quote back"
       },
       {
-        "hook": "\"What breaks and what it costs\" — teardown plus a public spare-parts list with prices and support timelines",
-        "why": "Parts availability, repairability and end-of-life support are cited as reasons buyers pay more for rivals and distrust cheap-cycle brands.",
-        "format": "Repair teardown video and a permanent parts/lifecycle page."
+        "hook": "First 100 hours: the beginner checklist enthusiasts write for each other",
+        "why": "A new-owner thread self-organised into a numbered tips list — dry filament, clean plate, learn CAD, print for your printer — showing exactly what onboarding content the audience values (D19), echoed by advice to buy into a large community (D24).",
+        "format": "Checklist post plus short maintenance clips mapped to each item"
       },
       {
-        "hook": "\"Printing in a one-bedroom flat\" — fumes, filtration, venting and noise, tested",
-        "why": "A high-engagement thread was driven entirely by household fume anxiety, with detailed advice on enclosures, HEPA/carbon purifiers and window venting.",
-        "format": "Measured explainer with real VOC/particulate readings, plus a small-space setup guide."
+        "hook": "Repair-instead-of-replace stories with the receipts",
+        "why": "Functional-print threads celebrating an $18 OEM part printed for cents, a melted appliance base and a carton handle draw both enthusiasm and cost-scepticism, which is itself engagement (D34, D33, D32).",
+        "format": "Before/after with model files and honest cost accounting including printer amortisation"
       },
       {
-        "hook": "\"Is this print good?\" — a calibration and first-fault troubleshooting series",
-        "why": "Beginners post prints asking whether quality is normal, and the answers repeatedly converge on dry filament, flow and K-value calibration.",
-        "format": "Short diagnostic clips indexed by symptom, plus a searchable wiki."
+        "hook": "Generational quality-jump comparisons: old bedslinger vs current machine, same model file",
+        "why": "Migration threads from Ender-class machines to modern CoreXY consistently attract detailed comparison and nostalgia (D26, D27, D22, D11).",
+        "format": "Side-by-side timelapse with print time, post-processing hours and failure count stated"
       },
       {
-        "hook": "\"First printer, first week\" — a starter checklist in the style the community already writes for itself",
-        "why": "A beginner tips thread produced a crowd-built numbered list covering maintenance, filament drying, bed hygiene and learning CAD, and brand academy courses were the top-voted recommendation.",
-        "format": "Free structured course plus a printable one-page checklist in the box."
+        "hook": "Ambitious build showcases — instruments, oversized prints, novel kinematics",
+        "why": "The corpus's highest-engagement non-drama threads are creative feats: a song recorded on 3D-printed instruments, a double-delta prototype, a 'what should I print first' huge-printer thread (D7, D10, D6).",
+        "format": "Long-form build documentation with open files"
       },
       {
-        "hook": "\"Old modded machine vs new machine\" — honest head-to-head including where the new machine loses",
-        "why": "Threads comparing tuned Ender 3s against modern machines are popular, and audiences punish comparisons they judge rigged or AI-written.",
-        "format": "Long-form comparison with published settings so viewers can reproduce it."
+        "hook": "Cosplay and props: helmets, hooves and wearables",
+        "why": "Prop and costume threads generate deep technical replies on materials and safety, and one showed a 8-day print cut to 2 days on newer hardware (D11, D18).",
+        "format": "Material-choice guides with named filament types and finishing steps"
+      },
+      {
+        "hook": "Printing where you live: enclosure, filtration and venting for flats",
+        "why": "A small-apartment fumes thread produced concrete purifier and venting recommendations and household negotiation advice (D4).",
+        "format": "Setup guide for shared living spaces"
+      },
+      {
+        "hook": "Wear-and-consumables transparency: what breaks after thousands of cycles",
+        "why": "A 10,000-filament-change teardown of PTFE and AMS wear was treated as valuable service journalism and prompted direct demands for a manufacturer response (D17).",
+        "format": "Long-run durability log with maintenance intervals published"
       }
     ],
     "evidence": {
       "confidence": "Medium",
-      "basis": "6 hooks derived from 18 Global-tagged discussions and 0 UK-tagged; each hook maps to at least one high-engagement thread, but no UK-specific content demand is evidenced.",
+      "basis": "0 UK-tagged and 34 global discussions; each hook is drawn from at least one thread and the strongest three from multiple, but no discussion evidences UK-specific content preferences.",
       "sources": [
         {
           "subreddit": "3Dprinting",
           "postTitle": "First printer, wife complaining",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "3Dprinting",
+          "postTitle": "Got myself a ridiculously huge 3D printer. What the heck should I make first?",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "3Dprinting",
+          "postTitle": "I recorded a song using 100% 3d printed instruments. 0 audio effects were used. all the sound you hear is raw audio only.",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "3Dprinting",
+          "postTitle": "I created the World's First Double Delta 3D Printer!",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "3Dprinting",
+          "postTitle": "Had to replace my Mando helmet. Tested with my new printer. DAGGONE that's a quality jump.",
           "locality": "Global"
         },
         {
@@ -262,12 +336,12 @@
         },
         {
           "subreddit": "BambuLab",
-          "postTitle": "Developer re-enables 3D printer features that Bambu Lab disabled, firm promptly threatens legal action — OrcaSlicer-BambuLab project now shuttered",
+          "postTitle": "My experience with 10K+ filament changes on the H2C with Matte PLA",
           "locality": "Global"
         },
         {
           "subreddit": "BambuLab",
-          "postTitle": "Brand new x2d. Is this poor or expected print quality?",
+          "postTitle": "Would this work for funky costume shoes?",
           "locality": "Global"
         },
         {
@@ -276,8 +350,8 @@
           "locality": "Global"
         },
         {
-          "subreddit": "ender3",
-          "postTitle": "Are these worth it or total waste of money?",
+          "subreddit": "BambuLab",
+          "postTitle": "SPC Joins Against Bambu Labs",
           "locality": "Global"
         },
         {
@@ -292,7 +366,27 @@
         },
         {
           "subreddit": "ender3",
+          "postTitle": "It’s been real, and it’s been fun…",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "ender3",
           "postTitle": "Ender 3 vs Bambu lab A1",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "functionalprint",
+          "postTitle": "Got tired of a flimsy cartons - designed a holder (OpenSCAD)",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "functionalprint",
+          "postTitle": "Wife set her Insta-Pot on a hot eye and melted the bottom",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "functionalprint",
+          "postTitle": "Why pay $18 when you can 3D print it for $0.40?",
           "locality": "Global"
         }
       ]
@@ -301,37 +395,58 @@
   "creators": {
     "items": [
       {
-        "signal": "An independent technical YouTuber's critical video became the reference point for the whole ecosystem debate and was reposted into the brand's own community",
-        "evidenceNote": "The same creator's video anchors 2 separate discussions, one in a general printing community and one in the brand's own subreddit, generating hundreds of comments in each.",
-        "profile": "Independent technical reviewer with a right-to-repair and open-source framing",
-        "platform": "YouTube, amplified via Reddit reposts",
-        "scale": "2 of 18 discussions are built directly around a single creator's video"
+        "signal": "Independent right-to-repair and homelab commentary is treated as verdict-setting: a single video title became the framing for two separate threads",
+        "evidenceNote": "Jeff Geerling is named in 2 discussions, one in a general printing community and one inside the brand's own community, both summarising his position rather than debating the facts.",
+        "profile": "Independent tech/self-hosting commentator with a repair-rights stance",
+        "platform": "YouTube, resurfaced on Reddit",
+        "scale": "Not stated in the corpus"
       },
       {
-        "signal": "Open-source developers and advocacy organisations are treated as credible authorities, and their actions drive purchase reversals",
-        "evidenceNote": "2 discussions centre on a developer's shuttered slicer fork and a conservancy's licence counter-offensive; commenters in those threads state they have switched suppliers or will not repurchase.",
-        "profile": "Software developers, licence-compliance advocates, and a rival founder quoted as a source",
-        "platform": "GitHub and Reddit, with a founder's tweet circulated as evidence",
-        "scale": "2 of 18 discussions, both high-comment"
+        "signal": "Repair-advocacy channels are credited with shielding an individual developer from legal pressure",
+        "evidenceNote": "Louis Rossmann is referenced in 3 discussions; commenters explicitly value the protection effect of a large channel taking up the case.",
+        "profile": "Consumer-rights and repair advocate",
+        "platform": "YouTube",
+        "scale": "Not stated in the corpus"
       },
       {
-        "signal": "Explicit hostility to paid or covert influencer marketing",
-        "evidenceNote": "2 discussions contain accusations of astroturfing and 'guerilla marketing', used as a reason to reject a brand outright.",
-        "profile": "Sceptical enthusiast commenters policing perceived sponsorship",
-        "platform": "Reddit",
-        "scale": "2 of 18 discussions"
+        "signal": "Hardware-journalism outlets moving into consumer-protection reporting are welcomed as escalation points",
+        "evidenceNote": "GamersNexus is the subject of 1 discussion, whose top comment frames their involvement as changing the balance of power.",
+        "profile": "Hardware testing and investigative outlet",
+        "platform": "Website and YouTube, linked into Reddit",
+        "scale": "Not stated in the corpus"
       },
       {
-        "signal": "Peer-to-peer tutorial links and brand-run academy material are shared approvingly inside help threads",
-        "evidenceNote": "3 discussions show users linking YouTube tutorials or a manufacturer wiki/academy as the answer to beginner questions, with the academy recommendation the top-voted comment in one thread.",
-        "profile": "Tutorial channels and official education content rather than personality-led reviewers",
-        "platform": "YouTube plus manufacturer wiki, surfaced in Reddit threads",
-        "scale": "3 of 18 discussions"
+        "signal": "Competitor founders and software-freedom organisations function as credibility sources within threads",
+        "evidenceNote": "Josef Prusa's post and the Software Freedom Conservancy are cited in 2 discussions as evidence in arguments, with users reporting donations.",
+        "profile": "Founder commentary and non-profit advocacy",
+        "platform": "X/GitHub links shared on Reddit",
+        "scale": "Not stated in the corpus"
+      },
+      {
+        "signal": "Suspicion of paid or covert promotion is active and vocal — creator association can backfire",
+        "evidenceNote": "3 discussions contain accusations of astroturfing, guerrilla marketing or paid influencers appearing in comment sections.",
+        "profile": "Not a creator type but an audience filter applied to all creators",
+        "platform": "Reddit comment sections",
+        "scale": "Three separate threads"
+      },
+      {
+        "signal": "Disclosed hardware sponsorship of a hobbyist build project drew no backlash in the thread",
+        "evidenceNote": "1 discussion features an open-source printer build whose author states a filament-brand sponsorship in the post; commentary stays on the engineering.",
+        "profile": "Maker-engineer publishing open documentation",
+        "platform": "Reddit plus GitHub",
+        "scale": "Single high-engagement thread"
+      },
+      {
+        "signal": "Model-sharing platforms act as the discovery layer creators point newcomers toward",
+        "evidenceNote": "MakerWorld and Printables links appear in 4 discussions as the default answer to 'what do I print / where do I get files'.",
+        "profile": "Designers publishing free models",
+        "platform": "MakerWorld, Printables",
+        "scale": "Not stated in the corpus"
       }
     ],
     "evidence": {
       "confidence": "Low",
-      "basis": "Only 4 creator-related patterns across 18 Global-tagged discussions and 0 UK-tagged; no UK creator is named anywhere in the corpus, so nothing here evidences UK creator preference.",
+      "basis": "0 UK-tagged and 34 global discussions; named creators appear in only 1–3 threads each and none of the mentions are attributable to UK participants, so this shows observed reference patterns in a global conversation only.",
       "sources": [
         {
           "subreddit": "3Dprinting",
@@ -340,22 +455,22 @@
         },
         {
           "subreddit": "3Dprinting",
-          "postTitle": "First printer, wife complaining",
+          "postTitle": "Louis Rossman talks about Bambu Labs sending legal threats to orca slicer",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "3Dprinting",
+          "postTitle": "Sh*** is going to hit the fan. GamersNexus joins the fight against Bambu Labs.",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "3Dprinting",
+          "postTitle": "I created the World's First Double Delta 3D Printer!",
           "locality": "Global"
         },
         {
           "subreddit": "BambuLab",
           "postTitle": "Bambu Lab 3D printers: Never again - Jeff Geerling",
-          "locality": "Global"
-        },
-        {
-          "subreddit": "BambuLab",
-          "postTitle": "Developer re-enables 3D printer features that Bambu Lab disabled, firm promptly threatens legal action — OrcaSlicer-BambuLab project now shuttered",
-          "locality": "Global"
-        },
-        {
-          "subreddit": "BambuLab",
-          "postTitle": "Brand new x2d. Is this poor or expected print quality?",
           "locality": "Global"
         },
         {
@@ -369,8 +484,13 @@
           "locality": "Global"
         },
         {
-          "subreddit": "ender3",
-          "postTitle": "Hell yea that's a beautiful part, hope it's worth it.",
+          "subreddit": "BambuLab",
+          "postTitle": "SPC Joins Against Bambu Labs",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "functionalprint",
+          "postTitle": "Got tired of a flimsy cartons - designed a holder (OpenSCAD)",
           "locality": "Global"
         }
       ]
@@ -380,8 +500,8 @@
     "items": [
       {
         "name": "Bambu Lab",
-        "discussions": 17,
-        "summary": "The reference point of the category and the brand the corpus argues about most; near-universally credited with ease of use and per-dollar throughput, and simultaneously the subject of an active openness backlash including legal threats to a developer and alleged licence violations.",
+        "discussions": 24,
+        "summary": "The reference point for the whole corpus. Hardware, speed, multi-material handling and out-of-box ease are repeatedly conceded even by critics; the company's software control, legal conduct and support are the reasons people say they will not rebuy.",
         "strengths": [
           {
             "text": "I'm sorry but there's not a single printer that competes with Bambu in terms of ease of use.",
@@ -389,24 +509,19 @@
             "locality": "Global"
           },
           {
-            "text": "A bambu lab printer works right out of the box but an ender 3 requires upgrades and tinkering in order to match the bambu's stock performance.",
-            "subreddit": "ender3",
+            "text": "The printers are fine. If you want straightforward option where you can just go to the app on the phone and send to printer, then they rules this space.",
+            "subreddit": "3Dprinting",
             "locality": "Global"
           }
         ],
         "weaknesses": [
           {
-            "text": "Getting real tired of your shit, Bambu.",
-            "subreddit": "BambuLab",
+            "text": "Please avoid Bambu, their business practices are a parasite on the 3d printing community, always taking from and then closing the door behind you.",
+            "subreddit": "3Dprinting",
             "locality": "Global"
           },
           {
-            "text": "Bambu probably wouldn't exist without the Open-Source software it's built on, yet they break the liscence agreements and screw over the community they're built on.",
-            "subreddit": "BambuLab",
-            "locality": "Global"
-          },
-          {
-            "text": "I would never even consider buying one purely due to their sleazy guerilla marketing.",
+            "text": "I'm currently dealing with bambu lab customer support over issues with my AMS lite. They do respond, but expect a 2-3 day delay between interactions.",
             "subreddit": "3Dprinting",
             "locality": "Global"
           }
@@ -414,52 +529,47 @@
       },
       {
         "name": "Prusa",
-        "discussions": 6,
-        "summary": "Positioned as the ethical, open, repairable premium alternative; named repeatedly as the default answer when users say they are leaving a closed ecosystem, with price the main objection.",
+        "discussions": 12,
+        "summary": "The named alternative whenever trust is the topic. Cited for openness, parts availability and longevity; price premium is acknowledged and accepted by those recommending it.",
         "strengths": [
           {
-            "text": "Prusa or bust. Sure they're pricey, but they hit everything else you care about. Plus they won't fuck you because they feel like it.",
+            "text": "Prusa or bust. Sure they're pricey, but they hit everything else you care about.",
             "subreddit": "3Dprinting",
             "locality": "Global"
           },
           {
-            "text": "Prusa FTW",
-            "subreddit": "3Dprinting",
+            "text": "Shit like this is why I've just bought a Core One L, I'll gladly pay a bit more to support an open community and innovation.",
+            "subreddit": "BambuLab",
             "locality": "Global"
           }
         ],
         "weaknesses": [
           {
-            "text": "I spent ~1k on an mk3 in 2020, never had issues with it, and upgraded it to an mk3.5 last year, and it's still a workhorse.",
+            "text": "This is why I'll always shell out more for a Prusa",
             "subreddit": "3Dprinting",
             "locality": "Global"
           }
         ]
       },
       {
-        "name": "Creality (Ender 3, K1, K2)",
-        "discussions": 10,
-        "summary": "The tinkerer's platform and the learning machine; defended passionately in dedicated threads for cheapness and moddability, but described elsewhere as dated, and its newer premium machines draw complaints about beginner friction.",
+        "name": "Creality / Ender",
+        "discussions": 14,
+        "summary": "Positioned as the learning platform and the used-market entry point, with a large modification ecosystem. Also the brand most often called dated, and one thread blames a bad first experience on buying Creality at all.",
         "strengths": [
           {
             "text": "Ender 3 is a great machine to get if you want to learn the ins and outs of 3d printing.",
-            "subreddit": "ender3",
-            "locality": "Global"
-          },
-          {
-            "text": "Klipper / Mainsail is awesome and is my favorite upgrade for Enders.",
             "subreddit": "ender3",
             "locality": "Global"
           }
         ],
         "weaknesses": [
           {
-            "text": "Your mistake is buying a creality printer in 2025.",
+            "text": "It was the best choice back in the day but now it's dramatically outdated.",
             "subreddit": "ender3",
             "locality": "Global"
           },
           {
-            "text": "Just simple... If any ender has a price tag around 200. Just say no and by a bambu labs a1 mini.",
+            "text": "Your mistake is buying a creality printer in 2025.",
             "subreddit": "ender3",
             "locality": "Global"
           }
@@ -467,18 +577,18 @@
       },
       {
         "name": "Anycubic",
-        "discussions": 3,
-        "summary": "Recommended on price for multicolour and entry machines, but attacked in one detailed comment for closed firmware, rapid model churn and unavailable replacement parts.",
+        "discussions": 4,
+        "summary": "Recommended on price and speed by some owners, but also singled out as closed-source with short product lifecycles and poor parts availability.",
         "strengths": [
           {
-            "text": "If you want cheap multicolor a Anycubic Kobra V3 is usually around $220",
+            "text": "I have an Anycubic, the discontinued Kobra Neo, and I'm happy with it. A solid brand.",
             "subreddit": "3Dprinting",
             "locality": "Global"
           }
         ],
         "weaknesses": [
           {
-            "text": "Anycubic is BambuLabs but worse",
+            "text": "They are also as bad as Bambu Labs when it comes to Software/Firmware and are closed source.",
             "subreddit": "3Dprinting",
             "locality": "Global"
           }
@@ -487,10 +597,10 @@
       {
         "name": "Elegoo",
         "discussions": 2,
-        "summary": "The Centauri Carbon is cited by first-time owners as a cheap, trouble-free entry machine, with a successor generation anticipated.",
+        "summary": "Named as a low-price, trouble-free option by owners of the Centauri Carbon, with a successor product anticipated.",
         "strengths": [
           {
-            "text": "My first (and only currently) printer is an elegoo centauri carbon (1). I had zero experience in 3d printing but novice experience in 3d modeling. I’ve now racked up a few hundred hours and have yet to have a single issue.",
+            "text": "I have an elegoo Centauri carbon I love it although it is not ams and they are about to come out with a 2 which is, and looks pretty nice.",
             "subreddit": "3Dprinting",
             "locality": "Global"
           }
@@ -499,8 +609,8 @@
       },
       {
         "name": "QIDI",
-        "discussions": 1,
-        "summary": "Named once as a like-for-like enclosed alternative aimed at engineering filaments.",
+        "discussions": 2,
+        "summary": "Surfaced specifically as an enclosed, engineering-filament alternative in the same form factor as the incumbent.",
         "strengths": [
           {
             "text": "I recommend looking into the QIDI Q2. It's great for engineering filaments and has the same form factor of other enclosed Bambu Lab printers.",
@@ -511,38 +621,31 @@
         "weaknesses": []
       },
       {
-        "name": "Flashforge",
-        "discussions": 3,
-        "summary": "Mentioned as an affordable, satisfying alternative by owners of the AD5M/AD5X, including by a user who left a frustrating Ender behind.",
-        "strengths": [
-          {
-            "text": "My flashforge ad5x is great",
-            "subreddit": "3Dprinting",
-            "locality": "Global"
-          }
-        ],
-        "weaknesses": []
-      },
-      {
         "name": "Snapmaker",
         "discussions": 2,
-        "summary": "Cited by Bambu owners as their preferred machine or their intended next purchase after leaving the ecosystem.",
+        "summary": "Named as the planned replacement by disaffected owners and described as comparatively pain-free, with usability niggles around filament handling.",
         "strengths": [
           {
-            "text": "I have bambu printers. I prefer my snapmaker",
-            "subreddit": "3Dprinting",
+            "text": "Once it dies I'll be getting a snapmaker U1 or something.",
+            "subreddit": "BambuLab",
             "locality": "Global"
           }
         ],
-        "weaknesses": []
+        "weaknesses": [
+          {
+            "text": "My biggest complaint with the U1 is the manual feeding and unfeeding.",
+            "subreddit": "3Dprinting",
+            "locality": "Global"
+          }
+        ]
       },
       {
-        "name": "Voron (community/open-source builds)",
-        "discussions": 4,
-        "summary": "The aspirational open-source self-build path for advanced users, referenced as the natural progression once someone has printed enough hours.",
+        "name": "Voron",
+        "discussions": 6,
+        "summary": "The open-source self-build route, invoked as the ideological alternative and as the graduation path for tinkerers.",
         "strengths": [
           {
-            "text": "Someone needs to create a third character, the Voron Guy",
+            "text": "Know the basics, want to tinker - build a Voron",
             "subreddit": "ender3",
             "locality": "Global"
           }
@@ -551,8 +654,8 @@
       },
       {
         "name": "Sovol",
-        "discussions": 2,
-        "summary": "Named as an openness-friendly switch destination and as a large-format CoreXY reference point.",
+        "discussions": 4,
+        "summary": "Mentioned as a post-switch destination chosen explicitly for openness, and for large-format value.",
         "strengths": [
           {
             "text": "I use Prusa and Sovol now because of their openness.",
@@ -563,23 +666,23 @@
         "weaknesses": []
       },
       {
-        "name": "Formlabs",
-        "discussions": 1,
-        "summary": "Invoked once, sarcastically, as an even more locked-down vendor than the one under criticism.",
-        "strengths": [],
-        "weaknesses": [
+        "name": "Flashforge",
+        "discussions": 3,
+        "summary": "Occasionally recommended on owner satisfaction, but also grouped with brands accused of anti-consumer behaviour.",
+        "strengths": [
           {
-            "text": "Mam, you guys would REALLY hate Formlabs I guess.",
+            "text": "My flashforge ad5x is great",
             "subreddit": "3Dprinting",
             "locality": "Global"
           }
-        ]
+        ],
+        "weaknesses": []
       }
     ],
-    "gap": "No brand in this corpus is credited with both out-of-the-box ease of use and genuine openness at once: the ease-of-use leader is the openness villain, and the openness champion is described as expensive. Users state the gap explicitly and say they would pay to fill it. A secondary, unclaimed gap is credible after-sales presence — support latency, returns and spare parts are complaints with no named brand held up as the counter-example.",
+    "gap": "No brand in the corpus is described as simultaneously (a) genuinely appliance-easy, (b) open/locally controllable, and (c) well supported after the sale. Ease-of-use is credited to the incumbent, openness to Prusa/Voron/Sovol, and support quality is criticised almost everywhere it comes up. That triple is the unoccupied position these discussions keep circling.",
     "evidence": {
       "confidence": "Medium",
-      "basis": "11 named brands across 18 Global-tagged discussions and 0 UK-tagged; Bambu, Creality and Prusa are each named in 6+ threads, while 7 of the 11 appear in only 1–3, and no UK retail or distribution context is evidenced.",
+      "basis": "0 UK-tagged and 34 global discussions; the two leading brands are named in 24 and 12 threads respectively, but six of the ten competitors rest on 2–4 threads and none of the mentions are UK-located.",
       "sources": [
         {
           "subreddit": "3Dprinting",
@@ -588,7 +691,22 @@
         },
         {
           "subreddit": "3Dprinting",
+          "postTitle": "Louis Rossman talks about Bambu Labs sending legal threats to orca slicer",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "3Dprinting",
+          "postTitle": "Excited to buy my first Bambu printer - now left with $2,500 worth of broken parts",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "3Dprinting",
           "postTitle": "My first 3D Printer was from Bambu Lab. My next one won't be. Have other manufacturers caught up in affordability and ease-of-use?",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "3Dprinting",
+          "postTitle": "Does the recent Bambu labs drama make them worse as a starter choice?",
           "locality": "Global"
         },
         {
@@ -603,12 +721,7 @@
         },
         {
           "subreddit": "BambuLab",
-          "postTitle": "The Software Freedom Conservancy (SFC) just launched a massive counter-offensive against Bambu Lab over AGPL violations – Introducing Project \"baltobu\"",
-          "locality": "Global"
-        },
-        {
-          "subreddit": "ender3",
-          "postTitle": "Are these worth it or total waste of money?",
+          "postTitle": "This is unacceptable BambuLabs...",
           "locality": "Global"
         },
         {
@@ -618,22 +731,17 @@
         },
         {
           "subreddit": "ender3",
-          "postTitle": "BambuLab Virgin vs Creality Ender CHAD",
-          "locality": "Global"
-        },
-        {
-          "subreddit": "ender3",
           "postTitle": "I wasted $800 on my first 3D printer. Here's what I learned so you don't have to.",
           "locality": "Global"
         },
         {
           "subreddit": "ender3",
-          "postTitle": "Is this worth it?",
+          "postTitle": "It’s been real, and it’s been fun…",
           "locality": "Global"
         },
         {
           "subreddit": "ender3",
-          "postTitle": "Upgrading an Ender 3 I got for free. Need input!",
+          "postTitle": "10$ Ender 3, first time owning a 3D printer",
           "locality": "Global"
         }
       ]
@@ -642,64 +750,64 @@
   "positioning": {
     "items": [
       {
-        "recommendation": "Lead on local control and repairability as the headline product promise, not as a footnote spec — LAN-only operation, open slicer compatibility, published parts list",
-        "rationale": "The one gap the corpus states out loud is a machine that is as easy as the market leader without the walled garden, and users explicitly say they would spend money with whoever closes it. For a Chinese brand this also pre-empts the country-of-origin framing that appears in the same threads, because the objection raised is about vendor conduct and control, not about manufacturing origin per se.",
+        "recommendation": "Enter on a written, verifiable ownership guarantee: full local/LAN operation, third-party slicer support, and no retroactive firmware restriction — stated as a public commitment, not a marketing adjective",
+        "rationale": "The corpus's dominant grievance is not price or print quality but loss of control after purchase, and the specific trigger was a firmware/authentication change described as changing the deal post-sale. Because these are global discussions with no UK-located participants, treat this as a category-level hypothesis to validate in the UK, not a proven UK demand.",
         "supportedBy": [
           {
             "section": "Key Concerns & Barriers",
-            "detail": "Closed ecosystem and loss of local control is the most frequent barrier, appearing in 6 discussions, with users describing LAN mode and firewalling as workarounds",
-            "locality": "Global"
-          },
-          {
-            "section": "Competitive Landscape",
-            "detail": "No named brand combines ease of use with openness; commenters say they would back a company that offered both at a similar price",
+            "detail": "Closed ecosystem and right-to-repair anger is the most-cited barrier, appearing in 12 of 34 discussions",
             "locality": "Global"
           },
           {
             "section": "Consumer Sentiment",
-            "detail": "Owners who like their hardware state they will not repurchase after the lockdown and legal-threat episode",
+            "detail": "Owners state they will not repurchase despite liking the hardware",
+            "locality": "Global"
+          },
+          {
+            "section": "Competitive Landscape",
+            "detail": "No named brand combines ease-of-use with openness and good support",
             "locality": "Global"
           }
         ]
       },
       {
-        "recommendation": "Do not trade away out-of-the-box simplicity to win the openness argument — ship auto-calibration and reliable defaults, and prove them with reproducible comparison content",
-        "rationale": "The corpus is equally clear that enthusiasts who once tinkered are unwilling to go back to bed levelling and z-offsets, and that cheap machines needing upgrades lose on total cost of ownership. An open machine that is fiddly would lose the mainstream buyer while still being distrusted as a newcomer.",
+        "recommendation": "Compete on after-sale service as a headline feature — published response-time targets, human contact, and no-fault replacement on transit damage",
+        "rationale": "Support is where the incumbent's own community turns hostile: ticket-only systems with multi-day gaps, disputed damage claims, and shipping-damage limbo. This is a low-cost, highly quotable differentiator for a challenger, and the discussions show users already comparing rival brands' handling of faulty parts favourably.",
         "supportedBy": [
           {
+            "section": "Key Concerns & Barriers",
+            "detail": "Support and RMA failures raised in 3 discussions, including a bed damage dispute lasting days",
+            "locality": "Global"
+          },
+          {
             "section": "Consumer Sentiment",
-            "detail": "Ease of use is repeatedly cited as the reason users tolerate a vendor they otherwise resent",
+            "detail": "Transit-damaged unit thread shows the refund/replacement process as the pain point rather than the product",
+            "locality": "Global"
+          },
+          {
+            "section": "Competitive Landscape",
+            "detail": "Multi-day support latency named as a specific weakness",
+            "locality": "Global"
+          }
+        ]
+      },
+      {
+        "recommendation": "Earn credibility through open documentation and disclosed, hands-off creator relationships — and expect country-of-origin scrutiny to be tested in public",
+        "rationale": "This audience actively hunts for astroturfing and paid influence, and five discussions raise Chinese ownership as a reason to distrust cloud services and IP claims. The creators they already cite are repair advocates and investigative outlets, and one sponsored open-source build passed without objection because the sponsorship was disclosed and the files were public. Section 6 note: this is inference from observed reference patterns, not a hiring recommendation.",
+        "supportedBy": [
+          {
+            "section": "Creator Signals",
+            "detail": "Three discussions accuse brands of astroturfing or paid influencers appearing in comments",
             "locality": "Global"
           },
           {
             "section": "Key Concerns & Barriers",
-            "detail": "Upgrade cost creep on budget machines is raised as a reason not to buy cheap",
+            "detail": "Country-of-origin distrust around servers and jurisdiction raised in 5 discussions",
             "locality": "Global"
           },
           {
             "section": "Content Opportunities",
-            "detail": "Head-to-head comparisons are popular but audiences reject ones they judge rigged, so settings must be published",
-            "locality": "Global"
-          }
-        ]
-      },
-      {
-        "recommendation": "Build the UK entry around after-sales proof and home-environment fit: retail channel with easy returns, stated support response times, spare parts in-region, and fumes/ventilation guidance for small homes",
-        "rationale": "Support latency, shipping damage and warranty are unresolved complaints with no brand named as the counter-example, and household fume anxiety is a genuine pre-purchase blocker in flats. Both are executional, verifiable claims a newcomer can make credibly. Note this direction rests on category evidence only — the corpus contains no UK-tagged discussion, so UK channel and household assumptions need primary validation before spend.",
-        "supportedBy": [
-          {
-            "section": "Key Concerns & Barriers",
-            "detail": "Ticket-only support with multi-day delays and a damaged-on-delivery ordeal push buyers toward retail purchase over direct",
-            "locality": "Global"
-          },
-          {
-            "section": "Key Concerns & Barriers",
-            "detail": "Fume and ventilation anxiety in a small flat generated one of the corpus's highest-engagement threads",
-            "locality": "Global"
-          },
-          {
-            "section": "Competitive Landscape",
-            "detail": "Parts availability and long support windows are the stated reason buyers pay a premium for a rival",
+            "detail": "Disclosed-sponsorship open-source build documentation drew engineering discussion, not backlash",
             "locality": "Global"
           }
         ]
@@ -707,8 +815,13 @@
     ],
     "evidence": {
       "confidence": "Low",
-      "basis": "Inferred from 18 Global-tagged discussions with 0 UK-tagged; the openness/ease-of-use tension is well evidenced at category level, but no UK pricing, retail, or consumer evidence exists in this corpus to validate market-entry specifics.",
+      "basis": "0 UK-tagged and 34 global discussions; the underlying barrier and competitor findings are well supported across 12+ threads, but every directional inference here extrapolates from a global corpus to a UK market the evidence does not cover.",
       "sources": [
+        {
+          "subreddit": "3Dprinting",
+          "postTitle": "Bambu Lab 3D printers: Never again",
+          "locality": "Global"
+        },
         {
           "subreddit": "3Dprinting",
           "postTitle": "Excited to buy my first Bambu printer - now left with $2,500 worth of broken parts",
@@ -716,12 +829,12 @@
         },
         {
           "subreddit": "3Dprinting",
-          "postTitle": "First printer, wife complaining",
+          "postTitle": "My first 3D Printer was from Bambu Lab. My next one won't be. Have other manufacturers caught up in affordability and ease-of-use?",
           "locality": "Global"
         },
         {
           "subreddit": "3Dprinting",
-          "postTitle": "My first 3D Printer was from Bambu Lab. My next one won't be. Have other manufacturers caught up in affordability and ease-of-use?",
+          "postTitle": "I created the World's First Double Delta 3D Printer!",
           "locality": "Global"
         },
         {
@@ -735,16 +848,17 @@
           "locality": "Global"
         },
         {
-          "subreddit": "ender3",
-          "postTitle": "Are these worth it or total waste of money?",
+          "subreddit": "BambuLab",
+          "postTitle": "Day 3 of bambu labs refusing to replace my printer bed after their Gcode tore a hole through it.",
           "locality": "Global"
         },
         {
-          "subreddit": "ender3",
-          "postTitle": "Ender 3 vs Bambu lab A1",
+          "subreddit": "BambuLab",
+          "postTitle": "SPC Joins Against Bambu Labs",
           "locality": "Global"
         }
       ]
     }
-  }
+  },
+  "audienceId": "tech-enthusiasts"
 }
