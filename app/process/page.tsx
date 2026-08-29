@@ -207,11 +207,10 @@ export default function ProcessPage() {
 
         <Block n="08" title="Where it stands">
           <p>
-            147 discussions across 21 communities, five categories, one market.
+            266 discussions across 26 communities, seven categories, one market.
             Every brief names the window its evidence came from and the balance
-            of UK to global sources behind each section. Three categories carry
-            a limited-UK-coverage notice, which is accurate rather than cautious:
-            they rest on 2, 0 and 0 UK-located discussions.
+            of UK to global sources behind each section, and every one matches
+            the corpus it was built from — checked, not assumed.
           </p>
           <p>
             Briefs are generated ahead of time and bundled at build time, so the
@@ -219,14 +218,35 @@ export default function ProcessPage() {
             fail because someone else&rsquo;s service is down.
           </p>
           <p>
-            What is unfinished is stated on the pages that are affected rather
-            than collected here: four categories are built on narrower evidence
-            than the corrected relevance gate now yields, each category has been
-            analysed for one audience, and only the United Kingdom is supported.
+            The honest headline is the UK column. Of 266 discussions, 21 are
+            UK-located, and 18 of those sit in one category. This is a tool for
+            reading a market before entering it, and it currently reads one
+            category&rsquo;s market well and six categories&rsquo; global
+            conversation. That is not a gap in the collection — it is what UK
+            Reddit contains. British users discuss AI constantly, because it
+            arrived in their coursework; they mention chargers and earbuds
+            constantly and discuss them as a purchase almost never.
           </p>
         </Block>
 
-        <Block n="09" title="What I would tell someone starting this">
+        <Block n="09" title="What the gate still cannot see">
+          <p>
+            The relevance gate reads a post&rsquo;s title and body. Some of the
+            best evidence is in neither.
+          </p>
+          <Finding
+            found="A UK thread about cooling a house at night mentions smart home once in its body and carries a real discussion of smart switches and relays in its comments. The gate dropped it, correctly by its own rule and wrongly in substance."
+            changed="Nothing yet, deliberately. An earlier version did test comments and was removed for admitting noise — but it tested with the broad search terms, and with category anchors the same test would be far cleaner. The gate was revised three times in one sitting; a fourth pass without evidence it improves things is churn, not care."
+          />
+          <p>
+            It is recorded here rather than fixed because a known limitation
+            someone can act on is worth more than an untested change, and
+            because the next person to touch this should know the shape of what
+            it misses.
+          </p>
+        </Block>
+
+        <Block n="10" title="What I would tell someone starting this">
           <p>
             The build was days; the trust was the rest. Every problem worth
             fixing had the same shape — output that looked sound, presented in a
