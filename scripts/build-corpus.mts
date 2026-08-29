@@ -7,7 +7,13 @@
  * so this step is unchanged either way.
  */
 import { readFileSync, existsSync } from "node:fs";
-import { CATEGORIES, SUBREDDIT_MAP, CATEGORY_ANCHORS, type CategoryId } from "../lib/options.ts";
+import {
+  CATEGORIES,
+  SUBREDDIT_MAP,
+  CATEGORY_ANCHORS,
+  CATEGORY_EXCLUSIONS,
+  type CategoryId,
+} from "../lib/options.ts";
 import { normaliseDiscussions } from "../lib/corpus/normalise.ts";
 import { saveCorpus, statsFor, describeWindow, rawPath } from "../lib/corpus/store.ts";
 import type { Discussion, RawDiscussion } from "../lib/corpus/types.ts";
@@ -34,7 +40,14 @@ for (const categoryId of targets) {
     }
     const raw = JSON.parse(readFileSync(file, "utf8")) as RawDiscussion[];
     discussions.push(
-      ...normaliseDiscussions(raw, src.name, src.locality, CATEGORY_ANCHORS[categoryId]),
+      ...normaliseDiscussions(
+        raw,
+        src.name,
+        src.locality,
+        CATEGORY_ANCHORS[categoryId],
+        CATEGORY_EXCLUSIONS[categoryId] ?? [],
+        src.general === true,
+      ),
     );
   }
 

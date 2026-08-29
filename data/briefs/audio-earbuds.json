@@ -1,0 +1,1066 @@
+{
+  "categoryId": "audio-earbuds",
+  "discussionsAnalysed": 78,
+  "ukDiscussions": 2,
+  "globalDiscussions": 76,
+  "dataWindow": "Posts and comment threads from Sept 2025 to Aug 2026",
+  "sentiment": {
+    "label": "Mixed",
+    "headline": "Enthusiasts already accept that value brands sound good enough — the doubt has moved to durability, software and support",
+    "summary": "Across 76 Global-tagged discussions the recurring position is that budget and mid-price (largely Chinese-made) audio now competes on sound, and that price no longer predicts quality; enthusiasts openly police hype in both directions. The praise is conditional, however: the same threads treat cheap-brand build quality, firmware stability, battery lifespan and after-sales support as the real differentiators, and one comment explicitly frames Chinese brand ownership as a warranty risk. This is a Global-corpus finding, not a UK one: only two discussions are UK-tagged (D1, D2), and in both, noise-cancelling headphones appear incidentally as a coping tool for neighbour noise while working from home — useful as a UK use-case signal, but no UK participant in this corpus discusses brands, price or purchase intent in the category.",
+    "quotes": [
+      {
+        "text": "Budget options have caught up to more expensive options when it comes to overall sound quality, it’s been this way for a long time.",
+        "subreddit": "earbuds",
+        "locality": "Global"
+      },
+      {
+        "text": "There's definitely a focused and inflated appreciation for the \"Chi fi\" budget darlings",
+        "subreddit": "BudgetAudiophile",
+        "locality": "Global"
+      },
+      {
+        "text": "QCY have come a long way since they first started. Now it's a brand to be reckoned with.",
+        "subreddit": "earbuds",
+        "locality": "Global"
+      },
+      {
+        "text": "Too bad it was a Chinese brand and they won't do anything about it",
+        "subreddit": "headphones",
+        "locality": "Global"
+      },
+      {
+        "text": "I've started wearing noise cancelling earphones to drown it out but that's only between the hours of 9-5.",
+        "subreddit": "AskUK",
+        "locality": "UK"
+      },
+      {
+        "text": "Ear plugs after that or I'll borrow the daughter's noise cancelling headphones and put some Whitesnake on",
+        "subreddit": "CasualUK",
+        "locality": "UK"
+      }
+    ],
+    "evidence": {
+      "confidence": "Medium",
+      "basis": "2 UK-tagged discussions (both incidental to the category) versus 76 Global discussions that are consistent on value-vs-hype; strong global pattern, effectively no UK-specific brand sentiment.",
+      "sources": [
+        {
+          "subreddit": "AskUK",
+          "postTitle": "Neighbour's wind chimes affecting work and sleep - what are my legal options?",
+          "locality": "UK"
+        },
+        {
+          "subreddit": "CasualUK",
+          "postTitle": "Nothing better than sitting in the peace of the garden in the sun",
+          "locality": "UK"
+        },
+        {
+          "subreddit": "headphones",
+          "postTitle": "Bluetooth is good actually",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "headphones",
+          "postTitle": "soundcore X20 exploded in my ear this morning",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "headphones",
+          "postTitle": "A comparison of cheap vs expensive hifiman headphones.",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "BudgetAudiophile",
+          "postTitle": "Can you understand the Amazon review hype about Edifier?",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "QCY Melobuds N70 Best from ALL",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Tbh I feel like there is no big difference in sound quality between and good budget earbuds and premium earbuds anymore",
+          "locality": "Global"
+        }
+      ]
+    }
+  },
+  "barriers": {
+    "items": [
+      {
+        "name": "Fit and comfort decide the purchase, and cannot be specced",
+        "frequency": "19 of 78 discussions",
+        "quote": {
+          "text": "comfort over specs, always. if it hurts, you’ll never use it, no matter how many “premium drivers” they brag about.",
+          "subreddit": "earbuds",
+          "locality": "Global"
+        },
+        "implication": "Driver counts and codec lists do not close a sale in this segment; tip/pad options, return-friendly buying and long-session comfort evidence do."
+      },
+      {
+        "name": "Build quality and QC lottery",
+        "frequency": "11 of 78 discussions",
+        "quote": {
+          "text": "Build quality is still average at best, and QC remains poor",
+          "subreddit": "HeadphoneAdvice",
+          "locality": "Global"
+        },
+        "implication": "Unit-to-unit variance is the single most damaging reputational pattern attached to value brands here; consistency is a claimable position."
+      },
+      {
+        "name": "Battery lifespan and non-replaceable cells (disposability)",
+        "frequency": "9 of 78 discussions",
+        "quote": {
+          "text": "BT headphones are almost disposable though, can’t replace the battery so once it goes they go.",
+          "subreddit": "HeadphoneAdvice",
+          "locality": "Global"
+        },
+        "implication": "Enthusiasts pre-discount wireless products to a 2–4 year life; replaceable batteries or a published battery-service path would be unusually differentiating."
+      },
+      {
+        "name": "Firmware and app instability",
+        "frequency": "9 of 78 discussions",
+        "quote": {
+          "text": "But there is some software glitches causing them to forget settings or change settings.",
+          "subreddit": "earbuds",
+          "locality": "Global"
+        },
+        "implication": "Software bugs are discussed thread-by-thread with version numbers; a visible changelog and fast fixes are read as brand competence."
+      },
+      {
+        "name": "Distrust of sponsored reviews and spec-sheet claims",
+        "frequency": "9 of 78 discussions",
+        "quote": {
+          "text": "skip the sponsored top 10 lists what pair has actually changed ur life!!",
+          "subreddit": "earbuds",
+          "locality": "Global"
+        },
+        "implication": "Marketing superlatives are actively mocked; claims that can be independently tested travel further than claims that cannot."
+      },
+      {
+        "name": "After-sales support, spares and warranty friction",
+        "frequency": "5 of 78 discussions",
+        "quote": {
+          "text": "Also wanted a spare pair of fins # as one had deformed, and Denon say they don't do spare parts.",
+          "subreddit": "earbuds",
+          "locality": "Global"
+        },
+        "implication": "Even premium incumbents lose goodwill on spares; spare tips/pads/cases and a stated support route are cheap credibility."
+      },
+      {
+        "name": "Materials safety and sweat/heat failure",
+        "frequency": "5 of 78 discussions",
+        "quote": {
+          "text": "To be honest. Feels like there is a need for a certification.",
+          "subreddit": "headphones",
+          "locality": "Global"
+        },
+        "implication": "A published chemical-safety and IP/sweat-durability position addresses a live anxiety, including one thread where a model was pulled from shops after a materials report."
+      }
+    ],
+    "evidence": {
+      "confidence": "Medium",
+      "basis": "All seven barriers rest on Global discussions (76 of 78); the two UK-tagged threads contribute nothing on product concerns, so barrier ranking is category-level, not UK-verified.",
+      "sources": [
+        {
+          "subreddit": "headphones",
+          "postTitle": "AirPods Pro 3 review - everything is better except the sound",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "headphones",
+          "postTitle": "Bluetooth is good actually",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "headphones",
+          "postTitle": "Dutch consumer union did a test on harmfull chemicals in headphones. These are the sometimes shocking results. Multiple headphones are being taken out of dutch shops now.",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "headphones",
+          "postTitle": "soundcore X20 exploded in my ear this morning",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "headphones",
+          "postTitle": "A comparison of cheap vs expensive hifiman headphones.",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "headphones",
+          "postTitle": "Audeze LCD-X: Overpriced and Overrated",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "headphones",
+          "postTitle": "Bang and Olufsen Beo Grace Announced",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "HeadphoneAdvice",
+          "postTitle": "HiFiMAN Edition XS — Overhyped and honestly not worth the price",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "HeadphoneAdvice",
+          "postTitle": "Good open backs for gaming, that aren’t the HD 560s",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "HeadphoneAdvice",
+          "postTitle": "Seeking recommendations for best gaming headset ($350 budget)",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "HeadphoneAdvice",
+          "postTitle": "I'm a headphone beginner and asked about headphones yesterday.",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "HeadphoneAdvice",
+          "postTitle": "Most comfortable open-back headphones in the $200-$300 range",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "HeadphoneAdvice",
+          "postTitle": "Everyone said the HD 490 Pro Excelled at Comfort",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "HeadphoneAdvice",
+          "postTitle": "Hifiman build quality",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "HeadphoneAdvice",
+          "postTitle": "Headphones with good build quality",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "HeadphoneAdvice",
+          "postTitle": "Are the Soundcore Space 2 worth it?",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "BudgetAudiophile",
+          "postTitle": "New Edifier M60 speakers",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "BudgetAudiophile",
+          "postTitle": "First Impression of the Edifier M90s",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "best bose wireless earbuds for long listening sessions without ear pain?",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Best Earbuds To Buy In 2026? (Price, ANC, Battery Life)",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Soundcore Liberty 5 Pro Max arriving tomorrow — testing call quality vs Huawei FreeBuds Pro 5 and the new voice commands. Any specific tests you want to see?",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Soundcore Liberty 5 Pro Max review: the hype is real, they actually beat the FreeBuds Pro 5 for calls",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "QCY Melobuds N70 Best from ALL",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Gym earbuds. Most concerned with sound quality (ideally transparent) and reliability. I have no experience with ANC. Which would you choose - Bose, Sony, Apple? Price isn’t a concern.",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "how to choose wireless earbuds in 2025 without losing your mind? honestly…",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "QCY MeloBuds N70 firmware issue fixed with an official downgrade tool",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Best-sounding true wireless earbuds (Denon Perl Pro vs Technics AZ100 vs Sony XM5/XM6 vs B&amp;W PI8 vs Bose QC Ultra)",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Earfun Air Pro 4+ Review (and compariosn to original Pro 4)",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Sony WF-1000XM6 vs Technics AZ100 Sound Quality",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Soundcore Liberty 5 Pro - Disappointed",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "I have around $100–120 to spend. If it were you, which headphones would you choose?",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Bose QuietComfort 2024 - Ask Me Anything",
+          "locality": "Global"
+        }
+      ]
+    }
+  },
+  "content": {
+    "items": [
+      {
+        "hook": "Named head-to-head tests against the exact rivals the audience already benchmarks against (FreeBuds Pro 5, AZ100, AirPods Pro 3, WF-1000XM6)",
+        "why": "Review threads in this corpus are structured as direct comparisons, and commenters queue up specific tests they want run — including call quality in noise, wind, transparency and multipoint behaviour.",
+        "format": "Comparison review posts and videos with a stated test protocol, plus an open comment invitation for test requests"
+      },
+      {
+        "hook": "Shareable EQ presets published by the brand for its own products",
+        "why": "A user-published EQ in one thread was adopted and refined by other commenters, and EQ is repeatedly treated as the thing that unlocks a product's value across the corpus.",
+        "format": "Copy-paste EQ tables and app-importable presets per genre, with commentary on what each change does"
+      },
+      {
+        "hook": "Battery and repairability transparency: cycle life, what happens at year three, spares availability",
+        "why": "Disposability and dead batteries are raised in nine discussions, including complaints that spares simply do not exist.",
+        "format": "A plain-English lifespan and service page plus a short teardown/spares explainer"
+      },
+      {
+        "hook": "Firmware changelogs written like bug reports, not marketing notes",
+        "why": "One thread tracks a firmware saga across six dated edits, and other threads flag glitches, forgotten settings and connection drops as the deciding negative.",
+        "format": "Versioned release notes with known-issues list, mirrored into the community thread where the bug was reported"
+      },
+      {
+        "hook": "Materials and safety documentation front and centre",
+        "why": "A consumer-union chemical test drove a discussion demanding certification, and a separate buyer thread cited the same report as the reason for avoiding a previously loved model.",
+        "format": "Published test certificates and an FAQ on pads, tips and sweat exposure"
+      },
+      {
+        "hook": "Fit-first content: tip and pad sizing, long-session wear, sweat use",
+        "why": "Comfort and fit are the most frequently raised concern in the corpus and are described as untestable from spec sheets, with gym sweat failures reported repeatedly.",
+        "format": "Fit guides, included tip/pad range explainers, and a clear returns/exchange message"
+      }
+    ],
+    "evidence": {
+      "confidence": "Medium",
+      "basis": "Drawn from roughly a dozen Global review-and-request threads that state explicitly what they want tested or documented; no UK-tagged discussion contributes, so channel and language assumptions for the UK are untested.",
+      "sources": [
+        {
+          "subreddit": "headphones",
+          "postTitle": "Dutch consumer union did a test on harmfull chemicals in headphones. These are the sometimes shocking results. Multiple headphones are being taken out of dutch shops now.",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "HeadphoneAdvice",
+          "postTitle": "Good open backs for gaming, that aren’t the HD 560s",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "HeadphoneAdvice",
+          "postTitle": "Are the Soundcore Space 2 worth it?",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Best Earbuds To Buy In 2026? (Price, ANC, Battery Life)",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Soundcore Liberty 5 Pro Max arriving tomorrow — testing call quality vs Huawei FreeBuds Pro 5 and the new voice commands. Any specific tests you want to see?",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Soundcore Liberty 5 Pro Max review: the hype is real, they actually beat the FreeBuds Pro 5 for calls",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "how to choose wireless earbuds in 2025 without losing your mind? honestly…",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "QCY MeloBuds N70 firmware issue fixed with an official downgrade tool",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Save Your Money",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Best-sounding true wireless earbuds (Denon Perl Pro vs Technics AZ100 vs Sony XM5/XM6 vs B&amp;W PI8 vs Bose QC Ultra)",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Earfun Air Pro 4+ Review (and compariosn to original Pro 4)",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Sony WF-1000XM6 vs Technics AZ100 Sound Quality",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Soundpeats H3 Review | Phenomenal Sound... If you're willing to tune",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "How Sony tricked everyone? A little about active noise cancellation (ANC).",
+          "locality": "Global"
+        }
+      ]
+    }
+  },
+  "creators": {
+    "items": [
+      {
+        "signal": "A single YouTube reviewer, \"Picky Audio\", is named unprompted as a decision aid across four separate discussions, valued for a comparative scoring spreadsheet rather than for verdicts",
+        "evidenceNote": "Referenced in D60, D64, D72 and D73 — four distinct threads, one of which recommends the channel to a confused buyer and another of which cites his ranking to settle a sound-quality dispute.",
+        "profile": "Comparative earbud reviewer with a public scoring framework",
+        "platform": "YouTube, referenced into Reddit threads",
+        "scale": "4 of 78 discussions"
+      },
+      {
+        "signal": "Measurement-based sources are used to overrule subjective claims; a poster's anti-Sony ANC argument was rebutted by pointing at published ANC/isolation measurements",
+        "evidenceNote": "D75 top replies invoke measurement data twice against the original post; D13 cites a reviewer's measurement meta-analysis and Headphone Show videos, and D28 cites a public headphone ranking list.",
+        "profile": "Measurement/objectivist reviewers and test databases",
+        "platform": "Review sites and YouTube, quoted in Reddit argument",
+        "scale": "3 of 78 discussions"
+      },
+      {
+        "signal": "Community members who write their own long-form reviews function as creators inside the subreddits, and disclose gifted units in-post",
+        "evidenceNote": "D57, D58, D70 and D72 are author-written reviews, two of which state the unit was supplied for review; D66 previews an upcoming YouTube review from the same poster.",
+        "profile": "Reddit-native reviewers with small owned channels or sites",
+        "platform": "Reddit long-form posts, linked to personal site/YouTube",
+        "scale": "5 of 78 discussions"
+      },
+      {
+        "signal": "EQ-profile authors are cited by handle as a reason a product is acceptable",
+        "evidenceNote": "oratory1990 EQ profiles are named in D24 and D35 as the fix for a headphone's tuning; in D72 a commenter-published EQ is adopted and iterated by others in the same thread.",
+        "profile": "EQ/tuning specialists rather than product reviewers",
+        "platform": "Reddit and EQ software communities",
+        "scale": "3 of 78 discussions"
+      },
+      {
+        "signal": "Explicit hostility to influencer content perceived as brand-influenced, expressed in the same threads that praise independent reviewers",
+        "evidenceNote": "D57's author pre-empts \"heavily Soundcore-influenced\" reviews; D56 asks commenters to skip sponsored top-10 lists; D73 dismisses positive YouTube reviews as paid.",
+        "profile": "Sponsored top-10 and launch-day reviewers (named negatively as a category, not individuals)",
+        "platform": "YouTube and affiliate listicles",
+        "scale": "3 of 78 discussions"
+      }
+    ],
+    "evidence": {
+      "confidence": "Low",
+      "basis": "All creator references come from Global-tagged discussions, with the strongest single signal appearing in only 4 of 78 threads and no UK-tagged discussion naming any creator; this shows observed audience reference behaviour, not UK reach.",
+      "sources": [
+        {
+          "subreddit": "headphones",
+          "postTitle": "A comparison of cheap vs expensive hifiman headphones.",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "HeadphoneAdvice",
+          "postTitle": "A quality headset (for gaming) that is not \"gaming\" crap",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "HeadphoneAdvice",
+          "postTitle": "HiFiMAN Edition XS — Overhyped and honestly not worth the price",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "HeadphoneAdvice",
+          "postTitle": "Open back headphones for under $1600 - Overwhelmed by choices",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "HeadphoneAdvice",
+          "postTitle": "Comfort is king.",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "BudgetAudiophile",
+          "postTitle": "First Impression of the Edifier M90s",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Best Earbuds To Buy In 2026? (Price, ANC, Battery Life)",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Soundcore Liberty 5 Pro Max arriving tomorrow — testing call quality vs Huawei FreeBuds Pro 5 and the new voice commands. Any specific tests you want to see?",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Soundcore Liberty 5 Pro Max review: the hype is real, they actually beat the FreeBuds Pro 5 for calls",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "best wireless earbuds 2026. what's actually good now?",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "how to choose wireless earbuds in 2025 without losing your mind? honestly…",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Save Your Money",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Earfun Air Pro 4+ Review (and compariosn to original Pro 4)",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Soundpeats H3 Review | Phenomenal Sound... If you're willing to tune",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Soundcore Liberty 5 Pro - Disappointed",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "How Sony tricked everyone? A little about active noise cancellation (ANC).",
+          "locality": "Global"
+        }
+      ]
+    }
+  },
+  "competitive": {
+    "items": [
+      {
+        "name": "Anker / Soundcore",
+        "discussions": 16,
+        "summary": "The default value benchmark and the most-discussed brand in the earbuds threads. Credited with features, calls, ANC and price, but repeatedly attacked on sound tuning, and the newest premium-priced model draws price and reliability pushback.",
+        "strengths": [
+          {
+            "text": "Calls genuinely beat the FreeBuds Pro 5.",
+            "subreddit": "earbuds",
+            "locality": "Global"
+          },
+          {
+            "text": "they are one of the best value brands out there and offer very decent performance for the money",
+            "subreddit": "HeadphoneAdvice",
+            "locality": "Global"
+          }
+        ],
+        "weaknesses": [
+          {
+            "text": "If you care about sound quality, absolutely NOT, they sound like trash.",
+            "subreddit": "HeadphoneAdvice",
+            "locality": "Global"
+          },
+          {
+            "text": "The biggest issue is the price. It's too much for what it offers",
+            "subreddit": "earbuds",
+            "locality": "Global"
+          }
+        ]
+      },
+      {
+        "name": "Apple (AirPods Pro / Max)",
+        "discussions": 15,
+        "summary": "Treated as the convenience and ANC default, with the Pro 3 repeatedly called a bargain at discounted prices; criticised on tuning changes, absent EQ and Android experience.",
+        "strengths": [
+          {
+            "text": "Airpods Pro are the most convenient piece of tech I own already.",
+            "subreddit": "headphones",
+            "locality": "Global"
+          },
+          {
+            "text": "APP3 for $169 is a steal.",
+            "subreddit": "earbuds",
+            "locality": "Global"
+          }
+        ],
+        "weaknesses": [
+          {
+            "text": "Apple not offering an EQ for their headphones is insane",
+            "subreddit": "headphones",
+            "locality": "Global"
+          },
+          {
+            "text": "Now if only they made the APP3 experience just as good on Android...",
+            "subreddit": "headphones",
+            "locality": "Global"
+          }
+        ]
+      },
+      {
+        "name": "Sony",
+        "discussions": 15,
+        "summary": "Still the reflexive ANC recommendation, but carries the corpus's heaviest reliability and battery grievances, and one thread is dedicated to disputing its ANC reputation.",
+        "strengths": [
+          {
+            "text": "Best ANC is SONY WH/WF",
+            "subreddit": "earbuds",
+            "locality": "Global"
+          }
+        ],
+        "weaknesses": [
+          {
+            "text": "OP, do not buy Sony XM5 or XM6. They have poor build quality and they break eventually.",
+            "subreddit": "HeadphoneAdvice",
+            "locality": "Global"
+          },
+          {
+            "text": "So I've been using the Sony WF1000XM4 for 3 years, and bought 3 already because the battery is shit",
+            "subreddit": "earbuds",
+            "locality": "Global"
+          }
+        ]
+      },
+      {
+        "name": "Technics (EAH-AZ100)",
+        "discussions": 13,
+        "summary": "The enthusiast sound-quality pick of the moment in TWS, undermined by fit complaints and support/spares criticism.",
+        "strengths": [
+          {
+            "text": "Best all-rounder: AZ100.",
+            "subreddit": "earbuds",
+            "locality": "Global"
+          }
+        ],
+        "weaknesses": [
+          {
+            "text": "AZ100 - these would probably rank higher but the fit is terrible on me, they always fall out.",
+            "subreddit": "earbuds",
+            "locality": "Global"
+          },
+          {
+            "text": "Technics support sucks..",
+            "subreddit": "earbuds",
+            "locality": "Global"
+          }
+        ]
+      },
+      {
+        "name": "Bose",
+        "discussions": 12,
+        "summary": "Owns the ANC and comfort association, but attracts specific and detailed reliability complaints across repeated exchanges.",
+        "strengths": [
+          {
+            "text": "ANC first: Bose.",
+            "subreddit": "earbuds",
+            "locality": "Global"
+          }
+        ],
+        "weaknesses": [
+          {
+            "text": "I wouldn’t get any pair of Bose earbuds. Every single pair is buggy and has connectivity issues.",
+            "subreddit": "earbuds",
+            "locality": "Global"
+          }
+        ]
+      },
+      {
+        "name": "EarFun",
+        "discussions": 9,
+        "summary": "Held up as the tuning-per-pound winner in a direct three-way test, but consistently marked down on perceived build quality and ANC.",
+        "strengths": [
+          {
+            "text": "the tuning of the Earfun had the best combination of a spacious soundstage, punchy and controlled bass",
+            "subreddit": "earbuds",
+            "locality": "Global"
+          }
+        ],
+        "weaknesses": [
+          {
+            "text": "They look and feel cheap",
+            "subreddit": "earbuds",
+            "locality": "Global"
+          },
+          {
+            "text": "The Earfun also seemingly had the worst ANC performance",
+            "subreddit": "earbuds",
+            "locality": "Global"
+          }
+        ]
+      },
+      {
+        "name": "QCY",
+        "discussions": 2,
+        "summary": "A rising-credibility budget name with an enthusiastic launch thread, immediately shadowed by a firmware-bug thread tracked across months.",
+        "strengths": [
+          {
+            "text": "QCY have come a long way since they first started. Now it's a brand to be reckoned with.",
+            "subreddit": "earbuds",
+            "locality": "Global"
+          }
+        ],
+        "weaknesses": [
+          {
+            "text": "Despite trying all different settings, ANC simply doesnt work",
+            "subreddit": "earbuds",
+            "locality": "Global"
+          },
+          {
+            "text": "i got the same issue as soon as up to 3.0.11...same issue....OMG",
+            "subreddit": "earbuds",
+            "locality": "Global"
+          }
+        ]
+      },
+      {
+        "name": "HiFiMAN",
+        "discussions": 13,
+        "summary": "The clearest cautionary case for a Chinese brand in this corpus: acknowledged as unbeatable price-to-sound, permanently dogged by QC and comfort, with an entire thread devoted to asking whether build quality has improved.",
+        "strengths": [
+          {
+            "text": "With the XS you’re getting $400-$500 sound quality for $200 USD",
+            "subreddit": "HeadphoneAdvice",
+            "locality": "Global"
+          }
+        ],
+        "weaknesses": [
+          {
+            "text": "Build quality is still average at best, and QC remains poor",
+            "subreddit": "HeadphoneAdvice",
+            "locality": "Global"
+          },
+          {
+            "text": "Damn UK market is a bit unlucky.",
+            "subreddit": "HeadphoneAdvice",
+            "locality": "Global"
+          }
+        ]
+      },
+      {
+        "name": "Edifier",
+        "discussions": 7,
+        "summary": "Positioned as the entry gateway: over-performing for the money against PC speakers, but explicitly denied audiophile status and criticised on app and control design.",
+        "strengths": [
+          {
+            "text": "Every Edifier I have heard punches consistently well above its cost.",
+            "subreddit": "BudgetAudiophile",
+            "locality": "Global"
+          }
+        ],
+        "weaknesses": [
+          {
+            "text": "Edifiers are good for cheap entry level speakers. They’re not considered “audiophile”.",
+            "subreddit": "BudgetAudiophile",
+            "locality": "Global"
+          },
+          {
+            "text": "Edifier speakers are such a gateway drug",
+            "subreddit": "BudgetAudiophile",
+            "locality": "Global"
+          }
+        ]
+      }
+    ],
+    "gap": "No named brand in this corpus owns durability and ownership experience. Value brands are forgiven poor build only while cheap, and are punished immediately when they price near incumbents (D73); incumbents are trusted on sound and ANC but criticised on spares, firmware and battery life (D55, D69, D71). Nobody is credited with replaceable batteries, published spares, stable firmware or materials certification — the exact four things the barrier threads keep asking for.",
+    "evidence": {
+      "confidence": "Medium",
+      "basis": "Brand mentions are dense — nine brands each named in 2 to 16 Global discussions — but every competitor thread is Global-tagged, so UK share of voice, pricing and retail availability are unevidenced here.",
+      "sources": [
+        {
+          "subreddit": "headphones",
+          "postTitle": "AirPods Pro 3 are official - I loved my second gen so I’m definitely upgrading.",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "headphones",
+          "postTitle": "AirPods Pro 3 review - everything is better except the sound",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "HeadphoneAdvice",
+          "postTitle": "HiFiMAN Edition XS — Overhyped and honestly not worth the price",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "HeadphoneAdvice",
+          "postTitle": "I'm a headphone beginner and asked about headphones yesterday.",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "HeadphoneAdvice",
+          "postTitle": "Hifiman build quality",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "HeadphoneAdvice",
+          "postTitle": "Headphones with good build quality",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "HeadphoneAdvice",
+          "postTitle": "Are the Soundcore Space 2 worth it?",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "BudgetAudiophile",
+          "postTitle": "Can you understand the Amazon review hype about Edifier?",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "BudgetAudiophile",
+          "postTitle": "Just purchased Edifier 1700BTs for $149 AUD. What should I expect from them?",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "BudgetAudiophile",
+          "postTitle": "My desk setup has come along way since my first set of Edifiers",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Recommend your best audio quality wireless earbuds to me🥺",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "best bose wireless earbuds for long listening sessions without ear pain?",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Best Earbuds To Buy In 2026? (Price, ANC, Battery Life)",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Soundcore Liberty 5 Pro Max review: the hype is real, they actually beat the FreeBuds Pro 5 for calls",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "QCY Melobuds N70 Best from ALL",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Gym earbuds. Most concerned with sound quality (ideally transparent) and reliability. I have no experience with ANC. Which would you choose - Bose, Sony, Apple? Price isn’t a concern.",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Share your Current Daily Driver Headphone",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "how to choose wireless earbuds in 2025 without losing your mind? honestly…",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "QCY MeloBuds N70 firmware issue fixed with an official downgrade tool",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Save Your Money",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Tbh I feel like there is no big difference in sound quality between and good budget earbuds and premium earbuds anymore",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Best Wireless Earbuds October 2025",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Best-sounding true wireless earbuds (Denon Perl Pro vs Technics AZ100 vs Sony XM5/XM6 vs B&amp;W PI8 vs Bose QC Ultra)",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Earfun Air Pro 4+ Review (and compariosn to original Pro 4)",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Sony WF-1000XM6 vs Technics AZ100 Sound Quality",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Soundcore Liberty 5 Pro - Disappointed",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "I have around $100–120 to spend. If it were you, which headphones would you choose?",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "What are the Best Noise Cancelling Earbuds people actually use daily?",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Best noise cancelling earbuds people actually recommend right now?",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Bose QuietComfort 2024 - Ask Me Anything",
+          "locality": "Global"
+        }
+      ]
+    }
+  },
+  "positioning": {
+    "items": [
+      {
+        "recommendation": "Lead with ownership longevity — serviceable batteries, stocked spares and a stated support route — rather than driver counts",
+        "rationale": "The corpus already concedes that budget sound is good enough, so sound-quality claims land in a crowded and sceptical space. Lifespan, spares and support are the concerns nobody in the named competitive set is answering, and they are also where 'Chinese brand' scepticism concentrates. This is a Global-evidenced direction; UK-specific proof (retail returns, UK service address) would need separate validation.",
+        "supportedBy": [
+          {
+            "section": "Key Concerns & Barriers",
+            "detail": "Nine discussions treat wireless audio as disposable because the battery cannot be replaced",
+            "locality": "Global"
+          },
+          {
+            "section": "Competitive Landscape",
+            "detail": "Even premium incumbents are criticised for not supplying spare parts",
+            "locality": "Global"
+          },
+          {
+            "section": "Consumer Sentiment",
+            "detail": "Chinese brand ownership is explicitly framed as a warranty risk after a product failure",
+            "locality": "Global"
+          }
+        ]
+      },
+      {
+        "recommendation": "Make every claim independently testable, and hand the audience the tools to test it — published measurements, full parametric EQ, and open invitations to head-to-head comparison",
+        "rationale": "This segment settles arguments with measurements and shared EQ profiles, and openly mocks sponsored superlatives. A brand that publishes its own test conditions and ships a serious EQ converts the sceptics into unpaid reviewers. Again, evidence is Global; the reviewers named are not shown to have UK audiences.",
+        "supportedBy": [
+          {
+            "section": "Content Opportunities",
+            "detail": "Review posts invite readers to specify which tests to run against named rivals",
+            "locality": "Global"
+          },
+          {
+            "section": "Creator Signals",
+            "detail": "Measurement data is used in-thread to overrule a subjective ANC claim",
+            "locality": "Global"
+          },
+          {
+            "section": "Key Concerns & Barriers",
+            "detail": "A user-published EQ was adopted and refined by other commenters, deciding the product's verdict",
+            "locality": "Global"
+          }
+        ]
+      },
+      {
+        "recommendation": "Treat software and materials disclosure as product features: versioned changelogs with known issues, and published chemical-safety and sweat-durability testing",
+        "rationale": "Firmware instability and materials safety are two live, specific anxieties that a new entrant can neutralise cheaply and verifiably, and both currently produce long negative threads for competitors. Note this is inferred from Global threads, including one about a Dutch/EU test that removed products from shops — UK regulatory framing is not evidenced in this corpus.",
+        "supportedBy": [
+          {
+            "section": "Key Concerns & Barriers",
+            "detail": "A firmware bug saga tracked across months of dated edits, including a downgrade tool and a unit replacement",
+            "locality": "Global"
+          },
+          {
+            "section": "Consumer Sentiment",
+            "detail": "A chemical-contamination test prompted calls for headphone certification",
+            "locality": "Global"
+          },
+          {
+            "section": "Content Opportunities",
+            "detail": "A buyer rejects a previously favourite model purely because of the materials-toxicity report and vendor silence",
+            "locality": "Global"
+          }
+        ]
+      }
+    ],
+    "evidence": {
+      "confidence": "Low",
+      "basis": "Directions are inferred from sections 1–5, which rest on 76 Global and only 2 UK-tagged discussions; the logic is well supported at category level but no UK participant in this corpus discusses price, retail or brand choice.",
+      "sources": [
+        {
+          "subreddit": "headphones",
+          "postTitle": "Dutch consumer union did a test on harmfull chemicals in headphones. These are the sometimes shocking results. Multiple headphones are being taken out of dutch shops now.",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "headphones",
+          "postTitle": "soundcore X20 exploded in my ear this morning",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "HeadphoneAdvice",
+          "postTitle": "Good open backs for gaming, that aren’t the HD 560s",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "HeadphoneAdvice",
+          "postTitle": "Are the Soundcore Space 2 worth it?",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Soundcore Liberty 5 Pro Max arriving tomorrow — testing call quality vs Huawei FreeBuds Pro 5 and the new voice commands. Any specific tests you want to see?",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "QCY MeloBuds N70 firmware issue fixed with an official downgrade tool",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Best-sounding true wireless earbuds (Denon Perl Pro vs Technics AZ100 vs Sony XM5/XM6 vs B&amp;W PI8 vs Bose QC Ultra)",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "Soundpeats H3 Review | Phenomenal Sound... If you're willing to tune",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "earbuds",
+          "postTitle": "How Sony tricked everyone? A little about active noise cancellation (ANC).",
+          "locality": "Global"
+        }
+      ]
+    }
+  },
+  "audienceId": "tech-enthusiasts"
+}

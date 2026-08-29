@@ -1,21 +1,21 @@
 {
   "categoryId": "ai-app",
-  "discussionsAnalysed": 55,
-  "ukDiscussions": 26,
+  "discussionsAnalysed": 47,
+  "ukDiscussions": 18,
   "globalDiscussions": 29,
   "dataWindow": "Posts and comment threads from Sept 2025 to Aug 2026",
   "sentiment": {
-    "label": "Mixed",
-    "headline": "UK students use AI constantly but talk about it as a risk and a moral problem, not a product they enjoy",
-    "summary": "Across 26 UK-tagged discussions — 11 of them directly about students and AI — the picture is heavy, near-universal usage described in overwhelmingly negative language. UK student threads are dominated by resentment (peers 'cheating' to equal grades), fear (misconduct hearings, false accusations) and institutional distrust (lecturers themselves using AI). Positive accounts exist and are specific rather than enthusiastic: verifying physics answers, generating quiz questions, tidying references, structuring writing for a mature student. The 25 Global discussions (r/ChatGPT, r/artificial) show a different mood again — heavy daily use combined with active subscription-cancelling over quality, sycophancy and company conduct. There is no discussion in this corpus of anyone in the UK choosing an AI app on brand affinity; choice is discussed in terms of accuracy, permissibility and being caught.",
+    "label": "Negative",
+    "headline": "Among UK students the loud register is hostility and misconduct anxiety, not product enthusiasm — but the same threads admit heavy everyday use",
+    "summary": "Across 11 r/UniUK threads and 2 sixth-form threads, the dominant framing of AI apps is moral and defensive: cheating, deskilling, hallucinated references, and fear of being accused. Positive use is voiced almost apologetically and usually hedged as 'as a tool' — verification, quiz generation, structuring, polishing. Two UK general threads show the same split outside education (avoidance and eye-rolling alongside daily reliance). Global r/ChatGPT and r/artificial threads are more product-focused, but their tone is churn and disillusion (cancellations, model deprecation, ads) rather than advocacy. There is no discussion in this corpus where UK students speak warmly about an AI brand as a brand.",
     "quotes": [
       {
-        "text": "I am a uni student and I use AI all the time. The problem is, people don't use it just as a tool for learning or as a guide but they use it to do their work completely and don't end up learning anything.",
+        "text": "So frustrating to see how normalised AI laziness is now",
         "subreddit": "UniUK",
         "locality": "UK"
       },
       {
-        "text": "So frustrating to see how normalised AI laziness is now",
+        "text": "I am a uni student and I use AI all the time. The problem is, people don't use it just as a tool for learning or as a guide but they use it to do their work completely and don't end up learning anything.",
         "subreddit": "UniUK",
         "locality": "UK"
       },
@@ -25,19 +25,19 @@
         "locality": "UK"
       },
       {
-        "text": "never touched it and have no need to, if I want info I have the initiative to find it",
+        "text": "Personally, I don’t even use Siri. I avoid AI as much as I can",
         "subreddit": "AskUK",
         "locality": "UK"
       },
       {
-        "text": "Our lecturers have started introducing assignments where it’s stated we can use ChatGPT to brainstorm ideas, reduce word count, rewrite the occasional sentence etc.",
-        "subreddit": "UniUK",
+        "text": "why are we asking ai if the questions are hard or not qwq",
+        "subreddit": "6thForm",
         "locality": "UK"
       }
     ],
     "evidence": {
       "confidence": "High",
-      "basis": "26 UK-tagged discussions, 11 of them student-specific (r/UniUK, r/6thForm), consistent in tone across all 11; 29 Global discussions agree on heavy usage but not on the academic framing",
+      "basis": "13 UK student-oriented discussions (11 university, 2 sixth-form) plus 4 UK general discussions, consistent in tone; 30 global discussions agree on disillusion but cannot speak for UK students.",
       "sources": [
         {
           "subreddit": "UniUK",
@@ -76,6 +76,11 @@
         },
         {
           "subreddit": "UniUK",
+          "postTitle": "got accused of using AI on my dissertation",
+          "locality": "UK"
+        },
+        {
+          "subreddit": "UniUK",
           "postTitle": "1st Year Uni Student and ChatGPT 🤦🏻‍♀️",
           "locality": "UK"
         },
@@ -85,8 +90,23 @@
           "locality": "UK"
         },
         {
+          "subreddit": "UniUK",
+          "postTitle": "I think I’ve ruined my life. Advice?",
+          "locality": "UK"
+        },
+        {
           "subreddit": "AskUK",
           "postTitle": "Do people actually use AI day-to-day, or is it all hype?",
+          "locality": "UK"
+        },
+        {
+          "subreddit": "AskUK",
+          "postTitle": "Would you give up beef?",
+          "locality": "UK"
+        },
+        {
+          "subreddit": "AskUK",
+          "postTitle": "How aggressive is your AI adoption at work?",
           "locality": "UK"
         },
         {
@@ -100,9 +120,14 @@
           "locality": "UK"
         },
         {
-          "subreddit": "6thForm",
-          "postTitle": "UCAS you ain’t slick 😭",
-          "locality": "UK"
+          "subreddit": "ChatGPT",
+          "postTitle": "Why everybody is canceling ChatGPT?",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "ChatGPT",
+          "postTitle": "Never thought in 1,000,000 years I'd find myself switching to Gemini",
+          "locality": "Global"
         }
       ]
     }
@@ -110,79 +135,89 @@
   "barriers": {
     "items": [
       {
-        "name": "Fear of academic misconduct proceedings",
-        "frequency": "9 of 55 discussions",
+        "name": "Academic misconduct exposure is the single biggest fear",
+        "frequency": "7 of 47 discussions",
         "quote": {
-          "text": "Uni’s are dealing with a lot of ChatGPT related misconduct in the last couple years. I personally know of 3 people that were investigated for it last year, and our lecturers have talked about how common it’s becoming.",
+          "text": "Lecturer here. I check references carefully to check they are real.",
           "subreddit": "UniUK",
           "locality": "UK"
         },
-        "implication": "For UK students the dominant purchase-blocking risk is institutional, not financial. Any AI app marketed to this segment is read first through 'will this get me thrown off my course?'"
+        "implication": "An AI app marketed to UK students is bought against a background of disciplinary risk, not convenience; anything that looks like a way to submit generated text is a liability in this audience."
       },
       {
-        "name": "Hallucinated references and confidently wrong output",
-        "frequency": "11 of 55 discussions",
+        "name": "Deep distrust of AI detectors — and of uploading work anywhere",
+        "frequency": "5 of 47 discussions",
+        "quote": {
+          "text": "NEVER upload your work to any sort of checker. All of them are scammers.",
+          "subreddit": "UniUK",
+          "locality": "UK"
+        },
+        "implication": "Detector-adjacent or 'check your work' positioning is actively toxic here; students are being told by peers that uploading their own writing to third-party tools worsens their position."
+      },
+      {
+        "name": "False-accusation anxiety among honest students",
+        "frequency": "5 of 47 discussions",
+        "quote": {
+          "text": "thats the thing so many people are getting done for ai when theyve done nothing wrong. hope it all goes well for you :(",
+          "subreddit": "6thForm",
+          "locality": "UK"
+        },
+        "implication": "There is unmet demand for provable authorship, not for more generation capability."
+      },
+      {
+        "name": "Hallucinated citations and factual errors",
+        "frequency": "10 of 47 discussions",
         "quote": {
           "text": "As a lecturer, a couple of days ago I started to grade one assignment that is related to research practice, and evidence-based practice, and most references were fake (AI hallucinations).",
           "subreddit": "UniUK",
           "locality": "UK"
         },
-        "implication": "Fabricated citations are the single most-repeated concrete failure in the UK evidence, and the one that gets students caught. Verifiable sourcing is the clearest unmet functional demand visible here."
+        "implication": "Citation integrity is the concrete, repeatedly-cited failure mode (8 of the 10 discussions are UK-tagged); a verifiable-sources claim is the most credible product promise available."
       },
       {
-        "name": "False-positive AI detection and the 'don't upload your work' rule",
-        "frequency": "4 of 55 discussions",
+        "name": "Belief that AI use costs you learning and grades",
+        "frequency": "5 of 47 discussions",
         "quote": {
-          "text": "If you've not used AI, don't run reports through online detectors, submit like normal and if asked you can present the version/edit history of the document",
+          "text": "The interesting thing is that it also doesn't seem to really be helping them (on average), outside of getting them lazy marks on coursework.",
           "subreddit": "UniUK",
           "locality": "UK"
         },
-        "implication": "Students are being told by peers and staff that uploading their work to any third-party tool is itself a liability. A new app asking students to paste in coursework starts from a position of suspicion."
+        "implication": "Efficiency messaging ('faster, easier') is pre-loaded with negative associations in this audience; learning-gain framing is safer."
       },
       {
-        "name": "Confidentiality and data-handling anxiety",
-        "frequency": "4 of 55 discussions",
-        "quote": {
-          "text": "BUT OUR ASSIGNMENTS? OUR LABS??? HELLO this is confidential data we are dealing with.",
-          "subreddit": "UniUK",
-          "locality": "UK"
-        },
-        "implication": "Data anxiety appears in both student (lab data) and UK workplace (GDPR) threads. It is raised as an ethical objection, not just a compliance one."
-      },
-      {
-        "name": "Sycophancy — the model agrees with whatever you say",
-        "frequency": "5 of 55 discussions",
-        "quote": {
-          "text": "respectfully bro copilot will agree with anything if you let it.",
-          "subreddit": "6thForm",
-          "locality": "UK"
-        },
-        "implication": "Flattery is treated as evidence the tool is useless for study. Only one UK discussion (a sixth-form maths thread) carries this, but it is the top-voted framing there; the rest is Global."
-      },
-      {
-        "name": "Distrust of AI companies: ads, politics, sudden model removal",
-        "frequency": "8 of 55 discussions",
-        "quote": {
-          "text": "If I start seeing ads appear, I will never use the product again, full stop.",
-          "subreddit": "artificial",
-          "locality": "Global"
-        },
-        "implication": "Switching is normalised and fast in the Global communities. This is a Global finding — no UK-tagged discussion in the corpus discusses cancelling an AI subscription over company conduct."
-      },
-      {
-        "name": "Social stigma against visible AI use",
-        "frequency": "6 of 55 discussions",
+        "name": "Peer stigma for visible AI use",
+        "frequency": "6 of 47 discussions",
         "quote": {
           "text": "worried about the environment, asked ChatGPT.",
           "subreddit": "AskUK",
           "locality": "UK"
         },
-        "implication": "In UK general-audience subs, admitting AI use in a post invites pile-on, and AI-made marketing assets are read as a red flag. Loud AI branding carries reputational cost in the UK contexts observed here."
+        "implication": "Public, shareable AI behaviour is mocked in UK threads; social proof campaigns risk backfiring unless the use case is unambiguously legitimate."
+      },
+      {
+        "name": "Confidentiality and data-handling worries",
+        "frequency": "4 of 47 discussions",
+        "quote": {
+          "text": "I was very glad to see a firm-wide email saying \"it should be obvious, but you should *under no circumstances* put any client data into any AI system, because that is a data breach under GDPR\"...",
+          "subreddit": "AskUK",
+          "locality": "UK"
+        },
+        "implication": "UK evidence here is thin (2 UK discussions: lab/coursework data in D2, workplace GDPR in D14) but the framing exists and would sharpen for a non-UK-domiciled provider."
+      },
+      {
+        "name": "Provider churn, ads and paid-tier resentment",
+        "frequency": "6 of 47 discussions",
+        "quote": {
+          "text": "If I start seeing ads appear, I will never use the product again, full stop.",
+          "subreddit": "artificial",
+          "locality": "Global"
+        },
+        "implication": "All six of these discussions are Global, not UK — treat as a category-level switching dynamic, not a proven UK student attitude. One UK student thread does show hostility to paid AI tools (D10)."
       }
     ],
     "evidence": {
-      "confidence": "Medium",
-      "basis": "Academic-integrity and hallucination barriers rest on 9-11 UK discussions and are highly consistent; the company-trust and sycophancy barriers rest almost entirely on Global discussions (8 and 4 of 5 respectively) and cannot be reported as UK findings",
+      "confidence": "High",
+      "basis": "Integrity, detector-distrust, hallucination and stigma barriers rest on 13 UK student discussions that are mutually consistent; the vendor-churn and ads barrier rests on 6 global discussions only and is labelled as such.",
       "sources": [
         {
           "subreddit": "UniUK",
@@ -202,6 +237,11 @@
         {
           "subreddit": "UniUK",
           "postTitle": "Hallucinated reference",
+          "locality": "UK"
+        },
+        {
+          "subreddit": "UniUK",
+          "postTitle": "AI use is crazy",
           "locality": "UK"
         },
         {
@@ -240,11 +280,6 @@
           "locality": "UK"
         },
         {
-          "subreddit": "AskUK",
-          "postTitle": "I'm seeing more and more AI generated stuff around and about, why does it all look the same?",
-          "locality": "UK"
-        },
-        {
           "subreddit": "6thForm",
           "postTitle": "disgusting AI allegation for coursework",
           "locality": "UK"
@@ -255,23 +290,13 @@
           "locality": "UK"
         },
         {
-          "subreddit": "6thForm",
-          "postTitle": "UCAS you ain’t slick 😭",
-          "locality": "UK"
-        },
-        {
           "subreddit": "ChatGPT",
-          "postTitle": "ChatGPT crossed the line!",
+          "postTitle": "Cancel your ChatGPT Plus, burn their compute on the way out, and switch to Claude",
           "locality": "Global"
         },
         {
           "subreddit": "ChatGPT",
           "postTitle": "Why everybody is canceling ChatGPT?",
-          "locality": "Global"
-        },
-        {
-          "subreddit": "ChatGPT",
-          "postTitle": "People have started sounding like ChatGPT now and it's scary",
           "locality": "Global"
         },
         {
@@ -298,6 +323,11 @@
           "subreddit": "artificial",
           "postTitle": "Leak confirms OpenAI is preparing ads on ChatGPT for public roll out",
           "locality": "Global"
+        },
+        {
+          "subreddit": "artificial",
+          "postTitle": "Mark Cuban warns that OpenAI’s new plan to allow adults-only erotica in ChatGPT could ‘backfire. Hard’ | Fortune",
+          "locality": "Global"
         }
       ]
     }
@@ -305,39 +335,39 @@
   "content": {
     "items": [
       {
-        "hook": "'Show your working' — how to prove a piece of coursework is yours",
-        "why": "In four UK discussions the top-voted advice to accused students is identical: produce version history, drafts, timestamped notes. D8's poster was flagged at 96% despite never using AI; D19's sixth-former won by sending Word version history.",
-        "format": "Short UK-specific explainers and demos of exporting draft/edit history, aimed at r/UniUK and r/6thForm-style anxieties around results day and dissertation deadlines."
+        "hook": "'Prove it was yours' — building a defensible paper trail for coursework",
+        "why": "Accused students in D8 and D16 were advised, upvoted-heavily, to produce version history, notes and drafts; D16's case was dropped after Word version history was submitted.",
+        "format": "Short vertical explainer plus a downloadable pre-submission evidence checklist, published in term-time assessment windows."
       },
       {
-        "hook": "Every claim comes with a source you can click",
-        "why": "Fake references are the most-cited concrete failure in the UK academic threads, and one commenter already recommends a source-grounded tool by name as the fix.",
-        "format": "Side-by-side citation-verification demos; 'we checked all 12 references' teardown videos, seeded around assignment season."
+        "hook": "'Real references only' — sourcing a literature search you can actually cite",
+        "why": "Hallucinated references are the most concretely-described failure in the UK threads (D5, D2), and D1 states outright that AI literature-search tools are poor.",
+        "format": "Screen-recorded walkthrough comparing a source-grounded workflow against a fabricated-citation failure, with the marker's-eye view."
       },
       {
-        "hook": "It tells you when you're wrong",
-        "why": "UK sixth-formers openly mock a model for agreeing that an exam question was hard, and Global threads treat emotional-management tone as a reason to cancel.",
-        "format": "Clips of the model refusing to validate an incorrect worked answer; 'quiz me' and mark-my-attempt formats rather than 'write it for me'."
+        "hook": "'What your university actually permits' — decoding AI declarations and briefs",
+        "why": "D9 describes assignments that permit brainstorming but require a separate declaration; D11 quotes an assignment brief listing allowed uses; D16 turns on JCQ referencing rules.",
+        "format": "Institution-by-institution policy explainer carousel plus a declaration-wording template."
       },
       {
-        "hook": "Declared use: what your uni actually lets you do",
-        "why": "UK universities in this evidence permit brainstorming, structuring and word-count work but require a separate declaration document — students are visibly confused about where the line is (D11's poster panicked over two sentences).",
-        "format": "Policy-literacy explainers and an in-product usage log students can attach to a submission."
+        "hook": "'Study, don't submit' — revision use cases students already defend in public",
+        "why": "The few positive UK comments cluster on verifying worked answers, generating quiz questions and understanding lecture content (D4, D9, D12 'glorified search engine').",
+        "format": "Exam-season revision series built around self-testing and worked-answer checking rather than drafting."
       },
       {
-        "hook": "Exam-season utility, subject by subject",
-        "why": "Study use is the least-condemned use in the UK evidence: verifying physics answers with no solution sheet, generating quiz questions, and one student outright saying they needed the tool to revise during an outage.",
-        "format": "A-level and first-year subject walkthroughs (integration, lab write-up structure) published against the UK exam calendar."
+        "hook": "'It will agree with anything you say' — a sycophancy stress test",
+        "why": "UK sixth-formers mock a peer for taking Copilot's agreement as evidence (D17); global threads make the same complaint about tone and flattery (D20, D29, D38).",
+        "format": "Side-by-side prompt tests showing where a model pushes back, aimed at the accuracy-sceptic student."
       },
       {
-        "hook": "Marketing made by humans, visibly",
-        "why": "UK commenters say AI-generated posters actively put them off a venue, and one thread is entirely about AI creative all looking the same; a craft-led AI film was praised only because a real director made it.",
-        "format": "Human-credited campaign assets; avoid generated imagery in UK-facing creative."
+        "hook": "'Don't paste that in' — what not to feed a chatbot at university",
+        "why": "D2's original post is an angry account of classmates pasting confidential lab data into AI; D14 shows UK workplaces drawing an explicit GDPR line.",
+        "format": "Short cautionary explainer co-framed with lab and placement contexts."
       }
     ],
     "evidence": {
       "confidence": "Medium",
-      "basis": "Hooks 1, 2, 4, 5 and 6 each derive from 2-6 UK discussions; hook 3 rests on one UK discussion plus four Global ones, so it is the weakest of the set",
+      "basis": "Hooks are inferred from the recurring pain points of 13 UK student discussions and 4 UK general ones; no discussion in the corpus discusses AI-app marketing or content directly, so format choices are extrapolation.",
       "sources": [
         {
           "subreddit": "UniUK",
@@ -346,7 +376,17 @@
         },
         {
           "subreddit": "UniUK",
+          "postTitle": "AI rant",
+          "locality": "UK"
+        },
+        {
+          "subreddit": "UniUK",
           "postTitle": "Went to the library today and EVERY laptop had chatgpt/some other AI open",
+          "locality": "UK"
+        },
+        {
+          "subreddit": "UniUK",
+          "postTitle": "Hallucinated reference",
           "locality": "UK"
         },
         {
@@ -371,12 +411,12 @@
         },
         {
           "subreddit": "AskUK",
-          "postTitle": "Would you give up beef?",
+          "postTitle": "Do people actually use AI day-to-day, or is it all hype?",
           "locality": "UK"
         },
         {
           "subreddit": "AskUK",
-          "postTitle": "I'm seeing more and more AI generated stuff around and about, why does it all look the same?",
+          "postTitle": "How aggressive is your AI adoption at work?",
           "locality": "UK"
         },
         {
@@ -391,17 +431,17 @@
         },
         {
           "subreddit": "ChatGPT",
-          "postTitle": "What’s one thing you use ChatGPT for that sounds ridiculous — until people actually try it?",
+          "postTitle": "ChatGPT crossed the line!",
           "locality": "Global"
         },
         {
           "subreddit": "ChatGPT",
-          "postTitle": "Completely made with AI",
+          "postTitle": "People have started sounding like ChatGPT now and it's scary",
           "locality": "Global"
         },
         {
           "subreddit": "ChatGPT",
-          "postTitle": "ChatGPT website messed up.",
+          "postTitle": "Never thought in 1,000,000 years I'd find myself switching to Gemini",
           "locality": "Global"
         }
       ]
@@ -410,38 +450,53 @@
   "creators": {
     "items": [
       {
-        "signal": "Academics posting as academics are the most-upvoted voices in UK student AI threads",
-        "evidenceNote": "In six UK student discussions the highest-scoring comments are self-identified lecturers or markers (462 points in D5, 419 in D6, 341 in D7, 135 in D9). Students defer to them even when the advice is unwelcome.",
-        "profile": "UK university teaching staff and markers speaking in their professional capacity",
-        "platform": "Reddit (r/UniUK) — the only platform observable in this corpus",
-        "scale": "Not measurable from this evidence; comment scores in the hundreds within single threads"
+        "signal": "Self-identified academics and markers carry the most authority in UK student threads",
+        "evidenceNote": "Comments opening 'Lecturer here', 'As a lecturer', 'academic here' or 'Marker here' are the top-voted replies in five separate UK student discussions (D5, D2, D7, D9, D6), and in D5 the lecturer comment outscores the post's other advice by a wide margin.",
+        "profile": "UK university lecturers and markers speaking as institutional insiders",
+        "platform": "Reddit UK university forums",
+        "scale": "Not observable in this corpus — no follower or audience data appears in any discussion."
       },
       {
-        "signal": "Peer students trust each other's war stories and are openly suspicious of institutional messaging",
-        "evidenceNote": "A UCAS survey about AI use was read as a sting operation ('Nice try feds'), while a sixth-former's coursework-accusation thread drew detailed peer procedural advice and similar first-hand accounts.",
-        "profile": "Sixth-form and undergraduate peers recounting their own investigations and outcomes",
-        "platform": "Reddit (r/6thForm, r/UniUK)",
-        "scale": "Not measurable from this evidence"
+        "signal": "Tool recommendations reach students peer-to-peer inside comment threads, not from named personalities",
+        "evidenceNote": "The only concrete product tips in the UK corpus come from anonymous peers: NotebookLM for source-grounded citations and a UK essay-structure website in D9, Google Docs version history in D10, quiz generation in D4.",
+        "profile": "Anonymous student peers and mature students recounting personal workflows",
+        "platform": "Reddit UK university forums",
+        "scale": "Not observable — comment scores only, no creator identities."
       },
       {
-        "signal": "Celebrity endorsement is noticed and remembered, but discussed cynically as paid work",
-        "evidenceNote": "A UK thread on celebrities doing 'beneath them' ads concludes the deals are simply easy money; the top-voted defence is that people remember the celebrity, not the brand's message.",
-        "profile": "Mainstream UK celebrities in short-form ad campaigns",
-        "platform": "Discussed on Reddit (r/AskUK) about TV/online advertising",
-        "scale": "Not measurable from this evidence"
+        "signal": "Overt promotion is spotted and framed with suspicion",
+        "evidenceNote": "A low-scoring comment in D8 promoting a named 'ai detector' sits directly against high-scoring advice never to upload work to checkers; a global thread (D22) shows a top comment adding 'Disclosure: I am with the team that built it.'",
+        "profile": "Vendor-affiliated commenters",
+        "platform": "Reddit, both UK student and global AI forums",
+        "scale": "Two discussions only — thin."
       },
       {
-        "signal": "AI-made creative earns respect only when a named craft professional is attached",
-        "evidenceNote": "A fully AI-generated ad was widely praised in a Global thread specifically because a real director made it; commenters in a separate UK thread say generic AI posters make them avoid the business.",
-        "profile": "Named directors/editors using AI tools as craft, not automated output",
-        "platform": "Reddit (r/ChatGPT, Global) and r/AskUK for the negative counterpart",
-        "scale": "Not measurable from this evidence"
+        "signal": "No named influencers, YouTubers or TikTok creators appear anywhere in the corpus",
+        "evidenceNote": "Across all 47 discussions the only named external authorities are institutional tools and databases (Google Scholar and Web of Science in D1) and AI-company executives discussed as news subjects (D22, D36, D40, D47); zero education creators are referenced by name.",
+        "profile": "Absence signal",
+        "platform": "n/a",
+        "scale": "Zero mentions in 47 discussions."
       }
     ],
     "evidence": {
       "confidence": "Low",
-      "basis": "No creator, influencer or channel is named anywhere in the 55 discussions; these are inferred audience preferences from 4 UK discussions plus 1 Global one, and describe observed deference patterns only",
+      "basis": "No discussion names a single creator or influencer; the pattern rests on voice-type and vote-position readings across roughly 7 UK student discussions plus 2 global ones, which is suggestive at best.",
       "sources": [
+        {
+          "subreddit": "UniUK",
+          "postTitle": "I hope AI is banned.",
+          "locality": "UK"
+        },
+        {
+          "subreddit": "UniUK",
+          "postTitle": "AI rant",
+          "locality": "UK"
+        },
+        {
+          "subreddit": "UniUK",
+          "postTitle": "Went to the library today and EVERY laptop had chatgpt/some other AI open",
+          "locality": "UK"
+        },
         {
           "subreddit": "UniUK",
           "postTitle": "Hallucinated reference",
@@ -459,32 +514,22 @@
         },
         {
           "subreddit": "UniUK",
+          "postTitle": "got accused of using AI on my dissertation",
+          "locality": "UK"
+        },
+        {
+          "subreddit": "UniUK",
           "postTitle": "1st Year Uni Student and ChatGPT 🤦🏻‍♀️",
           "locality": "UK"
         },
         {
-          "subreddit": "AskUK",
-          "postTitle": "Are celebrities broke now?",
-          "locality": "UK"
-        },
-        {
-          "subreddit": "AskUK",
-          "postTitle": "I'm seeing more and more AI generated stuff around and about, why does it all look the same?",
-          "locality": "UK"
-        },
-        {
-          "subreddit": "6thForm",
-          "postTitle": "disgusting AI allegation for coursework",
-          "locality": "UK"
-        },
-        {
-          "subreddit": "6thForm",
-          "postTitle": "UCAS you ain’t slick 😭",
+          "subreddit": "UniUK",
+          "postTitle": "AI is literally ruining uni for me",
           "locality": "UK"
         },
         {
           "subreddit": "ChatGPT",
-          "postTitle": "Completely made with AI",
+          "postTitle": "Cancel your ChatGPT Plus, burn their compute on the way out, and switch to Claude",
           "locality": "Global"
         }
       ]
@@ -494,52 +539,81 @@
     "items": [
       {
         "name": "ChatGPT / OpenAI",
-        "discussions": 40,
-        "summary": "The default the category is discussed through, named in roughly 40 of 55 discussions including 15 UK-tagged ones. In UK student threads it is synonymous with 'AI' itself; in Global threads it is the incumbent people are actively leaving.",
+        "discussions": 37,
+        "summary": "The default reference point in every UK student discussion that names a tool, and the subject of most global threads. Simultaneously the most used and the most criticised: it is what students are accused of using, and the brand global users are most publicly leaving.",
         "strengths": [
           {
-            "text": "Don’t panic I used chat GPT and got firsts on all my assigments I used it to tidy up my refrences and lay out",
+            "text": "I lost a small screw on a busy patterned carpet. I uploaded a photo of the carpet, and chatgpt found the screw for me.",
+            "subreddit": "ChatGPT",
+            "locality": "Global"
+          },
+          {
+            "text": "Our lecturers have started introducing assignments where it’s stated we can use ChatGPT to brainstorm ideas, reduce word count, rewrite the occasional sentence etc.",
+            "subreddit": "UniUK",
+            "locality": "UK"
+          }
+        ],
+        "weaknesses": [
+          {
+            "text": "Lecturer here. I check references carefully to check they are real.",
             "subreddit": "UniUK",
             "locality": "UK"
           },
           {
-            "text": "I lost a small screw on a busy patterned carpet. I uploaded a photo of the carpet, and chatgpt found the screw for me.",
+            "text": "OpenAI just announced that they will remove a bunch of legacy models, notably 4o, even for paid users on Feb. 13, 2026. This is why I'm canceling mine.",
+            "subreddit": "ChatGPT",
+            "locality": "Global"
+          },
+          {
+            "text": "I have been using the paid version of chatgpt for two years and there is definitely a decline in quality.",
+            "subreddit": "ChatGPT",
+            "locality": "Global"
+          }
+        ]
+      },
+      {
+        "name": "Google Gemini",
+        "discussions": 9,
+        "summary": "Named mainly in global discussions as the destination for people leaving ChatGPT, on price-performance and image generation; barely mentioned by UK students.",
+        "strengths": [
+          {
+            "text": "went to Gemini more bang for the buck and its better I feel.",
+            "subreddit": "ChatGPT",
+            "locality": "Global"
+          },
+          {
+            "text": "Right now, Gemini 3 Pro is far far better.",
             "subreddit": "ChatGPT",
             "locality": "Global"
           }
         ],
         "weaknesses": [
           {
-            "text": "I have been using the paid version of chatgpt for two years and there is definitely a decline in quality.",
-            "subreddit": "ChatGPT",
-            "locality": "Global"
-          },
-          {
-            "text": "I stopped renewing after it became obvious it was tuned to target emotional engagement over accuracy; including gaslighting/lying/not admitting when it's wrong. I realized it sucks now and Gemini and Claude are much more accurate.",
-            "subreddit": "ChatGPT",
-            "locality": "Global"
-          },
-          {
-            "text": "Lecturer here. I check references carefully to check they are real.",
-            "subreddit": "UniUK",
+            "text": "Gemini was better for that than Chatgpt, but also buggier.",
+            "subreddit": "AskUK",
             "locality": "UK"
+          },
+          {
+            "text": "Since we’ve discussed your stress and anxiety, I strongly advise you against getting a raccoon.",
+            "subreddit": "ChatGPT",
+            "locality": "Global"
           }
         ]
       },
       {
-        "name": "Claude / Anthropic",
-        "discussions": 8,
-        "summary": "Named in 8 discussions, only 2 of them UK-tagged and both about workplace coding rather than study. Positioned in Global threads as the destination for people leaving OpenAI, though commenters challenge its ethical halo.",
+        "name": "Anthropic Claude",
+        "discussions": 9,
+        "summary": "Positioned in global threads as the ethical or warmer alternative and as the professional coding tool; criticised on usage limits and on the claim that its ethics are no cleaner.",
         "strengths": [
+          {
+            "text": "It has a much warmer voice like 4o used to be.",
+            "subreddit": "ChatGPT",
+            "locality": "Global"
+          },
           {
             "text": "Claude is the best there is and its still a monkey with a knife, if they fire me for it i dodged a bullet",
             "subreddit": "artificial",
             "locality": "Global"
-          },
-          {
-            "text": "I'm a software engineer. I use [Claude.ai](http://Claude.ai) all day, every day.",
-            "subreddit": "AskUK",
-            "locality": "UK"
           }
         ],
         "weaknesses": [
@@ -556,33 +630,9 @@
         ]
       },
       {
-        "name": "Google Gemini",
-        "discussions": 10,
-        "summary": "Named in around 10 discussions, almost all Global, as the main switching destination on price and quality. Appears in only one UK discussion, as a better tool for making dense articles accessible.",
-        "strengths": [
-          {
-            "text": "Right now, Gemini 3 Pro is far far better.",
-            "subreddit": "ChatGPT",
-            "locality": "Global"
-          },
-          {
-            "text": "Gemini was better for that than Chatgpt, but also buggier.",
-            "subreddit": "AskUK",
-            "locality": "UK"
-          }
-        ],
-        "weaknesses": [
-          {
-            "text": "Gemini loses its mind after failing to produce a seahorse emoji",
-            "subreddit": "ChatGPT",
-            "locality": "Global"
-          }
-        ]
-      },
-      {
         "name": "Microsoft Copilot",
         "discussions": 5,
-        "summary": "The competitor most present in UK-tagged discussions specifically (all 5 mentions are UK), because it arrives bundled through Office, university and employer licences rather than by choice. Reputation in those threads is poor.",
+        "summary": "Present by default rather than by choice — bundled into Office and institutional stacks, and the tool UK students and workers complain about most for quality.",
         "strengths": [
           {
             "text": "Hard to avoid now copilot is built into office.",
@@ -592,21 +642,21 @@
         ],
         "weaknesses": [
           {
-            "text": "We keep getting asked why we’re not fully utilising our Teams copilot licences… the unanimous reply is “because it’s shit and I would spend more time checking and correcting errors than just writing the fucking email or locating the file I need”.",
-            "subreddit": "AskUK",
+            "text": "respectfully bro copilot will agree with anything if you let it.",
+            "subreddit": "6thForm",
             "locality": "UK"
           },
           {
-            "text": "respectfully bro copilot will agree with anything if you let it.",
-            "subreddit": "6thForm",
+            "text": "because it’s shit and I would spend more time checking and correcting errors than just writing the fucking email or locating the file I need",
+            "subreddit": "AskUK",
             "locality": "UK"
           }
         ]
       },
       {
         "name": "Turnitin and AI detectors (incl. GPTZero)",
-        "discussions": 5,
-        "summary": "Not a rival app but the gatekeeping layer every UK student decision runs through, named in 5 UK discussions. Widely distrusted by students and staff alike, which creates space for a tool that helps students evidence authorship rather than test for it.",
+        "discussions": 4,
+        "summary": "The adversary brands in UK student discussion. Markers describe using Turnitin as one signal among several, while students describe consumer detectors as unreliable and dangerous to use.",
         "strengths": [
           {
             "text": "I run my students' scripts through Turnitin and manually search for any reference that doesn't get flagged up as having been cited elsewhere before.",
@@ -616,12 +666,12 @@
         ],
         "weaknesses": [
           {
-            "text": "'AI Detectors' are bullshit. It's an unsolved problem",
+            "text": "Some AI detectors claim the American Constitution was written by AI.",
             "subreddit": "UniUK",
             "locality": "UK"
           },
           {
-            "text": "There is an AI detector on Turnitin however universities don’t use it because it gives a lot of false positives and it’s completely unreliable.",
+            "text": "Turnitin’s AI detection has major flaws and is probabilistic, not absolute.",
             "subreddit": "UniUK",
             "locality": "UK"
           }
@@ -630,7 +680,7 @@
       {
         "name": "NotebookLM",
         "discussions": 2,
-        "summary": "Mentioned in only 2 discussions, but both times as the source-grounded answer to the hallucination problem — the closest thing in this corpus to an articulated unmet need being met.",
+        "summary": "The only tool a UK student recommends specifically for citation integrity, and used in a global thread to build study materials — the closest thing in the corpus to a validated student use case.",
         "strengths": [
           {
             "text": "Pro tip: use NotebookLM, not ChatGPT. You feed it the sources you want it to pull its info from and every claim it makes, it will provide a citation to the material you fed into it.",
@@ -638,20 +688,48 @@
             "locality": "UK"
           }
         ],
+        "weaknesses": []
+      },
+      {
+        "name": "Grammarly",
+        "discussions": 1,
+        "summary": "Named once, lumped in with ChatGPT by an academic warning against assessment help, and defended once by a student who sees grammar checking as legitimate — evidence too thin to characterise further.",
+        "strengths": [
+          {
+            "text": "I understand why you wouldn’t want chatgpt, but what’s wrong with grammerly? Doesn’t that just for spelling and grammar? That seems a bit unfair",
+            "subreddit": "UniUK",
+            "locality": "UK"
+          }
+        ],
         "weaknesses": [
           {
-            "text": "Don't use it to write your papers, btw. Just use it to generate ideas",
+            "text": "If you think you can get away using ChatGPT or Grammerly or whatever to write your assessments for you and get away with it. You cannot.",
             "subreddit": "UniUK",
             "locality": "UK"
           }
         ]
       }
     ],
-    "gap": "No Chinese-origin AI app is discussed anywhere in the UK-tagged evidence. DeepSeek is named once, in a Global thread, attached to a joke about not travelling to China; CapCut appears once in a UK thread but in a child-safeguarding context unrelated to AI assistants. Non-US alternatives are otherwise absent. The unoccupied position visible in the evidence is 'verifiably sourced and defensible in an academic misconduct meeting' — repeatedly asked for across UK student threads, gestured at only by NotebookLM in 2 discussions, and claimed by nobody.",
+    "gap": "No Chinese-origin AI app is named by any UK student in this corpus. DeepSeek appears exactly once, in a global thread, inside a joke about jurisdiction risk ('as long as I don't go to China I'm safe', D43) — a signal worth noting but far too thin to generalise. The unoccupied ground the named incumbents leave is verifiable citations (D5, D2, D1), authorship provenance for accused students (D8, D16), explicit alignment with UK university and JCQ disclosure rules (D9, D11, D16), and stable pricing free of ads and model retirements (global only: D26, D41, D44). NotebookLM is the nearest occupant of the citation-integrity space and is mentioned in just two discussions.",
     "evidence": {
       "confidence": "Medium",
-      "basis": "Brand naming is dense (ChatGPT in ~40 of 55 discussions) but UK-specific brand comparison is thin: only Copilot and Turnitin are discussed substantively in UK threads, and the Claude/Gemini switching narrative is almost entirely Global",
+      "basis": "Brand names are drawn from 13 UK student and 4 UK general discussions plus 30 global ones, but UK student naming is concentrated on ChatGPT, Copilot, Turnitin and one NotebookLM mention; Gemini and Claude evidence is almost entirely global.",
       "sources": [
+        {
+          "subreddit": "UniUK",
+          "postTitle": "I hope AI is banned.",
+          "locality": "UK"
+        },
+        {
+          "subreddit": "UniUK",
+          "postTitle": "AI rant",
+          "locality": "UK"
+        },
+        {
+          "subreddit": "UniUK",
+          "postTitle": "Went to the library today and EVERY laptop had chatgpt/some other AI open",
+          "locality": "UK"
+        },
         {
           "subreddit": "UniUK",
           "postTitle": "Hallucinated reference",
@@ -660,6 +738,11 @@
         {
           "subreddit": "UniUK",
           "postTitle": "Please listen freshers!",
+          "locality": "UK"
+        },
+        {
+          "subreddit": "UniUK",
+          "postTitle": "got accused of using AI on my dissertation",
           "locality": "UK"
         },
         {
@@ -673,6 +756,11 @@
           "locality": "UK"
         },
         {
+          "subreddit": "UniUK",
+          "postTitle": "I think I’ve ruined my life. Advice?",
+          "locality": "UK"
+        },
+        {
           "subreddit": "AskUK",
           "postTitle": "Do people actually use AI day-to-day, or is it all hype?",
           "locality": "UK"
@@ -680,6 +768,11 @@
         {
           "subreddit": "AskUK",
           "postTitle": "How aggressive is your AI adoption at work?",
+          "locality": "UK"
+        },
+        {
+          "subreddit": "6thForm",
+          "postTitle": "disgusting AI allegation for coursework",
           "locality": "UK"
         },
         {
@@ -704,11 +797,6 @@
         },
         {
           "subreddit": "ChatGPT",
-          "postTitle": "Gemini loses its mind after failing to produce a seahorse emoji",
-          "locality": "Global"
-        },
-        {
-          "subreddit": "ChatGPT",
           "postTitle": "Never thought in 1,000,000 years I'd find myself switching to Gemini",
           "locality": "Global"
         },
@@ -721,6 +809,21 @@
           "subreddit": "artificial",
           "postTitle": "OpenAI Reports Goldman Sachs Analyst to FBI for Horrifying ChatGPT Conversations",
           "locality": "Global"
+        },
+        {
+          "subreddit": "artificial",
+          "postTitle": "Leak confirms OpenAI is preparing ads on ChatGPT for public roll out",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "artificial",
+          "postTitle": "IBM stock tumbles 10% after Anthropic launches COBOL AI tool",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "artificial",
+          "postTitle": "Sam Altman says Google is 'still a huge threat' and ChatGPT will be declaring code red 'maybe twice a year for a long time'",
+          "locality": "Global"
         }
       ]
     }
@@ -728,87 +831,77 @@
   "positioning": {
     "items": [
       {
-        "recommendation": "Lead with provable authorship, not productivity: source-grounded answers plus an exportable record of the student's own process",
-        "rationale": "The two things UK student threads ask for most often are references that are real and a way to prove the work is theirs. This is the only positioning in the corpus that speaks to the fear rather than the convenience, and no named competitor claims it.",
+        "recommendation": "Lead with provenance: an AI study app whose core promise is that the student can prove the work is theirs",
+        "rationale": "The most acute unserved anxiety in UK student threads is not generation quality but defensibility — accused students are told to produce version history, drafts, notes and timestamps, and the sixth-former whose case was dropped had exactly that evidence. Building draft history, edit logging and an exportable work record into the product turns the category's biggest liability into the reason to install it.",
         "supportedBy": [
           {
             "section": "Key Concerns & Barriers",
-            "detail": "Hallucinated references are the most-repeated concrete failure, raised by a lecturer marking a cohort of assignments with mostly fake citations",
+            "detail": "False-accusation anxiety surfaces across 5 UK discussions; peers advise demonstrating process rather than trusting detectors.",
             "locality": "UK"
           },
           {
-            "section": "Key Concerns & Barriers",
-            "detail": "Peer consensus is that version and edit history is a student's only real defence against an accusation",
+            "section": "Content Opportunities",
+            "detail": "An accused sixth-form student's Word version history contributed to the exam board dropping the case.",
             "locality": "UK"
           },
           {
             "section": "Competitive Landscape",
-            "detail": "Only NotebookLM is cited as solving source-grounding, in a single passing comment",
-            "locality": "UK"
-          },
-          {
-            "section": "Content Opportunities",
-            "detail": "'Show your working' explainers map directly onto the advice UK students already give each other",
+            "detail": "Detector brands are the adversary in UK student threads and no named AI app offers authorship evidence.",
             "locality": "UK"
           }
         ]
       },
       {
-        "recommendation": "Position inside university rules, not around them: a study-and-check companion with a declarable usage log",
-        "rationale": "UK institutions in this evidence permit brainstorming, structuring and word-count work but require declaration, and students are anxious about where the line sits. Positioning as a cheating tool would collide with the strongest sentiment in the corpus; positioning as the compliant option converts that hostility into a reason to choose you.",
+        "recommendation": "Position as a source-grounded research and revision aid, never as a writing service",
+        "rationale": "Hallucinated references are the failure UK markers and students describe most concretely, and the only tool a UK student recommends by name is praised precisely for citing only the sources fed to it. The publicly defensible student use cases in these threads are self-testing, checking worked answers and understanding material — not drafting. Anything that reads as 'we write your essay' inherits the misconduct and stigma load documented across seven UK discussions.",
         "supportedBy": [
+          {
+            "section": "Key Concerns & Barriers",
+            "detail": "A lecturer reports most references in a batch of assignments were AI fabrications.",
+            "locality": "UK"
+          },
           {
             "section": "Consumer Sentiment",
-            "detail": "Lecturers are setting assignments that explicitly allow brainstorming and rewriting provided a separate declaration document is supplied",
+            "detail": "The rare positive UK student framing is explicitly 'as a tool for learning', with condemnation reserved for wholesale outsourcing.",
             "locality": "UK"
           },
           {
-            "section": "Key Concerns & Barriers",
-            "detail": "A final-year student panicked over two AI-phrased sentences because they were unsure whether disclosure requirements had been met",
-            "locality": "UK"
-          },
-          {
-            "section": "Content Opportunities",
-            "detail": "The least-condemned uses in UK threads are verification and self-testing, not generation",
-            "locality": "UK"
-          },
-          {
-            "section": "Creator Signals",
-            "detail": "Academics are the most-upvoted voices in UK student AI threads, so a rules-compliant product story is the one that survives their scrutiny",
+            "section": "Competitive Landscape",
+            "detail": "NotebookLM is the only tool recommended by a UK student for citation integrity, and only in two discussions — the space is barely occupied.",
             "locality": "UK"
           }
         ]
       },
       {
-        "recommendation": "Make data handling and no-ads an explicit, front-of-pack promise, and keep UK creative human-made",
-        "rationale": "Students are being told never to upload coursework to third-party tools, UK workplaces are issuing GDPR warnings, and Global users treat advertising as an immediate cancellation trigger. For an entrant with no UK reputation this is a defensive necessity before it is a differentiator; note the ads/trust evidence is Global, so the UK-specific version of it is untested here.",
+        "recommendation": "Compete on institutional fit and predictable terms — UK policy alignment, disclosure tooling, no ads, no surprise model retirements — while pre-empting the data-jurisdiction question head-on",
+        "rationale": "Global threads show incumbents shedding paying users over ads, deprecated models and quality drift, which is a switching window rather than proof of UK demand. The UK-specific version of that trust argument is institutional: students describe assignment briefs listing permitted uses and required declarations, so shipping declaration logs and clear policy mapping is the concrete trust product. The corpus also shows UK sensitivity to putting confidential coursework and client data into AI systems, and one global joke about Chinese jurisdiction — so a Chinese brand should treat data location as a launch message, not a footnote. Note the churn evidence is entirely Global, so size this claim cautiously.",
         "supportedBy": [
           {
             "section": "Key Concerns & Barriers",
-            "detail": "UK commenters advise students never to upload their work to any checker or third-party tool",
-            "locality": "UK"
-          },
-          {
-            "section": "Key Concerns & Barriers",
-            "detail": "A UK firm-wide instruction that putting client data into any AI system is a GDPR breach",
-            "locality": "UK"
-          },
-          {
-            "section": "Key Concerns & Barriers",
-            "detail": "Global users state flatly that visible advertising would end their use of the product",
+            "detail": "Ads and model deprecation drive stated cancellation intent across 6 global discussions.",
             "locality": "Global"
           },
           {
             "section": "Content Opportunities",
-            "detail": "AI-generated marketing assets actively deter UK commenters from a business",
+            "detail": "Students describe assignments that permit AI for brainstorming but require a separate declaration document.",
             "locality": "UK"
+          },
+          {
+            "section": "Key Concerns & Barriers",
+            "detail": "UK participants draw an explicit GDPR line on feeding confidential data to AI systems.",
+            "locality": "UK"
+          },
+          {
+            "section": "Competitive Landscape",
+            "detail": "The single DeepSeek mention in the corpus is a joke about Chinese jurisdiction risk.",
+            "locality": "Global"
           }
         ]
       }
     ],
     "evidence": {
       "confidence": "Medium",
-      "basis": "Directions 1 and 2 rest on 9-11 consistent UK student discussions; direction 3 mixes 2 UK discussions on data handling with 6 Global discussions on ads and company trust, so its UK applicability is inferred rather than evidenced",
+      "basis": "Directions 1 and 2 rest on 13 consistent UK student discussions; direction 3 mixes 2 UK discussions with 6 global churn discussions and is the weakest of the three, and this section infers rather than reports.",
       "sources": [
         {
           "subreddit": "UniUK",
@@ -851,9 +944,24 @@
           "locality": "UK"
         },
         {
-          "subreddit": "AskUK",
-          "postTitle": "I'm seeing more and more AI generated stuff around and about, why does it all look the same?",
+          "subreddit": "6thForm",
+          "postTitle": "disgusting AI allegation for coursework",
           "locality": "UK"
+        },
+        {
+          "subreddit": "ChatGPT",
+          "postTitle": "Why everybody is canceling ChatGPT?",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "artificial",
+          "postTitle": "OpenAI Reportedly Planning to Make ChatGPT \"Prioritize\" Advertisers in Conversation",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "artificial",
+          "postTitle": "OpenAI Reports Goldman Sachs Analyst to FBI for Horrifying ChatGPT Conversations",
+          "locality": "Global"
         },
         {
           "subreddit": "artificial",

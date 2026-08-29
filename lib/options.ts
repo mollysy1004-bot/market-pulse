@@ -24,9 +24,9 @@ export const CATEGORIES: Option[] = [
   // never one category. Charging & Power and Audio are the two slices where
   // Chinese brands actually compete and where dedicated communities exist, so
   // they are collected separately rather than pooled.
-  { id: "consumer-electronics", label: "Consumer Electronics", hint: "broad — see Charging or Audio", available: true },
-  { id: "charging-power", label: "Charging & Power", hint: "Anker, Ugreen, Baseus", available: false },
-  { id: "audio-earbuds", label: "Audio & Earbuds", hint: "Soundcore, Edifier, QCY", available: false },
+  { id: "consumer-electronics", label: "Consumer Electronics", hint: "the broad shelf; Charging and Audio are its live slices", available: true },
+  { id: "charging-power", label: "Charging & Power", hint: "Anker, Ugreen, Baseus", available: true },
+  { id: "audio-earbuds", label: "Audio & Earbuds", hint: "Soundcore, Edifier, QCY", available: true },
   { id: "smart-home", label: "Smart Home", hint: "Dreame, Roborock", available: true },
   { id: "3d-printer", label: "3D Printer", hint: "Bambu Lab", available: true },
   { id: "action-camera", label: "Action Camera", hint: "Insta360, GoPro competitors", available: true },
@@ -53,6 +53,18 @@ export interface SubredditRef {
   name: string;
   locality: Locality;
   note: string;
+  /**
+   * A community that is not about any one category — r/AskUK, r/CasualUK.
+   *
+   * These need a stricter relevance test than a specialist community does. In
+   * r/UsbCHardware an anchor anywhere in a post is a safe signal because the
+   * whole community is on topic. In a general community the same match is
+   * usually a passing mention: a backpack thread listing a power bank, a sleep
+   * thread mentioning headphones. Requiring the anchor in the title asks
+   * whether the thread is about the category rather than whether the category
+   * came up in it.
+   */
+  general?: boolean;
 }
 
 /**
@@ -63,10 +75,10 @@ export interface SubredditRef {
  */
 export const SUBREDDIT_MAP: Record<CategoryId, SubredditRef[]> = {
   "ai-app": [
-    { name: "UniUK", locality: "UK", note: "UK university students, study tools, AI in education" },
-    { name: "AskUK", locality: "UK", note: "General UK consumer attitudes" },
-    { name: "6thForm", locality: "UK", note: "Younger UK students (A-level), tech adoption" },
-    { name: "UKPersonalFinance", locality: "UK", note: "Subscription and pricing sensitivity signals" },
+    { name: "UniUK", general: true, locality: "UK", note: "UK university students, study tools, AI in education" },
+    { name: "AskUK", general: true, locality: "UK", note: "General UK consumer attitudes" },
+    { name: "6thForm", general: true, locality: "UK", note: "Younger UK students (A-level), tech adoption" },
+    { name: "UKPersonalFinance", general: true, locality: "UK", note: "Subscription and pricing sensitivity signals" },
     { name: "ChatGPT", locality: "Global", note: "General AI tool discussion, comparisons, complaints" },
     { name: "artificial", locality: "Global", note: "AI industry and product discussion" },
     { name: "productivity", locality: "Global", note: "Workflow and tool recommendations" },
@@ -76,25 +88,25 @@ export const SUBREDDIT_MAP: Record<CategoryId, SubredditRef[]> = {
     // is restricted, and returned nothing for any category term — the mapping was
     // written from assumption rather than checked. Replaced with communities that
     // actually carry UK purchase discussion.
-    { name: "AskUK", locality: "UK", note: "Purchase decisions, brand perception" },
-    { name: "CasualUK", locality: "UK", note: "Everyday UK product talk and recommendations" },
-    { name: "UKPersonalFinance", locality: "UK", note: "Value, warranty and replacement decisions" },
+    { name: "AskUK", general: true, locality: "UK", note: "Purchase decisions, brand perception" },
+    { name: "CasualUK", general: true, locality: "UK", note: "Everyday UK product talk and recommendations" },
+    { name: "UKPersonalFinance", general: true, locality: "UK", note: "Value, warranty and replacement decisions" },
     { name: "gadgets", locality: "Global", note: "Product discovery and reviews" },
     { name: "technology", locality: "Global", note: "Broader tech discussion" },
     { name: "BuyItForLife", locality: "Global", note: "Quality and value discussions" },
   ],
   "charging-power": [
-    { name: "AskUK", locality: "UK", note: "UK purchase decisions and brand perception" },
-    { name: "CasualUK", locality: "UK", note: "Everyday UK product talk and recommendations" },
-    { name: "UKPersonalFinance", locality: "UK", note: "Value, warranty and replacement decisions" },
+    { name: "AskUK", general: true, locality: "UK", note: "UK purchase decisions and brand perception" },
+    { name: "CasualUK", general: true, locality: "UK", note: "Everyday UK product talk and recommendations" },
+    { name: "UKPersonalFinance", general: true, locality: "UK", note: "Value, warranty and replacement decisions" },
     { name: "UsbCHardware", locality: "Global", note: "Charging standards, cable and adapter quality" },
     { name: "anker", locality: "Global", note: "Anker owners — the incumbent this category competes with" },
     { name: "gadgets", locality: "Global", note: "Product discovery and reviews" },
     { name: "BuyItForLife", locality: "Global", note: "Durability and after-sales experience" },
   ],
   "audio-earbuds": [
-    { name: "AskUK", locality: "UK", note: "UK purchase decisions and brand perception" },
-    { name: "CasualUK", locality: "UK", note: "Everyday UK product talk and recommendations" },
+    { name: "AskUK", general: true, locality: "UK", note: "UK purchase decisions and brand perception" },
+    { name: "CasualUK", general: true, locality: "UK", note: "Everyday UK product talk and recommendations" },
     { name: "headphones", locality: "Global", note: "General audio discussion and reviews" },
     { name: "HeadphoneAdvice", locality: "Global", note: "Purchase advice — stated needs and budgets" },
     { name: "BudgetAudiophile", locality: "Global", note: "Value tier, where Chinese brands compete" },
@@ -105,8 +117,8 @@ export const SUBREDDIT_MAP: Record<CategoryId, SubredditRef[]> = {
     // usable size does — the largest candidates have 16 and 427 members. UK
     // evidence for this category comes from general UK communities instead, and
     // the category is treated as thin on UK coverage.
-    { name: "AskUK", locality: "UK", note: "Home tech adoption attitudes" },
-    { name: "DIYUK", locality: "UK", note: "UK installation, wiring and home-tech practicalities" },
+    { name: "AskUK", general: true, locality: "UK", note: "Home tech adoption attitudes" },
+    { name: "DIYUK", general: true, locality: "UK", note: "UK installation, wiring and home-tech practicalities" },
     { name: "homeautomation", locality: "Global", note: "Smart home setup and products" },
     { name: "smarthome", locality: "Global", note: "Product recommendations and reviews" },
   ],
@@ -127,6 +139,10 @@ export const SUBREDDIT_MAP: Record<CategoryId, SubredditRef[]> = {
 /** Categories with thin UK-specific coverage must say so on the brief. */
 export const THIN_UK_COVERAGE: CategoryId[] = [
   "3d-printer",
+  // UK consumers mention chargers and earbuds constantly and discuss them as a
+  // purchase category rarely; both rest almost entirely on global communities.
+  "charging-power",
+  "audio-earbuds",
   "action-camera",
   // No UK smart home community of usable size exists; UK evidence here comes
   // only from general UK communities discussing the category in passing.
@@ -236,10 +252,19 @@ export const CATEGORY_ANCHORS: Record<CategoryId, string[]> = {
     "USB-C cable", "earbuds", "headphones", "earphones",
     "SSD", "hard drive", "external drive",
   ],
+  // Bare "charger" was tried here and reverted. It is the definitional term for
+  // this category and still a poor anchor in a general community, because that
+  // is where the word appears as an item in a list — keys, wallet, charger —
+  // rather than as the subject of a thread. It bought two real UK discussions
+  // and eleven about backpacks, hospital bags and a barber. The category keeps
+  // compound terms, and its UK evidence stays thin as a result, which is the
+  // honest reading: UK consumers mention chargers constantly and discuss them
+  // as a purchase rarely.
   "charging-power": [
     "Anker", "Ugreen", "Baseus", "EcoFlow", "Belkin", "Nitecore",
     "power bank", "portable charger", "charging brick", "wall charger",
-    "USB-C", "GaN", "power delivery", "battery pack", "charging cable",
+    "charging cable", "plug adapter", "rechargeable batter",
+    "USB-C", "GaN", "power delivery", "battery pack",
   ],
   "audio-earbuds": [
     "Soundcore", "Edifier", "QCY", "Moondrop", "Sennheiser", "AirPods",
@@ -260,5 +285,23 @@ export const CATEGORY_ANCHORS: Record<CategoryId, string[]> = {
     "GoPro", "Insta360", "Osmo", "Akaso", "DJI",
     "action camera", "action cam", "360 camera", "helmet mount",
     "chest mount", "gimbal", "Hero",
+  ],
+};
+
+/**
+ * Terms that disqualify a discussion even when an anchor matched.
+ *
+ * Anchors say what counts as the category; exclusions say what does not, and
+ * they exist because some anchors are unavoidably ambiguous. "charger" is the
+ * definitional term for charging accessories and also the word for the thing
+ * that fills a car battery: adding it pulled in salary-sacrifice EV leases and
+ * electricity-bill threads, a different category wearing the same noun.
+ * Narrowing the anchor instead would have lost the real discussions it was
+ * added for, so the ambiguity is resolved on the other side.
+ */
+export const CATEGORY_EXCLUSIONS: Partial<Record<CategoryId, string[]>> = {
+  "charging-power": [
+    "EV", "electric car", "electric vehicle", "salary sacrifice",
+    "electricity bill", "energy bill", "heat pump", "solar panel",
   ],
 };

@@ -5,6 +5,8 @@ import consumerElectronics from "../data/briefs/consumer-electronics.json";
 import smartHome from "../data/briefs/smart-home.json";
 import printer3d from "../data/briefs/3d-printer.json";
 import actionCamera from "../data/briefs/action-camera.json";
+import chargingPower from "../data/briefs/charging-power.json";
+import audioEarbuds from "../data/briefs/audio-earbuds.json";
 
 /**
  * Where a rendered brief came from.
@@ -31,6 +33,8 @@ const FILES: Partial<Record<CategoryId, BriefFile>> = {
   "smart-home": smartHome as unknown as BriefFile,
   "3d-printer": printer3d as unknown as BriefFile,
   "action-camera": actionCamera as unknown as BriefFile,
+  "charging-power": chargingPower as unknown as BriefFile,
+  "audio-earbuds": audioEarbuds as unknown as BriefFile,
 };
 
 /** The audience a category has been generated for, or null if none has. */

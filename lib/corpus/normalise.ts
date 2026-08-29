@@ -43,17 +43,41 @@ function isMetaPost(title: string): boolean {
  * and only in the title or body, so the discussion is about the category
  * rather than merely mentioning it once in a reply.
  */
-function isOnTopic(post: RawPost, anchors: string[]): boolean {
-  if (anchors.length === 0) return true;
-  const patterns = anchors.map((t) => {
+function buildPatterns(terms: string[]): RegExp[] {
+  return terms.map((t) => {
     const escaped = t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     // Acronyms match case-sensitively: a case-insensitive "AI" also matches
     // air, aid and aim, which quietly readmits every off-topic thread.
     const flags = /^[A-Z]{2,}/.test(t) ? "" : "i";
     return new RegExp(`\\b${escaped}\\b`, flags);
   });
+}
+
+function isOnTopic(
+  post: RawPost,
+  anchors: string[],
+  exclusions: string[] = [],
+  titleOnly = false,
+): boolean {
+  if (anchors.length === 0) return true;
   const head = `${post.title} ${post.selftext ?? ""}`;
-  return patterns.some((re) => re.test(head));
+  if (buildPatterns(exclusions).some((re) => re.test(head))) return false;
+  const patterns = buildPatterns(anchors);
+  if (!titleOnly) return patterns.some((re) => re.test(head));
+
+  // A general community must be talking about the category rather than merely
+  // mentioning it. A title match settles that; so does repetition, because a
+  // passing mention appears once — a backpack thread listing a power bank —
+  // while a thread actually about the category returns to it. Requiring the
+  // title alone was tried and cut real discussions whose titles are elliptical
+  // ("Hallucinated reference"), which is why the second test exists.
+  if (patterns.some((re) => re.test(post.title))) return true;
+  const body = post.selftext ?? "";
+  const hits = patterns.reduce((n, re) => {
+    const all = new RegExp(re.source, `${re.flags}g`);
+    return n + (body.match(all)?.length ?? 0);
+  }, 0);
+  return hits >= 2;
 }
 
 export function normaliseDiscussions(
@@ -61,6 +85,8 @@ export function normaliseDiscussions(
   subreddit: string,
   locality: Locality,
   anchors: string[] = [],
+  exclusions: string[] = [],
+  titleOnly = false,
 ): Discussion[] {
   const seen = new Set<string>();
   const out: Discussion[] = [];
@@ -68,7 +94,7 @@ export function normaliseDiscussions(
   for (const { post, comments } of raw) {
     if (!post?.id || seen.has(post.id)) continue;
     if (isMetaPost(post.title)) continue;
-    if (!isOnTopic(post, anchors)) continue;
+    if (!isOnTopic(post, anchors, exclusions, titleOnly)) continue;
 
     const kept = comments
       .filter((c) => c.body && !DELETED.has(c.body.trim()))
