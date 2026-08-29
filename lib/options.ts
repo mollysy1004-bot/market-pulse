@@ -13,6 +13,16 @@ export interface Option {
   label: string;
   hint?: string;
   available?: boolean;
+  /**
+   * An optional heading this option sits under in the selector.
+   *
+   * Markets use it; categories deliberately do not. A region genuinely contains
+   * its countries and has no evidence of its own, so it can be a heading. The
+   * category list has no such relationship left in it — every entry there names
+   * one product type, and the last entry that tried to be both a heading and a
+   * choice is the one that was removed.
+   */
+  group?: string;
 }
 
 /**
@@ -45,12 +55,35 @@ export const CATEGORIES: Option[] = [
   { id: "action-camera", label: "Action Cameras", hint: "Insta360, GoPro competitors", available: true },
 ];
 
+/**
+ * Markets are countries, never regions.
+ *
+ * Evidence in this product is located per country: a discussion is UK-located
+ * or it is not, and the source mapping that decides where to look is a list of
+ * communities that a particular country's consumers actually use. "North
+ * America" names no such set — the US and Canada do not share a consumer
+ * conversation, and "Southeast Asia" is five languages and five different
+ * platform mixes. A region cannot be selected because the collector would not
+ * know where to go.
+ *
+ * Regions still appear, as headings. They are how overseas marketing roles are
+ * actually scoped — a job is for Southeast Asia, or for the Middle East — so
+ * grouping the countries under them says what this tool is for without
+ * pretending a region is a market. The heading is not selectable, which is the
+ * whole difference between this and a category list that mixed the two.
+ *
+ * Everything but the UK is shown and disabled. Listing the intended scope is
+ * worth more than hiding it, and greying it out is what keeps that honest.
+ */
 export const MARKETS: Option[] = [
-  { id: "uk", label: "United Kingdom", available: true },
-  { id: "us", label: "United States", hint: "coming soon", available: false },
-  { id: "de", label: "Germany", hint: "coming soon", available: false },
-  { id: "id", label: "Indonesia", hint: "coming soon", available: false },
-  { id: "mx", label: "Mexico", hint: "coming soon", available: false },
+  { id: "uk", label: "United Kingdom", group: "Western Europe", available: true },
+  { id: "de", label: "Germany", group: "Western Europe", hint: "coming soon", available: false },
+  { id: "us", label: "United States", group: "North America", hint: "coming soon", available: false },
+  { id: "ca", label: "Canada", group: "North America", hint: "coming soon", available: false },
+  { id: "id", label: "Indonesia", group: "Southeast Asia", hint: "coming soon", available: false },
+  { id: "vn", label: "Vietnam", group: "Southeast Asia", hint: "coming soon", available: false },
+  { id: "ae", label: "United Arab Emirates", group: "Middle East", hint: "coming soon", available: false },
+  { id: "mx", label: "Mexico", group: "Latin America", hint: "coming soon", available: false },
 ];
 
 export const AUDIENCES: Option[] = [

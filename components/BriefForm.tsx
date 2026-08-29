@@ -5,6 +5,29 @@ import { useState, useTransition } from "react";
 import { AUDIENCES, CATEGORIES, MARKETS, type Option } from "@/lib/options";
 import { generatedAudienceFor } from "@/lib/brief";
 
+/**
+ * A selectable option is its name and nothing else: appending examples made
+ * every line read as "category, plus a note", and the note is what the
+ * collapsed control then shows. Examples moved to the caption below the field,
+ * where they describe the current choice instead of competing with it.
+ *
+ * An unavailable option keeps its hint, introduced by a middle dot. That text
+ * is not an annotation but the reason the row is greyed out, and it has to be
+ * legible in the place the row is.
+ */
+function renderOption(option: Option) {
+  return (
+    <option
+      key={option.id}
+      value={option.id}
+      disabled={option.available === false}
+    >
+      {option.label}
+      {option.available === false && option.hint ? ` · ${option.hint}` : ""}
+    </option>
+  );
+}
+
 function Field({
   label,
   name,
@@ -21,6 +44,23 @@ function Field({
   const selected = options.find((o) => o.id === value);
   const caption = selected?.available === false ? undefined : selected?.hint;
 
+  /**
+   * Options carrying a group are rendered under it; the rest stay flat. The
+   * heading is an optgroup rather than a disabled option, so it cannot be
+   * chosen by keyboard or by a hand-typed value — a region is a way to find a
+   * market here, never a market itself.
+   */
+  const grouped = options.some((o) => o.group);
+  const groups: [string, Option[]][] = [];
+  if (grouped) {
+    for (const option of options) {
+      const name = option.group ?? "Other";
+      const bucket = groups.find(([g]) => g === name);
+      if (bucket) bucket[1].push(option);
+      else groups.push([name, [option]]);
+    }
+  }
+
   return (
     <label className="block">
       <span className="font-mono text-[11px] tracking-[0.12em] text-muted uppercase">
@@ -33,27 +73,13 @@ function Field({
           onChange={(e) => onChange(e.target.value)}
           className="w-full appearance-none rounded-sm border border-rule bg-surface py-3 pr-10 pl-3.5 text-[15px] text-ink transition-colors hover:border-muted focus:border-accent"
         >
-          {options.map((option) => (
-            <option
-              key={option.id}
-              value={option.id}
-              disabled={option.available === false}
-            >
-              {option.label}
-              {/*
-                A selectable option is its name and nothing else: appending
-                examples made every line read as "category, plus a note", and
-                the note is what the collapsed control then shows. Examples
-                moved to the caption below, where they describe the current
-                choice instead of competing with it.
-
-                An unavailable option keeps its hint, introduced by a middle
-                dot. That text is not an annotation but the reason the row is
-                greyed out, and it has to be legible in the place the row is.
-              */}
-              {option.available === false && option.hint ? ` · ${option.hint}` : ""}
-            </option>
-          ))}
+          {grouped
+            ? groups.map(([groupName, groupOptions]) => (
+                <optgroup key={groupName} label={groupName}>
+                  {groupOptions.map(renderOption)}
+                </optgroup>
+              ))
+            : options.map(renderOption)}
         </select>
         <svg
           aria-hidden="true"

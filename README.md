@@ -140,8 +140,11 @@ to put it on the site.
 2. Widen the corpus per category — collection is capped at 12 discussions per
    source and the relevance gate is deliberately strict, so most categories sit
    near 20 discussions
-3. Add a second market. Everything above the source mapping is market-agnostic;
-   `MARKETS` already lists four more as unavailable
+3. Add a second market. Everything above the source mapping is market-agnostic,
+   so a new market is a new source mapping and nothing else. `MARKETS` lists
+   seven more as unavailable, grouped by region — regions are headings only,
+   since evidence is located per country and no collector could be pointed at
+   "Southeast Asia"
 
 **Citations are verified, not trusted.** The model never writes a subreddit
 name, locality tag or count. It cites discussion IDs, and `lib/analysis/resolve.ts`
