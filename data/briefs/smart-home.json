@@ -1,54 +1,49 @@
 {
   "categoryId": "smart-home",
-  "discussionsAnalysed": 21,
-  "ukDiscussions": 2,
+  "discussionsAnalysed": 19,
+  "ukDiscussions": 0,
   "globalDiscussions": 19,
   "dataWindow": "Posts and comment threads from Nov 2025 to Aug 2026",
   "sentiment": {
     "label": "Mixed",
-    "headline": "Strong appetite for hardware that deletes household labour, paired with open hostility to cloud dependence, subscriptions and post-purchase monetisation — but the corpus is almost entirely global, not UK",
-    "summary": "Across 21 discussions the enthusiast tone splits cleanly. Where a device visibly removes a recurring chore — robot vacuums above all, plus blinds, leak sensors and locks — sentiment is warm and specific, often citing years of trouble-free use. Where a device requires a cloud account, a subscription, or can be changed by the vendor after purchase, sentiment turns sharply negative and moralised, with participants describing devices they paid for as no longer theirs. A third strand is fatigue with protocol churn and disposability, met by veteran users insisting nothing needs replacing. Locality caveat: only D1 and D2 are UK-tagged, and neither is a smart-home debate thread — in both, smart devices appear as accepted background infrastructure (a robot vacuum built into a custom kitchen unit; smart switches already owned and repurposed for fan control). The sentiment picture is therefore a global enthusiast picture that is consistent with, but not evidenced by, UK-specific opinion.",
+    "headline": "Strong enthusiasm for hardware that deletes a chore, paired with open hostility to cloud dependence, subscriptions and post-purchase changes — but this is a global picture, not a UK-verified one",
+    "summary": "Across all 19 discussions the participants are self-identified enthusiasts, and the split is consistent: devices that remove physical labour (robot vacuums, automated blinds, motion/scheduled lighting, smart locks) attract unqualified praise, while anything that requires a cloud account, a monthly fee, or can be changed by the vendor after purchase attracts contempt. The same posters who say a robot vacuum changed their life also say they will not buy a device that needs the internet to function. Crucially, every discussion in this corpus is tagged Global — there are zero UK-tagged discussions. The only UK-adjacent signal is a single price quoted in pounds in D19. So this sentiment must be read as category sentiment among English-language enthusiast communities, not as measured UK sentiment; a UK-specific reading of these findings is not supported by the evidence supplied.",
     "quotes": [
-      {
-        "text": "It honestly made me feel like I never really owned the devices in my own house.",
-        "subreddit": "homeautomation",
-        "locality": "Global"
-      },
       {
         "text": "Omg my robot has changed my life! So much freedom!",
         "subreddit": "smarthome",
         "locality": "Global"
       },
       {
-        "text": "a lot of what gets sold as smart home is convenience wearing a chore costume.",
+        "text": "Roborock 100%. There are some really good ones for $200-300. You can buy it and then basically forget about it as it cleans your house.",
+        "subreddit": "homeautomation",
+        "locality": "Global"
+      },
+      {
+        "text": "Any device that needs cloud connection to work at all is not going to be a part of my smart home setup...",
         "subreddit": "smarthome",
         "locality": "Global"
       },
       {
-        "text": "Love the robot vacuum's little house!",
-        "subreddit": "DIYUK",
-        "locality": "UK"
+        "text": "Cloud will dominate because people are lazy and it’s easier for the average Joe. Tech savvy people will tend to lean towards decentralized home stuff. Many people have done it and QOL is much better.",
+        "subreddit": "homeautomation",
+        "locality": "Global"
       },
       {
-        "text": "could just use smart home switches which I already have several of",
-        "subreddit": "DIYUK",
-        "locality": "UK"
+        "text": "Absolute deal breaker",
+        "subreddit": "homeautomation",
+        "locality": "Global"
+      },
+      {
+        "text": "Seriously though, my Roborock vacuum saves me an hour a week not having to clean floors manually.",
+        "subreddit": "smarthome",
+        "locality": "Global"
       }
     ],
     "evidence": {
       "confidence": "Medium",
-      "basis": "19 global enthusiast discussions, highly consistent on chore-value vs cloud-hostility; only 2 UK-tagged discussions (D1, D2), neither of which debates sentiment, so the UK read is inferred not observed",
+      "basis": "19 discussions, all tagged Global and 0 tagged UK; the pro-hardware / anti-cloud split is consistent across at least 12 of them, but no UK-located participants are identifiable, so confidence is capped at Medium and the finding is global, not UK.",
       "sources": [
-        {
-          "subreddit": "DIYUK",
-          "postTitle": "Please go easy on me - i’m only 19 :)",
-          "locality": "UK"
-        },
-        {
-          "subreddit": "DIYUK",
-          "postTitle": "Flushing hot air out of house at night",
-          "locality": "UK"
-        },
         {
           "subreddit": "homeautomation",
           "postTitle": "Which robot vacuum works the best? Tired of vacuuming constantly.",
@@ -70,8 +65,8 @@
           "locality": "Global"
         },
         {
-          "subreddit": "homeautomation",
-          "postTitle": "What robot vacuum would you recommend that includes a mop?",
+          "subreddit": "smarthome",
+          "postTitle": "What's the most underrated smart home device you own?",
           "locality": "Global"
         },
         {
@@ -81,22 +76,7 @@
         },
         {
           "subreddit": "smarthome",
-          "postTitle": "Smart homes are becoming disposable tech and I’m honestly sick of it",
-          "locality": "Global"
-        },
-        {
-          "subreddit": "smarthome",
           "postTitle": "What's one smart home device you can't live without?",
-          "locality": "Global"
-        },
-        {
-          "subreddit": "smarthome",
-          "postTitle": "If you had to start your smart home from scratch today, what ecosystem(s) would you choose and why?",
-          "locality": "Global"
-        },
-        {
-          "subreddit": "smarthome",
-          "postTitle": "After 5 years of running a smart home here are my tips and recommendations.",
           "locality": "Global"
         },
         {
@@ -115,89 +95,69 @@
   "barriers": {
     "items": [
       {
-        "name": "Cloud dependence and vendor kill-switch risk",
-        "frequency": "8 of 21 discussions",
+        "name": "Cloud dependence and absence of local control",
+        "frequency": "8 of 19 discussions",
         "quote": {
           "text": "Any device that needs cloud connection to work at all is not going to be a part of my smart home setup...",
           "subreddit": "smarthome",
           "locality": "Global"
         },
-        "implication": "For this segment, a cloud-only product is not a cheaper product — it is a disqualified product. Any entry SKU needs a documented offline mode."
+        "implication": "For this segment, cloud-only operation is a hard disqualifier rather than a feature trade-off. A new entrant that cannot demonstrate full offline function is excluded from consideration before price is discussed. Raised in D1, D2, D3, D7, D14, D15, D16, D18."
       },
       {
-        "name": "Post-purchase monetisation: subscriptions, paywalled features, ads",
-        "frequency": "2 of 21 discussions",
+        "name": "Vendor trust, data handling and explicit suspicion of Chinese-linked vendors",
+        "frequency": "7 of 19 discussions",
         "quote": {
-          "text": "Absolute deal breaker",
-          "subreddit": "homeautomation",
-          "locality": "Global"
-        },
-        "implication": "Only two discussions, but both are the thread topic itself and draw the corpus's most emphatic language. A visible, contractual no-subscription position is a cheap differentiator."
-      },
-      {
-        "name": "Security and geopolitical suspicion attached to Chinese-origin connected hardware",
-        "frequency": "1 of 21 discussions",
-        "quote": {
-          "text": "I don't want Bezos or Xi watching my traffic.",
+          "text": "Unifi, but amongst that list: hands down unifi. I don't want Bezos or Xi watching my traffic.",
           "subreddit": "smarthome",
           "locality": "Global"
         },
-        "implication": "Thin evidence — one comment in one global networking thread — but directly material to a Chinese brand. Treat as a risk to pre-empt with data-locality proof, not as a measured trend."
+        "implication": "The corpus contains a named, unprompted distrust of Chinese-linked hardware and platforms — the Xi comment and a security-reputation criticism of TP-Link in D11, plus repeated warnings against the Tuya/SmartLife cloud in D13 and D15. This is the single most direct risk signal in the evidence for a Chinese brand, though it appears in a small number of discussions and none tagged UK."
       },
       {
-        "name": "Ecosystem lock-in; demand for Home Assistant / Zigbee / Z-Wave / Matter interoperability",
-        "frequency": "10 of 21 discussions",
-        "quote": {
-          "text": "Don't lock yourself into Tuya/SmartLife cloud. When their servers go down (and they will), half your house stops working.",
-          "subreddit": "smarthome",
-          "locality": "Global"
-        },
-        "implication": "Home Assistant compatibility functions as the entry ticket to this segment; proprietary-app-only products are argued against by default."
-      },
-      {
-        "name": "Disposability, protocol churn and repair economics",
-        "frequency": "4 of 21 discussions",
-        "quote": {
-          "text": "I sent it in and paid ~1/3 of the cost in repairs and shipping.",
-          "subreddit": "homeautomation",
-          "locality": "Global"
-        },
-        "implication": "Longevity claims must be backed by parts availability and repair pricing; the corpus rewards brands whose 2014-era kit still runs."
-      },
-      {
-        "name": "Scepticism that smart features remove real work",
-        "frequency": "5 of 21 discussions",
+        "name": "Reliability and household acceptability (must work for non-enthusiasts)",
+        "frequency": "6 of 19 discussions",
         "quote": {
           "text": "Do not replace practical solutions with smart solutions.",
           "subreddit": "smarthome",
           "locality": "Global"
         },
-        "implication": "Feature lists underperform. Claims framed as a deleted weekly job travel further than claims framed as app control."
+        "implication": "Praise clusters on products that never need attention and keep a physical fallback (switch, key, manual control). Devices that break the normal way of doing something, or that a partner or child can disrupt, are criticised even when technically capable. Raised in D8, D9, D10, D12, D16, D17."
       },
       {
-        "name": "Distrust of brand-seeded marketing in community threads",
-        "frequency": "1 of 21 discussions",
+        "name": "Protocol churn, lock-in and 'disposable' devices",
+        "frequency": "4 of 19 discussions",
         "quote": {
-          "text": "Just be mindful of bots. This post was made with an extremely generic format to generate conversation.",
-          "subreddit": "homeautomation",
-          "locality": "Global"
-        },
-        "implication": "Community seeding is actively policed; undisclosed brand posting risks a public call-out in the same thread as the recommendation."
-      },
-      {
-        "name": "Real-world clutter defeats robot vacuums",
-        "frequency": "1 of 21 discussions",
-        "quote": {
-          "text": "Yes and no. I like ours but the kids make such a mess that I can’t use it without a lot of prep work first.",
+          "text": "The communication protocol really has nothing to do with whether connected products are disposables. It’s like saying a computer is bad because it has Ethernet vs WiFi. What matters is that the software is good, the company has good support, and that it performs reliably",
           "subreddit": "smarthome",
           "locality": "Global"
         },
-        "implication": "Obstacle handling and tangle resistance are the credibility test in family households; a single discussion, so treat as a hypothesis to verify."
+        "implication": "Longevity is judged by vendor behaviour and support, not spec sheets. Participants cite ten-year-old devices as proof of value, so a new brand carries an unproven-longevity penalty. Raised in D2, D3, D10, D15."
+      },
+      {
+        "name": "Subscriptions, paywalled features and ads inserted after purchase",
+        "frequency": "2 of 19 discussions",
+        "quote": {
+          "text": "I’m slowly but surely eradicating any Amazon device from our home/lives",
+          "subreddit": "homeautomation",
+          "locality": "Global"
+        },
+        "implication": "Only two discussions (D2, D3) centre on this, but both are heavily engaged and treat it as a reason to abandon a brand entirely rather than downgrade. A thin count, but an unusually absolute reaction where it appears."
+      },
+      {
+        "name": "Practical friction with robot vacuums (floor prep, clogging, repair cost)",
+        "frequency": "2 of 19 discussions",
+        "quote": {
+          "text": "But if my daughter has left her toys on the floor, we’ve left our shoes in the hall, and my dog’s plushes are strewn about, it’s basically useless.",
+          "subreddit": "smarthome",
+          "locality": "Global"
+        },
+        "implication": "Even inside the most-praised category, two discussions surface real limits: households with children or clutter report the device is unusable without prep (D19), and one poster describes paying roughly a third of purchase price in repairs (D7). Thin evidence, but it points at obstacle handling and service cost as claim-testing areas."
       }
     ],
     "evidence": {
       "confidence": "Medium",
-      "basis": "Cloud/interoperability barriers recur across 8–10 separate global discussions and are internally consistent; the trust, marketing and clutter barriers each rest on 1–2 discussions and are labelled thin; no UK-tagged discussion raises any of these barriers",
+      "basis": "19 Global discussions, 0 UK-tagged; the cloud/local barrier appears in 8 separate discussions and is highly consistent, while the vendor-trust and subscription barriers rest on 7 and 2 discussions respectively — strong on the first, thin on the last.",
       "sources": [
         {
           "subreddit": "homeautomation",
@@ -216,17 +176,7 @@
         },
         {
           "subreddit": "homeautomation",
-          "postTitle": "Which robot vacuum is worth the cost?",
-          "locality": "Global"
-        },
-        {
-          "subreddit": "homeautomation",
           "postTitle": "What robot vacuum would you recommend that includes a mop?",
-          "locality": "Global"
-        },
-        {
-          "subreddit": "smarthome",
-          "postTitle": "which smart home purchase actually removed a recurring chore for you, not just added another app",
           "locality": "Global"
         },
         {
@@ -266,11 +216,6 @@
         },
         {
           "subreddit": "smarthome",
-          "postTitle": "If you were building a smart home from scratch what path would you go? philips hue or something else?",
-          "locality": "Global"
-        },
-        {
-          "subreddit": "smarthome",
           "postTitle": "Do you think smart homes depend on cloud services too much?",
           "locality": "Global"
         },
@@ -285,55 +230,45 @@
   "content": {
     "items": [
       {
-        "hook": "Unplug the internet on camera and keep the house running",
-        "why": "Eight global discussions treat offline operation as the buying test, and one poster describes a whole smart home surviving a severed neighbourhood fibre line (D4)",
-        "format": "Unedited long-take demo video plus a published list of exactly which functions survive an outage"
+        "hook": "Prove it works with the internet unplugged",
+        "why": "Eight discussions treat cloud dependence as disqualifying, and D2 contains a first-hand account of a whole smart home continuing to run during a neighbourhood internet outage — offline continuity is the claim this audience actually tests.",
+        "format": "Demonstration video or documented test: router unplugged, device still performing core functions, with an explicit list of what does and does not degrade."
       },
       {
-        "hook": "Published Home Assistant / Zigbee / Matter support matrix, maintained per firmware release",
-        "why": "Home Assistant is named as the control layer in ten separate discussions and one commenter buys on the basis that a vacuum listed home assistant integration among its boxes (D9)",
-        "format": "Living documentation page and integration repo, referenced rather than advertised"
+        "hook": "Publish the local API and Home Assistant / Matter integration path",
+        "why": "Home Assistant is referenced in more discussions than any single hardware brand in this corpus, and in D7 a buyer lists 'home assistant integration' among the boxes a robot vacuum had to tick before purchase.",
+        "format": "Developer-facing integration docs plus a maintained integration guide; announce protocol support (Zigbee/Z-Wave/Matter) explicitly rather than by implication."
       },
       {
-        "hook": "What every spare part costs and how to fit it",
-        "why": "Cheap OEM parts availability is given as the single reason a rival brand is recommended (D3), while a paid-for repair cycle turned an owner against a flagship (D9)",
-        "format": "Priced parts catalogue plus short teardown and replacement clips"
+        "hook": "Frame the product as a chore deleted, not an app added",
+        "why": "D9 sets an explicit test — the purchase must remove a recurring job, not relocate it to a phone — and the products that clear that bar (robot vacuums, automated blinds, humidity-sensing fans) are the ones praised throughout D4, D9, D13 and D19.",
+        "format": "Before/after chore accounting: which weekly task disappears, how much prep it still needs, and honest limits (clutter, pets, kids)."
       },
       {
-        "hook": "Which weekly job did this delete — with the time log",
-        "why": "One thread explicitly bans convenience claims and asks only for chores removed (D11); another quantifies an hour a week saved on floors (D11) and a third frames it as an extra housekeeper (D21)",
-        "format": "Owner-diary case studies with before/after time accounting, not feature reels"
+        "hook": "Spare parts, prices and repairability, published up front",
+        "why": "In D1 the single most specific reason given for choosing a brand is cheap, widely available OEM filters, attachments and internal parts; in D7 an expensive out-of-warranty repair is the main complaint.",
+        "format": "Parts catalogue with prices and expected life, plus teardown/replacement walkthroughs."
       },
       {
-        "hook": "Independent-lab test data, submitted rather than self-published",
-        "why": "Participants route each other to third-party testers instead of brand claims — vacuumwars is cited in three separate discussions (D3, D7, D9) and rtings in one (D7)",
-        "format": "Test-unit submission plus publishing raw methodology and unfavourable results"
+        "hook": "Third-party test results rather than brand claims",
+        "why": "Participants route each other to independent testers instead of manufacturer material — Vacuumwars in D1, D5 and D7, Rtings in D5 — and D5 also shows the community openly accusing a thread of being astroturfed.",
+        "format": "Link-out to independent bench results and side-by-side comparisons; avoid affiliate-styled recommendation posts, which this audience visibly flags."
       },
       {
-        "hook": "Does it fit a UK flat: dock footprint, cabinet cut-outs, threshold heights",
-        "why": "The only UK discussion featuring a device shows a 19-year-old building a bespoke kitchen unit to house fridge, robot vacuum and dryer, and the community celebrates it (D1)",
-        "format": "Dimensioned templates and DIY build guides aimed at UK fitted-kitchen dimensions"
+        "hook": "Guidance for new-builds and renovations: switches, wiring, fallbacks",
+        "why": "Three discussions (D15, D17, and rule-setting in D16) are people planning a house or gut renovation and asking what to install, with repeated advice to prefer switches over bulbs and to run cabling early.",
+        "format": "Planning guide: cabling and back-box advice, switch-versus-bulb reasoning, and how the product keeps a manual control path."
       },
       {
-        "hook": "Relay and switch control for UK housing problems — overheating, ventilation, retrofits",
-        "why": "The one UK thread that discusses automation hardware is about flushing hot air from a brick house, where a commenter recommends a specific relay brand (D2)",
-        "format": "Retrofit walkthroughs tied to seasonal UK problems rather than to product launches"
+        "hook": "Support the hackers and dashboard builders",
+        "why": "D6 shows an enthusiast rebuilding a $600 commercial calendar on spare hardware with the top reply asking for a GitHub repo, and D14 shows an open-source, end-to-end-encrypted camera prototype attracting build requests.",
+        "format": "Open repos, flashable firmware or documented hooks, and visible engagement with community projects."
       }
     ],
     "evidence": {
       "confidence": "Medium",
-      "basis": "Hooks 1–5 are drawn from recurring questions across 10+ global discussions; hooks 6–7 rest on a single UK discussion each (D1, D2) and are flagged as directional rather than demonstrated",
+      "basis": "Each opportunity is grounded in 2–8 of the 19 Global discussions; content demand for local-control proof and HA integration is the best evidenced, while the DIY/hackability and new-build angles rest on 2–3 discussions each. No UK-tagged discussions, so channel and language preferences for the UK specifically are untested here.",
       "sources": [
-        {
-          "subreddit": "DIYUK",
-          "postTitle": "Please go easy on me - i’m only 19 :)",
-          "locality": "UK"
-        },
-        {
-          "subreddit": "DIYUK",
-          "postTitle": "Flushing hot air out of house at night",
-          "locality": "UK"
-        },
         {
           "subreddit": "homeautomation",
           "postTitle": "Which robot vacuum works the best? Tired of vacuuming constantly.",
@@ -351,6 +286,11 @@
         },
         {
           "subreddit": "homeautomation",
+          "postTitle": "I turned a smart tv into an economic skylight calendar alternative that works with Home Assistant",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "homeautomation",
           "postTitle": "What robot vacuum would you recommend that includes a mop?",
           "locality": "Global"
         },
@@ -361,12 +301,22 @@
         },
         {
           "subreddit": "smarthome",
+          "postTitle": "First prototype for my privacy-first security camera",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "smarthome",
           "postTitle": "If you had to start your smart home from scratch today, what ecosystem(s) would you choose and why?",
           "locality": "Global"
         },
         {
           "subreddit": "smarthome",
-          "postTitle": "Do you think smart homes depend on cloud services too much?",
+          "postTitle": "After 5 years of running a smart home here are my tips and recommendations.",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "smarthome",
+          "postTitle": "If you were building a smart home from scratch what path would you go? philips hue or something else?",
           "locality": "Global"
         },
         {
@@ -380,57 +330,45 @@
   "creators": {
     "items": [
       {
-        "signal": "A YouTube/testing outlet, Vacuum Wars, is the reference audiences hand each other when asked which robot vacuum to buy",
-        "evidenceNote": "Named in three separate global discussions — as a good resource (D3), as a ranking authority (D7) and as the answer to a recommendation request (D9)",
-        "profile": "Independent product-testing channel in the floorcare category",
-        "platform": "YouTube and an associated website",
-        "scale": "Not observable from this evidence; cited by name without follower or view figures"
+        "signal": "A YouTube testing channel is the default referral for robot vacuum decisions",
+        "evidenceNote": "Vacuumwars is named in three separate discussions — recommended as 'a good resource' in D1, cited as the source of a number-one ranking by a self-declared Dreame retail employee in D5, and linked with 'Someone already nerded out on all this' in D7.",
+        "profile": "Independent product-testing channel focused on floor-care hardware",
+        "platform": "YouTube (with an accompanying website)",
+        "scale": "Referenced in 3 of 19 discussions; the only creator named more than once in this corpus"
       },
       {
-        "signal": "Written independent-test outlets are used as tie-breakers alongside video",
-        "evidenceNote": "rtings is offered as an independent testing source and a Wirecutter review is linked inside a bot-suspicion comment in the same discussion (D7)",
-        "profile": "Editorial review desks rather than personalities",
-        "platform": "Web review sites",
-        "scale": "Unknown from this evidence"
+        "signal": "Independent lab-style test sites are used to settle disputes about value",
+        "evidenceNote": "In D5 a commenter offers only 'Rtings.com do independent tests of robovacs', and another commenter in the same discussion traces the thread's image back to a Wirecutter review, treating published testing as the arbiter.",
+        "profile": "Methodology-led review publications rather than personalities",
+        "platform": "Websites",
+        "scale": "1 discussion (D5); thin, single-thread evidence"
       },
       {
-        "signal": "Hobbyist builders posting working projects attract requests to share code and buy in",
-        "evidenceNote": "A DIY smart-TV calendar build draws repeated asks for a GitHub repo and offers to contribute (D8); a prototype privacy-first camera build draws detailed spec questions and a peer building a doorbell alternative (D16)",
-        "profile": "Maker/open-source developers publishing builds in public",
-        "platform": "Reddit threads linking to GitHub",
-        "scale": "Thread-level engagement only; no audience size visible"
+        "signal": "Open-source builders and repo authors are the community's own influencers",
+        "evidenceNote": "In D6 the top reply to a homebuilt smart-display project is 'What's it called and do you have a github repo? I'd love to try it out as well want to do something similar.', and D14's camera prototype draws a reply from someone building a competing open alternative.",
+        "profile": "Hobbyist developers publishing code and build guides",
+        "platform": "Reddit plus GitHub",
+        "scale": "2 discussions (D6, D14), plus a community jailbreak link shared in D3"
       },
       {
-        "signal": "Brand-affiliated posting is tolerated when disclosed but sits next to active astroturf policing",
-        "evidenceNote": "In one discussion a retail employee openly states an employer affiliation while recommending models, in the same thread where another commenter flags the post as likely bot-generated (D7)",
-        "profile": "Employee and seller voices participating in community threads",
+        "signal": "Promotional-looking content is actively called out",
+        "evidenceNote": "D5 contains a detailed accusation — 'Just be mindful of bots. This post was made with an extremely generic format to generate conversation.' — alongside a commenter who discloses working for Dreame; D1 and D7 both carry recommendation links to the same third-party site.",
+        "profile": "Sceptical community moderation behaviour, not a creator type",
         "platform": "Reddit",
-        "scale": "One discussion; not a pattern"
+        "scale": "2–3 discussions; consistent enough to treat as a real reputational risk pattern"
       },
       {
-        "signal": "An anti-enshittification cultural reference is circulated as shared vocabulary",
-        "evidenceNote": "A commenter recommends Cory Doctorow's Enshittification with a purchase link in response to a subscription complaint (D4), and the same coinage recurs in the ads discussion (D5)",
-        "profile": "Author/commentator whose framing is borrowed by participants",
-        "platform": "Book, quoted in Reddit comments",
-        "scale": "Two discussions"
-      },
-      {
-        "signal": "In the UK threads, peer DIY showcase outperforms any external creator reference",
-        "evidenceNote": "A first-person flat renovation post housing a robot vacuum draws a 957-score top comment and no creator citations at all (D1)",
-        "profile": "Ordinary UK DIY posters rather than named creators",
-        "platform": "Reddit UK DIY community",
-        "scale": "Single discussion with high comment engagement"
+        "signal": "Critique of platform behaviour is anchored to an outside author",
+        "evidenceNote": "In D2 a commenter recommends Cory Doctorow's 'Enshittification' to explain the paywall/shutdown pattern, and the term 'enshittification' is then used independently in D3.",
+        "profile": "Author/commentator supplying the vocabulary for the anti-cloud argument",
+        "platform": "Books and long-form writing, surfacing in Reddit comments",
+        "scale": "2 discussions (D2, D3)"
       }
     ],
     "evidence": {
       "confidence": "Low",
-      "basis": "Only one creator (Vacuum Wars) appears in more than two discussions, all global; no UK-tagged discussion names any creator, so this reports observed reference patterns and cannot describe UK creator preference",
+      "basis": "Creator references appear in only about 6 of 19 discussions and all are Global-tagged; one channel is named in 3 discussions and everything else in 1–2, so this shows an observed referral habit in the category and nothing about UK creator preferences.",
       "sources": [
-        {
-          "subreddit": "DIYUK",
-          "postTitle": "Please go easy on me - i’m only 19 :)",
-          "locality": "UK"
-        },
         {
           "subreddit": "homeautomation",
           "postTitle": "Which robot vacuum works the best? Tired of vacuuming constantly.",
@@ -474,13 +412,8 @@
       {
         "name": "Roborock",
         "discussions": 6,
-        "summary": "The default recommendation in every robot vacuum discussion in this corpus, praised for reliability, breadth of price points and parts supply, but with credible dissent on repair experience and on being outperformed by newer rivals.",
+        "summary": "The default recommendation in every robot vacuum discussion in the corpus, named in D1, D4, D5, D7, D9 and D19. Praised for value, longevity, parts availability and 'set and forget' behaviour, with isolated complaints about repair cost and one direct loss to Dreame.",
         "strengths": [
-          {
-            "text": "Roborock. Everything is good. Spend as much as you possibly can for even better",
-            "subreddit": "homeautomation",
-            "locality": "Global"
-          },
           {
             "text": "Roborock for one specific reason, you can buy so many OEM replacement filters, attachments, and internal parts for such a low price… I was shocked at it…",
             "subreddit": "homeautomation",
@@ -494,12 +427,12 @@
         ],
         "weaknesses": [
           {
-            "text": "I sent it in and paid ~1/3 of the cost in repairs and shipping.",
+            "text": "I bought the Roborock S8 MaxV Ultra on a Black Friday sale in 2024. It worked great for a year until it stopped charging. I sent it in and paid ~1/3 of the cost in repairs and shipping.",
             "subreddit": "homeautomation",
             "locality": "Global"
           },
           {
-            "text": "I have a Dreame L40 AE which replaced my Roborock S7 MaxV. The difference in performance is night and day",
+            "text": "Prior to the Dreame I would have been 50:50 on Roborock vacuums but this has super impressed me. And for £450.",
             "subreddit": "smarthome",
             "locality": "Global"
           }
@@ -508,22 +441,22 @@
       {
         "name": "Dreame",
         "discussions": 3,
-        "summary": "Positioned in the corpus as the value-and-momentum challenger to Roborock, cited on price-performance and on beating an incumbent flagship in a direct swap.",
+        "summary": "Named in D1, D5 and D19 as the credible challenger — the brand people switch to from iRobot or Roborock, usually on price-to-performance and value at discount.",
         "strengths": [
           {
-            "text": "Dreame X40 ultra or L40 ultra for $280-$450 is a fantastic deal.",
+            "text": "I have had several iRobots and I can’t recommend them any more. Buggy and not reliable. I am looking to switch to Dreame I think.",
             "subreddit": "homeautomation",
             "locality": "Global"
           },
           {
-            "text": "This machine has been able to handle our whole house without any issues, and it's even smarter than the one I used before, plus the noise level is low, which honestly surprised me!",
-            "subreddit": "smarthome",
+            "text": "Dreame X40 ultra or L40 ultra for $280-$450 is a fantastic deal. I doubt ones that are twice the price clean twice as well.",
+            "subreddit": "homeautomation",
             "locality": "Global"
           }
         ],
         "weaknesses": [
           {
-            "text": "It’s not the best model and probably not the best brand out there, but I’m very very happy with my Dreame E30 Ultra that I got from Costco.",
+            "text": "If you’re at that price range, I would suggest the Dreame X60 It is rated number one on vacuum wars. Also, completely transparent I do work for Dreame here at Garden State Plaza in New Jersey.",
             "subreddit": "homeautomation",
             "locality": "Global"
           }
@@ -532,22 +465,22 @@
       {
         "name": "Eufy",
         "discussions": 3,
-        "summary": "Consistently mentioned as a satisfied second choice, with specific praise for roller-mop hardware and mid-price positioning, but qualified on carpet performance.",
+        "summary": "A consistent second-tier pick in D1, D5 and D7, chosen on price and specific mop hardware rather than on ecosystem or brand loyalty.",
         "strengths": [
           {
-            "text": "I tested a few before picking one. Settled on Eufy X10 pro. Been happy with it.",
+            "text": "I've had the eufy S1 Pro since late 2024 and am very happy with it. The self-cleaning roller mop is excellent for cleaning hard floors vs the spinning pads that merely smear dirt around.",
             "subreddit": "homeautomation",
             "locality": "Global"
           },
           {
-            "text": "The self-cleaning roller mop is excellent for cleaning hard floors vs the spinning pads that merely smear dirt around.",
+            "text": "I tested a few before picking one. Settled on Eufy X10 pro. Been happy with it.",
             "subreddit": "homeautomation",
             "locality": "Global"
           }
         ],
         "weaknesses": [
           {
-            "text": "I have heard that there are better options if you need thorough carpet cleaning, though.",
+            "text": "There are other options out there which do work maybe a little better but for like 3-4x the price.",
             "subreddit": "homeautomation",
             "locality": "Global"
           }
@@ -555,23 +488,23 @@
       },
       {
         "name": "iRobot / Roomba",
-        "discussions": 3,
-        "summary": "Named repeatedly as the incumbent being abandoned — treated as a cautionary tale about failing to innovate and about reliability.",
+        "discussions": 4,
+        "summary": "Named in D1, D2, D5 and D7 almost entirely as a cautionary tale — cited for reliability problems, failure to innovate and cloud lock-in, and treated as the incumbent being replaced.",
         "strengths": [
           {
-            "text": "They had a huge first mover advantage",
+            "text": "They had a huge first mover advantage and just completely failed to innovate over time.",
             "subreddit": "homeautomation",
             "locality": "Global"
           }
         ],
         "weaknesses": [
           {
-            "text": "I have had several iRobots and I can’t recommend them any more. Buggy and not reliable. I am looking to switch to Dreame I think.",
+            "text": "I have had several iRobots and I can’t recommend them any more. Buggy and not reliable.",
             "subreddit": "homeautomation",
             "locality": "Global"
           },
           {
-            "text": "Had an iRobot S9 and Braava. The S8 is way better.",
+            "text": "I used to coerce my Roomba to connect locally by cutting its accès to the internet, but it doesn't work very well.",
             "subreddit": "homeautomation",
             "locality": "Global"
           }
@@ -580,7 +513,7 @@
       {
         "name": "Philips Hue",
         "discussions": 6,
-        "summary": "The most-named lighting brand, credited with bulb longevity and quality-of-life lighting, but sits inside the corpus's wider argument that smart bulbs are the wrong starting point versus switches.",
+        "summary": "Named in D4, D10, D12, D16, D17 and D18 as the quality benchmark in lighting, valued for bulb durability, local operation and long support life — though several posters argue switches beat bulbs regardless of brand.",
         "strengths": [
           {
             "text": "From my experience when it comes to lights Hue offers quality.",
@@ -588,19 +521,19 @@
             "locality": "Global"
           },
           {
-            "text": "Philips Hue bulbs through the whole house. I did my own custom day/night cycle with a \"wind down\" lighting schedule",
+            "text": "Philips Hue bulbs through the whole house.",
             "subreddit": "homeautomation",
             "locality": "Global"
           }
         ],
         "weaknesses": [
           {
-            "text": "Not starting with smart bulbs, but smart switches or relays and only add smart bulbs later on if really needed",
+            "text": "In the battle of smart switch vs smart bulbs - switches win every time.",
             "subreddit": "smarthome",
             "locality": "Global"
           },
           {
-            "text": "Get away from smart bulbs and appliances, keep it simple with just smart relays, switches, things that are hard wired in.",
+            "text": "Not starting with smart bulbs, but smart switches or relays and only add smart bulbs later on if really needed",
             "subreddit": "smarthome",
             "locality": "Global"
           }
@@ -608,34 +541,64 @@
       },
       {
         "name": "Lutron",
-        "discussions": 4,
-        "summary": "The corpus's benchmark for boring reliability and outage-proof operation; invoked as the counter-argument whenever someone complains that smart homes are disposable.",
+        "discussions": 5,
+        "summary": "Named in D8, D9, D10, D16 and D17 as the reliability standard: hardware that survives outages, needs no maintenance, and is accepted by non-enthusiast household members.",
         "strengths": [
-          {
-            "text": "Lutron is the gold standard for reliability and quality.",
-            "subreddit": "smarthome",
-            "locality": "Global"
-          },
           {
             "text": "Honestly just all the Lutron Caseta switches and their hub. I never have to think about them, never need to reset them, never have to fix anything.",
             "subreddit": "smarthome",
             "locality": "Global"
           },
           {
-            "text": "What are you doing, man? I’ve still got all the Lutron Caseta switches in installed in 2014",
+            "text": "Lutron is the gold standard for reliability and quality.",
             "subreddit": "smarthome",
             "locality": "Global"
           }
         ],
-        "weaknesses": []
+        "weaknesses": [
+          {
+            "text": "Humidity sensing bathroom fan switch. Removed having to remember to turn the fan on when showering, and for people like me that shower before bed, removed having to wake up 30 after going to bed just to turn it off. Mine are Lutron. No app and nothing to learn so everyone in the house sees the benefit.",
+            "subreddit": "smarthome",
+            "locality": "Global"
+          }
+        ]
       },
       {
-        "name": "Amazon (Echo, Alexa, Eero, Ring)",
-        "discussions": 4,
-        "summary": "Widely owned and occasionally defended for convenience, but the single most criticised name in the corpus on advertising, trust and network hardware.",
+        "name": "Home Assistant",
+        "discussions": 11,
+        "summary": "Not a device brand but the gatekeeping platform in this corpus, referenced in D2, D4, D6, D7, D9, D10, D13, D15, D16, D17 and D18. Compatibility with it functions as a purchase requirement, and it is the recommended answer to almost every cloud, lock-in or reliability complaint.",
         "strengths": [
           {
-            "text": "I'll probably get some hate here but Alexa.",
+            "text": "Anything other than home assistant is a toy not an actual smart home solution.",
+            "subreddit": "smarthome",
+            "locality": "Global"
+          },
+          {
+            "text": "Home assistant. Squirrel chewed the fiber cable coming into the neighborhood. Anyone with their service was without internet. My entire smart home continued to function.",
+            "subreddit": "homeautomation",
+            "locality": "Global"
+          }
+        ],
+        "weaknesses": [
+          {
+            "text": "I know most say home assistance but it bit too complicated for me and my smart home is small.",
+            "subreddit": "smarthome",
+            "locality": "Global"
+          },
+          {
+            "text": "Frigate for cameras. Hubitat for zwave/zigbee/material Home Assistant for dashboard But then you have to get into IT.",
+            "subreddit": "homeautomation",
+            "locality": "Global"
+          }
+        ]
+      },
+      {
+        "name": "Amazon (Echo, Alexa, Eero)",
+        "discussions": 5,
+        "summary": "Named in D3, D8, D11, D12 and D13. Alexa is credited with everyday usefulness by some, but Amazon as a vendor is the corpus's main example of post-purchase degradation, ads and untrustworthy platform behaviour.",
+        "strengths": [
+          {
+            "text": "I'll probably get some hate here but Alexa. I didn't like the expense for Apple certified smart devices and started out using treat life brand smart switches. I have them all over and for five or six years not a single one has failed.",
             "subreddit": "smarthome",
             "locality": "Global"
           },
@@ -647,7 +610,7 @@
         ],
         "weaknesses": [
           {
-            "text": "Was anyone actually questioning whether we can trust Amazon??",
+            "text": "It is one of the main reasons why I would never recommend their hubs",
             "subreddit": "homeautomation",
             "locality": "Global"
           },
@@ -659,17 +622,41 @@
         ]
       },
       {
-        "name": "TP-Link (Deco)",
-        "discussions": 1,
-        "summary": "Liked on ease of setup and IoT band control by owners in the one networking discussion, while simultaneously carrying an explicit security-reputation objection — the clearest example in the corpus of a Chinese-origin brand being judged on trust as well as product.",
+        "name": "Tuya / SmartLife",
+        "discussions": 2,
+        "summary": "Named in D13 and D15 only, and negatively in both: presented as the cloud ecosystem to avoid because outages take out large parts of a home and day-to-day issues are common.",
         "strengths": [
           {
-            "text": "I have deco and have been really pleased. It was very easy to setup - like stupid easy.",
+            "text": "A lot of stuff out there is WiFi and is operating without a hub or controller of any description.",
+            "subreddit": "smarthome",
+            "locality": "Global"
+          }
+        ],
+        "weaknesses": [
+          {
+            "text": "Don't lock yourself into Tuya/SmartLife cloud. When their servers go down (and they will), half your house stops working.",
             "subreddit": "smarthome",
             "locality": "Global"
           },
           {
+            "text": "With the amount of issues I have with Tuya, I seriously love the simplicity of a motion light.",
+            "subreddit": "smarthome",
+            "locality": "Global"
+          }
+        ]
+      },
+      {
+        "name": "TP-Link (Deco)",
+        "discussions": 1,
+        "summary": "Named only in D11, where it is a genuinely popular mesh choice for smart home networking but also carries an explicit security-reputation objection — the clearest example in the corpus of capability and trust being judged separately.",
+        "strengths": [
+          {
             "text": "I switched from eero to TP deco and I like it more. Assigning 2.4 for IoT stuff is a great improvement.",
+            "subreddit": "smarthome",
+            "locality": "Global"
+          },
+          {
+            "text": "I have deco and have been really pleased. It was very easy to setup - like stupid easy.",
             "subreddit": "smarthome",
             "locality": "Global"
           }
@@ -683,75 +670,9 @@
         ]
       },
       {
-        "name": "Ubiquiti / UniFi",
-        "discussions": 3,
-        "summary": "The enthusiast networking default, chosen explicitly on privacy and self-hosting grounds despite acknowledged setup difficulty.",
-        "strengths": [
-          {
-            "text": "Unifi is the most consumer and privacy friendly. And it’s still not that hard to setup",
-            "subreddit": "smarthome",
-            "locality": "Global"
-          },
-          {
-            "text": "Ubiqiti and home assistant...",
-            "subreddit": "homeautomation",
-            "locality": "Global"
-          }
-        ],
-        "weaknesses": [
-          {
-            "text": "Unifi takes a bit of networking knowledge because there is a lot more options and features for the end user to be able to manage their network.",
-            "subreddit": "smarthome",
-            "locality": "Global"
-          }
-        ]
-      },
-      {
-        "name": "Home Assistant",
-        "discussions": 10,
-        "summary": "Not a hardware rival but the gatekeeping control layer: named in ten separate discussions as the answer to cloud dependence, protocol churn and lock-in. Compatibility with it is effectively a purchase criterion.",
-        "strengths": [
-          {
-            "text": "Allow me to be the first to mention Home Assistant. Local, privacy, and sustainability focused smart homes are the way.",
-            "subreddit": "smarthome",
-            "locality": "Global"
-          },
-          {
-            "text": "Anything other than home assistant is a toy not an actual smart home solution.",
-            "subreddit": "smarthome",
-            "locality": "Global"
-          }
-        ],
-        "weaknesses": [
-          {
-            "text": "I know most say home assistance but it bit too complicated for me and my smart home is small.",
-            "subreddit": "smarthome",
-            "locality": "Global"
-          }
-        ]
-      },
-      {
-        "name": "Shelly",
-        "discussions": 3,
-        "summary": "The relay/switch brand recommended for local control, and notably the only smart-home brand named in a UK-tagged discussion in this corpus.",
-        "strengths": [
-          {
-            "text": "For the control element of the fans, I highly recommend the range of relays from Shelly.",
-            "subreddit": "DIYUK",
-            "locality": "UK"
-          },
-          {
-            "text": "Home assistant, shelly, hue, IKEA stuff, All local.",
-            "subreddit": "smarthome",
-            "locality": "Global"
-          }
-        ],
-        "weaknesses": []
-      },
-      {
         "name": "Matic",
         "discussions": 2,
-        "summary": "A niche robot vacuum named specifically because it processes locally — the only vacuum brand in the corpus credited with a no-cloud data position.",
+        "summary": "A niche robot vacuum named in D5 and D7, positioned entirely on local on-device processing and privacy rather than features or price — the closest thing in this corpus to a brand occupying the local-first gap.",
         "strengths": [
           {
             "text": "The big thing is it does all its processing locally. The map of your home is not uploaded to a cloud server to be mined for data and sold.",
@@ -771,41 +692,13 @@
             "locality": "Global"
           }
         ]
-      },
-      {
-        "name": "Tuya / SmartLife",
-        "discussions": 2,
-        "summary": "Cited only as the thing to avoid — the corpus's shorthand for cloud lock-in and unreliability.",
-        "strengths": [],
-        "weaknesses": [
-          {
-            "text": "With the amount of issues I have with Tuya, I seriously love the simplicity of a motion light.",
-            "subreddit": "smarthome",
-            "locality": "Global"
-          },
-          {
-            "text": "Don't lock yourself into Tuya/SmartLife cloud.",
-            "subreddit": "smarthome",
-            "locality": "Global"
-          }
-        ]
       }
     ],
-    "gap": "The corpus contains no brand that is simultaneously credited with competitive hardware value and with local, cloud-free operation. Value and hardware momentum sit with Chinese robot-vacuum brands (Roborock, Dreame, Eufy) that are discussed purely on cleaning performance and price, never on data locality; local-first credibility sits either with DIY assembly (Home Assistant, Zigbee, Z-Wave, Shelly), with premium Western switch and network brands (Lutron, Ubiquiti), or with one small vacuum entrant named for local processing (Matic, D9). One commenter's suspicion of Chinese network hardware (D13) shows the trust flank is exposed. A brand that pairs mid-price hardware with verifiable offline operation and published integration would be occupying a position no brand in these 21 discussions currently holds.",
+    "gap": "No brand named in this corpus combines the three things the discussions most reward at once: local-first operation with no cloud requirement, cheap and available spare parts, and documented Home Assistant/Matter support. Roborock owns value and parts but is criticised on repair cost and cloud reliance; Lutron and Hue own reliability but sit in lighting; Home Assistant owns local control but is a DIY platform some participants find too complicated (D18); the only explicitly local-first appliance named, Matic, is niche and sacrifices convenience hardware. That gap is visible in Global enthusiast discussion only — the corpus contains no UK-tagged discussion to confirm the same gap exists in UK retail.",
     "evidence": {
       "confidence": "Medium",
-      "basis": "Brand naming is dense and repeated across 13 global discussions, giving reliable relative salience; only 2 UK discussions name any brand (Shelly in D2, an unnamed robot vacuum in D1), so UK-specific competitive standing and pricing are not evidenced",
+      "basis": "Brand mentions are countable across 19 Global discussions: Home Assistant in 11, Roborock and Hue in 6 each, Lutron and Amazon in 5, down to Tuya in 2 and TP-Link in 1 — solid on the leaders, single-discussion and therefore weak on Tuya, TP-Link and Matic. No UK-tagged discussions, so UK retail presence and pricing are unevidenced.",
       "sources": [
-        {
-          "subreddit": "DIYUK",
-          "postTitle": "Please go easy on me - i’m only 19 :)",
-          "locality": "UK"
-        },
-        {
-          "subreddit": "DIYUK",
-          "postTitle": "Flushing hot air out of house at night",
-          "locality": "UK"
-        },
         {
           "subreddit": "homeautomation",
           "postTitle": "Which robot vacuum works the best? Tired of vacuuming constantly.",
@@ -814,11 +707,6 @@
         {
           "subreddit": "homeautomation",
           "postTitle": "Done paying subscriptions just to use my own front door",
-          "locality": "Global"
-        },
-        {
-          "subreddit": "homeautomation",
-          "postTitle": "When a smart home display becomes ad inventory, something has gone wrong",
           "locality": "Global"
         },
         {
@@ -858,6 +746,11 @@
         },
         {
           "subreddit": "smarthome",
+          "postTitle": "Smart light switches for Bathroom that are teen proof",
+          "locality": "Global"
+        },
+        {
+          "subreddit": "smarthome",
           "postTitle": "What's one smart home device you can't live without?",
           "locality": "Global"
         },
@@ -892,83 +785,73 @@
   "positioning": {
     "items": [
       {
-        "recommendation": "Lead with local-first operation and a written no-subscription, no-ads commitment — and answer the data-origin question before it is asked",
-        "rationale": "The loudest and most consistent theme in the corpus is loss of control after purchase, and no vacuum or appliance brand in these discussions except one niche entrant is credited with local processing. For a Chinese brand this doubles as pre-emption of the trust objection: publishing where data goes, and proving the device works with the internet unplugged, converts the segment's biggest fear into a claim only this brand is making.",
+        "recommendation": "Lead with local-first architecture as the product's headline claim, not a footnote: full function with the internet unplugged, no account required for core features, no subscription for anything the buyer already paid for, and published Home Assistant / Matter support.",
+        "rationale": "This is the one requirement the corpus applies almost universally and absolutely — participants describe it as a purchase filter rather than a preference, and the only brands they name as trustworthy on it (Matic, Lutron, Hubitat, Home Assistant itself) are niche or DIY. It is also the direct antidote to the vendor-behaviour complaints that cause brand abandonment. Caveat: this rests entirely on Global enthusiast discussion, so it is a segment-level bet, not a validated UK one.",
         "supportedBy": [
           {
-            "section": "Consumer Sentiment",
-            "detail": "Owner describes paying again to view footage from their own front door lock and concluding they never owned the devices",
-            "locality": "Global"
-          },
-          {
             "section": "Key Concerns & Barriers",
-            "detail": "Cloud-only devices are stated as an outright exclusion criterion",
+            "detail": "Cloud dependence appears as a disqualifier in 8 discussions; 'Any device that needs cloud connection to work at all is not going to be a part of my smart home setup...'",
             "locality": "Global"
           },
           {
             "section": "Competitive Landscape",
-            "detail": "Matic is the only vacuum in the corpus credited with processing locally and not uploading home maps",
+            "detail": "Home Assistant compatibility is referenced in 11 discussions and functions as a gatekeeping requirement rather than a nice-to-have",
             "locality": "Global"
           },
           {
-            "section": "Key Concerns & Barriers",
-            "detail": "Explicit geopolitical suspicion of Chinese-origin network hardware in the one networking discussion",
+            "section": "Content Opportunities",
+            "detail": "A buyer lists 'home assistant integration' among the boxes a robot vacuum had to tick before purchase",
             "locality": "Global"
           }
         ]
       },
       {
-        "recommendation": "Compete on ownership economics: cheap published spare parts, documented repair paths and long support windows, plus day-one Home Assistant and Zigbee/Matter support",
-        "rationale": "The corpus rewards brands whose kit still works a decade on and punishes repair friction. Parts availability is given as the sole stated reason for recommending the category leader, and Home Assistant compatibility functions as the entry ticket into enthusiast consideration. This is a low-cost, verifiable differentiator that does not depend on out-spending incumbents on features.",
+        "recommendation": "Enter through a chore-deletion appliance (the robot vacuum category as evidenced here), and compete on published independent test results plus cheap, listed spare parts rather than on feature counts or launch discounts.",
+        "rationale": "Robot vacuums are the single most-discussed and most-praised product in the corpus and the category where challengers visibly displace incumbents on price-to-performance. The stated reasons for brand choice are unusually concrete — parts availability, third-party test rankings, forget-about-it reliability — and the stated reasons for regret are repair cost and obstacle handling. That gives a new entrant a testable checklist rather than a positioning slogan.",
         "supportedBy": [
           {
+            "section": "Consumer Sentiment",
+            "detail": "A poster switches from Roborock to Dreame and reports 'The difference in performance is night and day', quoting a price in pounds",
+            "locality": "Global"
+          },
+          {
             "section": "Competitive Landscape",
-            "detail": "Cheap OEM filters, attachments and internal parts cited as the specific reason to buy the leading brand",
+            "detail": "The most specific single reason given for brand loyalty is cheap, widely available OEM parts",
             "locality": "Global"
           },
           {
-            "section": "Key Concerns & Barriers",
-            "detail": "A flagship owner paid roughly a third of purchase price in repairs and shipping, then had the unit fail again",
-            "locality": "Global"
-          },
-          {
-            "section": "Key Concerns & Barriers",
-            "detail": "Home Assistant named as the interoperability answer to Tuya-style cloud lock-in",
+            "section": "Creator Signals",
+            "detail": "Independent testers (Vacuumwars, Rtings) are the referral route for purchase decisions in this category",
             "locality": "Global"
           }
         ]
       },
       {
-        "recommendation": "Market on chores deleted in real UK homes, not features added — with proof shown at UK flat dimensions",
-        "rationale": "Enthusiasts explicitly discount convenience framing and ask what job was removed; the strongest positive language in the corpus attaches to labour actually eliminated. The only UK discussion featuring a device shows the robot vacuum being physically designed into a small flat's kitchen, which suggests fit, footprint and integration are the UK-relevant proof points — though this rests on one discussion and should be tested before spend.",
+        "recommendation": "Treat country-of-origin trust as an explicit workstream: on-device processing with no cloud upload of home maps or video, third-party security/privacy audit published, and no promotional seeding in enthusiast communities.",
+        "rationale": "The corpus contains unprompted, named distrust of Chinese-linked hardware and cloud platforms — a comment rejecting both Amazon and 'Xi' watching traffic, a security-reputation objection to TP-Link, and repeated advice against the Tuya/SmartLife cloud. Separately, the community publicly flags suspected astroturfed threads and vendor employees posting recommendations, so marketing tactics that look seeded would compound the trust problem. This barrier is real but thinly evidenced (7 discussions, none UK-tagged), so it should be treated as a risk to design around and to test in UK-specific research, not as a quantified UK objection.",
         "supportedBy": [
           {
-            "section": "Content Opportunities",
-            "detail": "A thread that bans convenience claims and admits only chores genuinely removed produces the corpus's clearest value framing",
+            "section": "Key Concerns & Barriers",
+            "detail": "'I don't want Bezos or Xi watching my traffic' alongside 'TP Link has a bad reputation for security.'",
             "locality": "Global"
           },
           {
-            "section": "Consumer Sentiment",
-            "detail": "Family-household owners describe a robot vacuum as an extra housekeeper, alongside dissent that clutter defeats it",
+            "section": "Competitive Landscape",
+            "detail": "Tuya/SmartLife is named in only 2 discussions and negatively in both, as the cloud ecosystem to avoid",
             "locality": "Global"
           },
           {
-            "section": "Content Opportunities",
-            "detail": "UK poster builds a bespoke kitchen unit to house fridge, robot vacuum and dryer, and the community celebrates the integration",
-            "locality": "UK"
+            "section": "Creator Signals",
+            "detail": "A thread is publicly accused of being bot-generated and a commenter discloses working for a vacuum brand, showing low tolerance for seeded promotion",
+            "locality": "Global"
           }
         ]
       }
     ],
     "evidence": {
       "confidence": "Low",
-      "basis": "Directions are inferred from 19 global discussions with strong internal consistency but only 2 UK-tagged discussions (D1, D2); UK price sensitivity, retail channel and brand-origin sentiment are entirely unevidenced here and should be validated before commitment",
+      "basis": "These directions infer from 19 Global discussions with 0 UK-tagged discussions and only one pound-denominated price as a UK signal; the local-control direction is supported by 8 discussions and is the sturdiest, while the country-of-origin direction rests on 7 discussions of which the sharpest evidence is a single comment, so all three require UK-specific validation before commitment.",
       "sources": [
-        {
-          "subreddit": "DIYUK",
-          "postTitle": "Please go easy on me - i’m only 19 :)",
-          "locality": "UK"
-        },
         {
           "subreddit": "homeautomation",
           "postTitle": "Which robot vacuum works the best? Tired of vacuuming constantly.",
@@ -976,17 +859,12 @@
         },
         {
           "subreddit": "homeautomation",
-          "postTitle": "Done paying subscriptions just to use my own front door",
+          "postTitle": "Which robot vacuum is worth the cost?",
           "locality": "Global"
         },
         {
           "subreddit": "homeautomation",
           "postTitle": "What robot vacuum would you recommend that includes a mop?",
-          "locality": "Global"
-        },
-        {
-          "subreddit": "smarthome",
-          "postTitle": "which smart home purchase actually removed a recurring chore for you, not just added another app",
           "locality": "Global"
         },
         {
