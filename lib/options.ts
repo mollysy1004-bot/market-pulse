@@ -27,6 +27,14 @@ export interface Option {
  * unique, on-topic discussions cannot carry a category, and a selector that
  * mixes levels cannot tell a reader what they are choosing. Its data files are
  * left in data/ rather than deleted.
+ *
+ * Phones and laptops are deliberately absent, and this is a scope decision
+ * rather than a gap waiting to be filled. A Chinese phone brand entering the
+ * UK already has brand mentions to monitor and a research budget to read them
+ * with; this is a tool for categories where it has neither. The everyday nouns
+ * those categories turn on — phone, laptop, charger — are also the words
+ * general UK communities use in passing lists, so they retrieve possession
+ * rather than discussion.
  */
 export const CATEGORIES: Option[] = [
   { id: "ai-app", label: "AI Apps", hint: "Doubao, ChatGPT competitors", available: true },
