@@ -17,10 +17,10 @@ Spec: v0.3 (Feishu).
 
 Live at **https://market-pulse-two-omega.vercel.app**
 
-All five categories render generated briefs, built from 101 collected
-discussions in total. Smart home, 3D printer and action camera carry a
-limited-UK-coverage notice, which is accurate rather than cautious: they rest on
-2, 0 and 0 UK-located discussions respectively.
+All six categories render generated briefs, built from 255 collected
+discussions in total. Five of the six carry a limited-UK-coverage notice, which
+is accurate rather than cautious: outside AI Apps, which rests on 18 UK-located
+discussions, the whole set has two.
 
 Briefs are imported statically and bundled at build time, so the deployed site
 makes no API calls, costs nothing to serve, and cannot fail on a live request.
@@ -66,7 +66,7 @@ Editing copy does not require touching the page components.
 | File | Contains |
 |------|----------|
 | `lib/options.ts` | The three dropdowns, and the category → subreddit mapping with `UK` / `Global` locality tags |
-| `lib/mockBrief.ts` | The sample brief for each of the five categories |
+| `lib/mockBrief.ts` | The sample brief for each of the six categories |
 | `app/page.tsx` | Home page sections |
 | `app/brief/page.tsx` | Brief layout — the six sections |
 | `app/about/page.tsx` | About page copy |
@@ -102,8 +102,8 @@ discussion, never per comment. One popular thread with fifty comments about
 privacy is one discussion mentioning privacy, not fifty. Counting at comment
 level would let a single thread manufacture a trend.
 
-**Thin coverage is stated.** Categories with little UK-specific discussion
-(3D Printer, Action Camera) show an explicit warning on the brief instead of
+**Thin coverage is stated.** Categories with little UK-specific discussion —
+every one except AI Apps — show an explicit warning on the brief instead of
 presenting global signals as UK findings.
 
 **Creator Signals, not creator recommendations.** Section 4 reports observed

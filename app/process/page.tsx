@@ -207,7 +207,7 @@ export default function ProcessPage() {
 
         <Block n="08" title="Where it stands">
           <p>
-            266 discussions across 26 communities, seven categories, one market.
+            255 discussions across 25 communities, six categories, one market.
             Every brief names the window its evidence came from and the balance
             of UK to global sources behind each section, and every one matches
             the corpus it was built from — checked, not assumed.
@@ -218,10 +218,10 @@ export default function ProcessPage() {
             fail because someone else&rsquo;s service is down.
           </p>
           <p>
-            The honest headline is the UK column. Of 266 discussions, 21 are
+            The honest headline is the UK column. Of 255 discussions, 20 are
             UK-located, and 18 of those sit in one category. This is a tool for
             reading a market before entering it, and it currently reads one
-            category&rsquo;s market well and six categories&rsquo; global
+            category&rsquo;s market well and five categories&rsquo; global
             conversation. That is not a gap in the collection — it is what UK
             Reddit contains. British users discuss AI constantly, because it
             arrived in their coursework; they mention chargers and earbuds

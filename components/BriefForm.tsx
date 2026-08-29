@@ -18,6 +18,9 @@ function Field({
   value: string;
   onChange: (value: string) => void;
 }) {
+  const selected = options.find((o) => o.id === value);
+  const caption = selected?.available === false ? undefined : selected?.hint;
+
   return (
     <label className="block">
       <span className="font-mono text-[11px] tracking-[0.12em] text-muted uppercase">
@@ -38,18 +41,17 @@ function Field({
             >
               {option.label}
               {/*
-                An em dash introduces an example of what the option covers; a
-                middle dot states why an option cannot be chosen. One mark for
-                both left "AI App — Doubao" and "United States — Coming soon"
-                reading as the same kind of note when they are not. Parentheses
-                were the first attempt and nested badly inside labels that
-                already carry them, as "Gen Z (18–25)" does.
+                A selectable option is its name and nothing else: appending
+                examples made every line read as "category, plus a note", and
+                the note is what the collapsed control then shows. Examples
+                moved to the caption below, where they describe the current
+                choice instead of competing with it.
+
+                An unavailable option keeps its hint, introduced by a middle
+                dot. That text is not an annotation but the reason the row is
+                greyed out, and it has to be legible in the place the row is.
               */}
-              {option.hint
-                ? option.available === false
-                  ? ` · ${option.hint}`
-                  : ` — ${option.hint}`
-                : ""}
+              {option.available === false && option.hint ? ` · ${option.hint}` : ""}
             </option>
           ))}
         </select>
@@ -68,6 +70,13 @@ function Field({
           />
         </svg>
       </div>
+      {/*
+        Reserved whether or not it is filled, so changing category cannot make
+        the three fields jump against each other.
+      */}
+      <span className="mt-2 block min-h-[1.25rem] text-[13px] leading-[1.25rem] text-muted">
+        {caption ? `e.g. ${caption}` : ""}
+      </span>
     </label>
   );
 }

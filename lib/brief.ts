@@ -1,7 +1,6 @@
 import { getBrief as getSampleBrief, type Brief } from "./mockBrief";
 import type { CategoryId } from "./options";
 import aiApp from "../data/briefs/ai-app.json";
-import consumerElectronics from "../data/briefs/consumer-electronics.json";
 import smartHome from "../data/briefs/smart-home.json";
 import printer3d from "../data/briefs/3d-printer.json";
 import actionCamera from "../data/briefs/action-camera.json";
@@ -29,7 +28,6 @@ type BriefFile = Brief & { audienceId: string };
 
 const FILES: Partial<Record<CategoryId, BriefFile>> = {
   "ai-app": aiApp as unknown as BriefFile,
-  "consumer-electronics": consumerElectronics as unknown as BriefFile,
   "smart-home": smartHome as unknown as BriefFile,
   "3d-printer": printer3d as unknown as BriefFile,
   "action-camera": actionCamera as unknown as BriefFile,

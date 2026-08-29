@@ -2,7 +2,6 @@ export type Locality = "UK" | "Global";
 
 export type CategoryId =
   | "ai-app"
-  | "consumer-electronics"
   | "charging-power"
   | "audio-earbuds"
   | "smart-home"
@@ -16,20 +15,26 @@ export interface Option {
   available?: boolean;
 }
 
+/**
+ * Every entry names one product type, and no entry contains another.
+ *
+ * "Consumer Electronics" sat here until it did not survive its own evidence.
+ * It named a shelf rather than a product, so it read as a parent of Charging &
+ * Power and Audio & Earbuds while being offered as their sibling, and the
+ * corpus behind it was not independent: of eleven collected discussions eight
+ * were already in charging-power, one belonged in audio-earbuds, one was a
+ * hard drive warranty dispute and one was a thread about work bags. Two
+ * unique, on-topic discussions cannot carry a category, and a selector that
+ * mixes levels cannot tell a reader what they are choosing. Its data files are
+ * left in data/ rather than deleted.
+ */
 export const CATEGORIES: Option[] = [
-  { id: "ai-app", label: "AI App", hint: "Doubao, ChatGPT competitors", available: true },
-  // Consumer Electronics is the odd entry here: the other categories name a
-  // product type, and this one names a shelf. It collected cookware and car
-  // finance before the anchor gate, and reads thin afterwards because it was
-  // never one category. Charging & Power and Audio are the two slices where
-  // Chinese brands actually compete and where dedicated communities exist, so
-  // they are collected separately rather than pooled.
-  { id: "consumer-electronics", label: "Consumer Electronics", hint: "the broad shelf; Charging and Audio are its live slices", available: true },
+  { id: "ai-app", label: "AI Apps", hint: "Doubao, ChatGPT competitors", available: true },
   { id: "charging-power", label: "Charging & Power", hint: "Anker, Ugreen, Baseus", available: true },
   { id: "audio-earbuds", label: "Audio & Earbuds", hint: "Soundcore, Edifier, QCY", available: true },
   { id: "smart-home", label: "Smart Home", hint: "Dreame, Roborock", available: true },
-  { id: "3d-printer", label: "3D Printer", hint: "Bambu Lab", available: true },
-  { id: "action-camera", label: "Action Camera", hint: "Insta360, GoPro competitors", available: true },
+  { id: "3d-printer", label: "3D Printers", hint: "Bambu Lab", available: true },
+  { id: "action-camera", label: "Action Cameras", hint: "Insta360, GoPro competitors", available: true },
 ];
 
 export const MARKETS: Option[] = [
@@ -82,18 +87,6 @@ export const SUBREDDIT_MAP: Record<CategoryId, SubredditRef[]> = {
     { name: "ChatGPT", locality: "Global", note: "General AI tool discussion, comparisons, complaints" },
     { name: "artificial", locality: "Global", note: "AI industry and product discussion" },
     { name: "productivity", locality: "Global", note: "Workflow and tool recommendations" },
-  ],
-  "consumer-electronics": [
-    // r/UKTech was listed here as the primary UK source. It has 186 subscribers,
-    // is restricted, and returned nothing for any category term — the mapping was
-    // written from assumption rather than checked. Replaced with communities that
-    // actually carry UK purchase discussion.
-    { name: "AskUK", general: true, locality: "UK", note: "Purchase decisions, brand perception" },
-    { name: "CasualUK", general: true, locality: "UK", note: "Everyday UK product talk and recommendations" },
-    { name: "UKPersonalFinance", general: true, locality: "UK", note: "Value, warranty and replacement decisions" },
-    { name: "gadgets", locality: "Global", note: "Product discovery and reviews" },
-    { name: "technology", locality: "Global", note: "Broader tech discussion" },
-    { name: "BuyItForLife", locality: "Global", note: "Quality and value discussions" },
   ],
   "charging-power": [
     { name: "AskUK", general: true, locality: "UK", note: "UK purchase decisions and brand perception" },
@@ -184,12 +177,6 @@ export const CATEGORY_QUERIES: Record<CategoryId, string[]> = {
     "trust AI", "AI privacy", "AI detector", "AI hallucination",
     "worth paying", "cancel subscription",
   ],
-  "consumer-electronics": [
-    "Anker", "Ugreen", "Baseus",
-    "power bank", "charger", "earbuds",
-    "worth buying", "warranty", "customer support",
-    "build quality", "refurbished", "cheap brand",
-  ],
   "charging-power": [
     "Anker", "Ugreen", "Baseus",
     "power bank", "portable charger", "USB-C charger", "charging brick",
@@ -227,7 +214,7 @@ export const CATEGORY_QUERIES: Record<CategoryId, string[]> = {
  * category's own communities. Those words prove a thread is about a purchase;
  * they do not prove what was purchased. Used as a relevance test in a
  * general-purpose community they admitted cookware, a razor and a car finance
- * dispute into the consumer electronics corpus.
+ * dispute as category evidence.
  *
  * Anchors name product entities and brands instead, so the gate asks the
  * question it is actually for: is this discussion about this category?
@@ -238,19 +225,6 @@ export const CATEGORY_ANCHORS: Record<CategoryId, string[]> = {
   "ai-app": [
     "AI", "LLM", "ChatGPT", "Copilot", "Gemini", "Claude",
     "chatbot", "AI tool", "AI app", "prompt",
-  ],
-  // Bare everyday nouns — charger, phone, laptop — are not anchors in a general
-  // community: everyone owns one and mentions it in passing, which readmitted
-  // "what do you carry in your work bag" and "what has your kid lost at
-  // school". Anchors here are brands and compound product terms. Phones and
-  // laptops drop out with them, which matches the product's scope: a Chinese
-  // phone brand entering the UK already has brand mentions to monitor, and this
-  // is a tool for categories where it has none.
-  "consumer-electronics": [
-    "Anker", "Ugreen", "Baseus", "EcoFlow", "Belkin", "Soundcore",
-    "power bank", "portable charger", "charging station", "wall charger",
-    "USB-C cable", "earbuds", "headphones", "earphones",
-    "SSD", "hard drive", "external drive",
   ],
   // Bare "charger" was tried here and reverted. It is the definitional term for
   // this category and still a poor anchor in a general community, because that
