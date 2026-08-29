@@ -28,6 +28,12 @@ export interface Option {
 /**
  * Every entry names one product type, and no entry contains another.
  *
+ * The list was chosen by surveying which Chinese tech companies are actually
+ * expanding overseas, not by subdividing a product taxonomy. Each category has
+ * a Chinese brand already competing in it — Doubao, Anker, Soundcore, Dreame,
+ * Bambu Lab, Insta360 — which is what makes a brief about it worth generating.
+ * A category with no such brand would be market research about nobody.
+ *
  * "Consumer Electronics" sat here until it did not survive its own evidence.
  * It named a shelf rather than a product, so it read as a parent of Charging &
  * Power and Audio & Earbuds while being offered as their sibling, and the
@@ -39,9 +45,12 @@ export interface Option {
  * left in data/ rather than deleted.
  *
  * Phones and laptops are deliberately absent, and this is a scope decision
- * rather than a gap waiting to be filled. A Chinese phone brand entering the
- * UK already has brand mentions to monitor and a research budget to read them
- * with; this is a tool for categories where it has neither. The everyday nouns
+ * rather than a gap waiting to be filled. Two independent reasons agree. The
+ * survey above found phones to be the exception among expanding Chinese tech
+ * companies: the momentum, and the brands still establishing themselves, are
+ * in the other categories. And a Chinese phone brand entering the UK already
+ * has brand mentions to monitor and a research budget to read them with; this
+ * is a tool for categories where it has neither. The everyday nouns
  * those categories turn on — phone, laptop, charger — are also the words
  * general UK communities use in passing lists, so they retrieve possession
  * rather than discussion.
