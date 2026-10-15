@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, useTransition } from "react";
 import { AUDIENCES, CATEGORIES, MARKETS, type Option } from "@/lib/options";
@@ -179,12 +180,12 @@ export function BriefForm() {
         </button>
         <p className="text-[13px] leading-relaxed text-muted">
           Briefs are generated ahead of time, not on this click — see{" "}
-          <a
+          <Link
             href="/about"
             className="underline decoration-rule underline-offset-[4px] transition-colors hover:text-ink-soft"
           >
             why
-          </a>
+          </Link>
           . Only the United Kingdom is supported in this version, and each
           category has been analysed for one audience. The other options are
           listed to show the intended scope.
